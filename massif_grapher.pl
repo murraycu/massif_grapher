@@ -51,6 +51,10 @@ my $time_unit;
 # bother showing it.
 my $threshold = 1.0;
 
+# Whether the graph will be detailed, which requires us to only use 
+# the details snapshots.
+my $arg_detailed = 0;
+
 # Input file name
 my $input_file = undef;
 
@@ -71,6 +75,7 @@ usage: ms_print [options] massif-out-file
     -h --help             show this message
     --version             show version
     --threshold=<m.n>     significance threshold, in percent [$threshold]
+    --detailed            Print allocation details, using only the detailed snapshots.
 
   ms_print is Copyright (C) 2007-2007 Nicholas Nethercote.
   and licensed under the GNU General Public License, version 2.
@@ -115,6 +120,9 @@ sub process_cmd_line()
             } elsif ($arg =~ /^--threshold=([\d\.]+)%?$/) {
                 $threshold = $1;
                 ($1 >= 0 && $1 <= 100) or die($usage);
+
+            #} elif ($arg =~ /^--detailed$/) {
+            #    $arg_details = $1;
 
             } else {            # -h and --help fall under this case
                 die($usage);
@@ -194,17 +202,9 @@ sub read_heap_tree($$$$$)
     # Nb: we always print the alloc-XPt, even if its size is zero.
     my $is_significant = is_significant_XPt($is_top_node, $bytes, $mem_total_B);
 
-    # We precede this node's line with "$this_prefix.$arrow".  We precede
-    # any children of this node with "$this_prefix$child_midfix$arrow".
-    if ($is_significant) {
-        # Nb: $details might have '%' in it, so don't embed directly in the
-        # format string.
-        printf(TMPFILE
-            "$this_prefix$arrow%05.2f%% (%sB)%s\n", $perc, commify($bytes),
-            $details);
-    }
-
     # Now read all the children.
+    #my @child_bytes = ();
+
     my $n_insig_children = 0;
     my $total_insig_children_szB = 0;
     my $this_prefix2 = $this_prefix . $child_midfix;
@@ -217,24 +217,13 @@ sub read_heap_tree($$$$$)
                 $mem_total_B);
         $n_insig_children += $is_child_insignificant;
         $total_insig_children_szB += $child_insig_bytes;
+
+        #$child_bytes[$i] = $child_insig_bytes;
     }
 
-    if ($is_significant) {
-        # If this was significant but any children were insignificant, print
-        # the "in N places" line for them.
-        if ($n_insig_children > 0) {
-            $perc = safe_div_0(100 * $total_insig_children_szB, $mem_total_B);
-            printf(TMPFILE "%s->%05.2f%% (%sB) in %d+ places, all below "
-                 . "ms_print's threshold (%05.2f%%)\n",
-                $this_prefix2, $perc, commify($total_insig_children_szB),
-                $n_insig_children, $threshold);
-            print(TMPFILE "$this_prefix2\n");
-        }
+    #push (@mem_heap_parts, child_bytes);
 
-        # If this node has no children, print an extra (mostly) empty line.
-        if (0 == $n_children) {
-            print(TMPFILE "$this_prefix2\n");
-        }
+    if ($is_significant) {
         return (0, 0);
 
     } else {
@@ -353,6 +342,7 @@ sub read_input_file()
     my @mem_heap_extra_Bs = ();
     my @mem_stacks_Bs = ();
     my @is_detaileds  = ();
+    my @mem_heap_parts = ();
     my $peak_num = -1;      # An initial value that will be ok if no peak
                             # entry is in the file.
     
@@ -382,26 +372,6 @@ sub read_input_file()
         die("Line $.: missing 'time_unit' line\n");
     $time_unit = $1;
 
-    #-------------------------------------------------------------------------
-    # Print snapshot list header to $tmp_file.
-    #-------------------------------------------------------------------------
-    open(TMPFILE, "> $tmp_file") 
-         || die "Cannot open $tmp_file for reading\n";
-
-    my $time_column = sprintf("%14s", "time($time_unit)");
-    my $column_format = "%3s %14s %16s %16s %13s %12s\n";
-    my $header =
-        $fancy_nl .
-        sprintf($column_format
-        ,   "n"
-        ,   $time_column
-        ,   "total(B)"
-        ,   "useful-heap(B)"
-        ,   "extra-heap(B)"
-        ,   "stacks(B)"
-        ) .
-        $fancy_nl;
-    print(TMPFILE $header);
 
     #-------------------------------------------------------------------------
     # Read body of input file.
@@ -415,16 +385,6 @@ sub read_input_file()
         my $mem_stacks_B     = equals_num_line(get_line(), "mem_stacks_B");
         my $mem_total_B      = $mem_heap_B + $mem_heap_extra_B + $mem_stacks_B;
         my $heap_tree        = equals_num_line(get_line(), "heap_tree");
-
-        # Print the snapshot data to $tmp_file.
-        printf(TMPFILE $column_format,
-        ,   $snapshot_num
-        ,   commify($time)
-        ,   commify($mem_total_B)
-        ,   commify($mem_heap_B)
-        ,   commify($mem_heap_extra_B)
-        ,   commify($mem_stacks_B)
-        );
 
         # Remember the snapshot data.
         push(@snapshot_nums, $snapshot_num);
@@ -449,18 +409,14 @@ sub read_input_file()
             # '1' means it's the top node of the tree.
             read_heap_tree(1, "", "", "", $mem_total_B);
 
-            # Print the header, unless there are no more snapshots.
             $line = get_line();
-            if (defined $line) {
-                print(TMPFILE $header);
-            }
+
         } else {
             die("Line $.: expected 'empty' or '...' after 'heap_tree='\n");
         }
     }
 
     close(INPUTFILE);
-    close(TMPFILE);
 
     #-------------------------------------------------------------------------
     # Print header.
