@@ -568,7 +568,9 @@ sub read_input_file()
         transparent => 0,
         'bgclr' => 'white', 
         #'dclrs' => [ qw(lblue lyellow blue yellow lgreen lred green red purple orange pink dyellow) ], 
-        accent_treshold => 100_000 # Don't draw the vertical lines for each x item.
+        accent_treshold => 100_000, # Don't draw the vertical lines for each x item.
+
+        # Try to have a margin around the whole drawing, though this does not seem to work:
         t_margin => 20,
         b_margin => 20,
         l_margin => 20,
