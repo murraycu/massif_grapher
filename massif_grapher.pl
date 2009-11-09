@@ -1,14 +1,16 @@
 #! /usr/bin/perl
 
 ##--------------------------------------------------------------------##
-##--- Massif's results printer                         ms_print.in ---##
+##--- Massif's results printer                                     ---##
 ##--------------------------------------------------------------------##
 
-#  This file is part of Massif, a Valgrind tool for profiling memory
-#  usage of programs.
-#
+#  This file is based on the original ms_print.pl.in, 
 #  Copyright (C) 2007-2007 Nicholas Nethercote
 #     njn@valgrind.org
+#
+#  The "massif_grapher" changes are 
+#  Copyright (C) 2009 Murray Cumming
+#     murrayc@openismus.com
 #
 #  This program is free software; you can redistribute it and/or
 #  modify it under the terms of the GNU General Public License as
