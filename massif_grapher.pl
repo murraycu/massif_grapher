@@ -520,6 +520,7 @@ sub read_input_file()
        $x          = 0;
 
     #print "DEBUG: n_snapshots=$n_snapshots\n";
+    print "DEBUG: peak_mem_total_szB=$peak_mem_total_szB\n";
 
     for (my $i = 0; $i < $n_snapshots; $i++) {
 
@@ -570,11 +571,15 @@ sub read_input_file()
         #'dclrs' => [ qw(lblue lyellow blue yellow lgreen lred green red purple orange pink dyellow) ], 
         accent_treshold => 100_000, # Don't draw the vertical lines for each x item.
 
-        # Try to have a margin around the whole drawing, though this does not seem to work:
         t_margin => 20,
         b_margin => 20,
         l_margin => 20,
-        r_margin => 20
+        r_margin => 20,
+
+        y_min_value => 0,
+        y_max_value => $peak_mem_total_szB,
+
+        x_labels_vertical => 1
         )
         or warn $gd_graph->error;
 
