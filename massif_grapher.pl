@@ -496,6 +496,20 @@ sub read_input_file()
 
     # Use the biggest-possible list of colors,
     # to avoid reusing the same color.
+
+    #Add some more colors:
+    for (my $i = 0; $i < 500; $i++) {
+      my $hexcolor = '#';
+      for (my $j = 0; $j < 3; $j++) {
+        my $num = rand() * 255;
+        my $hextext = sprintf("%02x", $num);
+
+        $hexcolor .= $hextext;
+      }
+
+      GD::Graph::colour::add_colour($hexcolor);
+    }
+
     my @all_colors = GD::Graph::colour::colour_list();
     # Do not use "white" - that's the same as the background:
     my @colors = grep({$_ ne 'white'} @all_colors);
@@ -525,7 +539,7 @@ sub read_input_file()
         y_min_value => 0,
         y_max_value => $peak_mem_total_szB,
 
-        x_labels_vertical => 1,
+        x_labels_vertical => 1, # Meaning True
 
         )
         or warn $gd_graph->error;
