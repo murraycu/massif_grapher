@@ -529,6 +529,7 @@ sub read_input_file()
         transparent => 0,
         'bgclr' => 'white', 
         'dclrs' => \@colors, 
+        legend_placement => 'RB', 
         accent_treshold => 100_000, # Don't draw the vertical lines for each x item.
 
         t_margin => 20,
