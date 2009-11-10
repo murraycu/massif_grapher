@@ -498,25 +498,31 @@ sub read_input_file()
 
     $gd_graph->set_legend(@legend); 
 
-    # Use the biggest-possible list of colors,
-    # to avoid reusing the same color.
+    my @colors = ();
+    if ($arg_detailed) {
+        # Use the biggest-possible list of colors,
+        # to avoid reusing the same color.
 
-    #Add some more colors:
-    for (my $i = 0; $i < 500; $i++) {
-      my $hexcolor = '#';
-      for (my $j = 0; $j < 3; $j++) {
-        my $num = rand() * 255;
-        my $hextext = sprintf("%02x", $num);
+        #Add some more colors:
+        for (my $i = 0; $i < 500; $i++) {
+            my $hexcolor = '#';
+            for (my $j = 0; $j < 3; $j++) {
+               my $num = rand() * 255;
+               my $hextext = sprintf("%02x", $num);
+               $hexcolor .= $hextext;
+            }
 
-        $hexcolor .= $hextext;
-      }
+            GD::Graph::colour::add_colour($hexcolor);
+        }
 
-      GD::Graph::colour::add_colour($hexcolor);
+        my @all_colors = GD::Graph::colour::colour_list();
+        # Do not use "white" - that's the same as the background:
+        @colors = grep({$_ ne 'white'} @all_colors);
+    } else {
+      @colors = qw(red green blue);
     }
 
-    my @all_colors = GD::Graph::colour::colour_list();
-    # Do not use "white" - that's the same as the background:
-    my @colors = grep({$_ ne 'white'} @all_colors);
+    
 
     $gd_graph->set(
         #show_values => $gd_graph_data,
