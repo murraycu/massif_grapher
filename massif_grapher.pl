@@ -474,7 +474,11 @@ sub read_input_file()
     $gd_graph_data->make_strict();
 
     # Specify a large area so people can zoom in:
-    my $gd_graph = GD::Graph::area->new(1024, 798);
+    # If this isn't big enough then we get a "Vertical size too small" error 
+    # from Gd::Graph's axestype.pm: setup_boundaries().
+    # Using the defaults (not specify a size) don't help either.
+    # TODO: File a bug about that and/or guess a suitable size. 
+    my $gd_graph = GD::Graph::area->new(2000, 2000);
 
     my @legend = ();
 
