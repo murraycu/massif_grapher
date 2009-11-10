@@ -32,7 +32,7 @@
 use warnings;
 use strict;
 
-# This it the TODO package on Ubuntu.
+# This it the libgd-graph-perl package on Ubuntu/Debian.
 use GD::Graph::area;
 use GD::Graph::Data;
 
@@ -58,9 +58,6 @@ my $arg_detailed = 0;
 # Input file name
 my $input_file = undef;
 
-# Tmp file name.
-my $tmp_file = "ms_print.tmp.$$";
-
 # Version number.
 my $version = "3.5.0-Debian";
 
@@ -69,7 +66,7 @@ my $ms_print_args;
 
 # Usage message.
 my $usage = <<END
-usage: ms_print [options] massif-out-file
+usage: massif_grapher [options] massif-out-file
 
   options for the user, with defaults in [ ], are:
     -h --help             show this message
@@ -77,7 +74,7 @@ usage: ms_print [options] massif-out-file
     --threshold=<m.n>     significance threshold, in percent [$threshold]
     --detailed            Print allocation details, using only the detailed snapshots.
 
-  ms_print is Copyright (C) 2007-2007 Nicholas Nethercote.
+  massif_grapher is Copyright (C) 2007-2007 Nicholas Nethercote, and Copyright (C) 2009 Murray Cumming 
   and licensed under the GNU General Public License, version 2.
   Bug reports, feedback, admiration, abuse, etc, to: njn\@valgrind.org.
                                                 
@@ -87,6 +84,16 @@ END
 # Used in various places of output.
 my $fancy    = '-' x 80;
 my $fancy_nl = $fancy . "\n";
+
+# Details of the snapshots' trees:
+# Arrays of references to arrays:
+my @mem_heap_parts = ();
+my @mem_heap_part_names = ();
+
+# Map of all function names to a unique index:
+my %hash_map_part_names = (); 
+# Reverse (Map of all unique indexes to function names):
+my %hash_map_part_names_reverse = ();
 
 # Returns 0 if the denominator is 0.
 sub safe_div_0($$)
@@ -121,8 +128,8 @@ sub process_cmd_line()
                 $threshold = $1;
                 ($1 >= 0 && $1 <= 100) or die($usage);
 
-            #} elif ($arg =~ /^--detailed$/) {
-            #    $arg_details = $1;
+            } elsif ($arg =~ /^--detailed$/) {
+                $arg_detailed = 1;
 
             } else {            # -h and --help fall under this case
                 die($usage);
@@ -185,9 +192,11 @@ sub is_significant_XPt($$$)
 # Forward declaration, because it's recursive.
 sub read_heap_tree($$$$$);
 
-# Return pair:  if the tree was significant, both are zero.  If it was
-# insignificant, the first element is 1 and the second is the number of
-# bytes.
+# Return four:
+# The first element is the number of bytes,
+# The second element is the name of the function.
+# The second element is th array of child bytes.
+# The third element is the array of child function names.
 sub read_heap_tree($$$$$)
 {
     # Read the line and determine if it is significant.
@@ -203,120 +212,28 @@ sub read_heap_tree($$$$$)
     my $is_significant = is_significant_XPt($is_top_node, $bytes, $mem_total_B);
 
     # Now read all the children.
-    #my @child_bytes = ();
+    my @child_bytes = ();
+    my @child_functions = ();
 
-    my $n_insig_children = 0;
-    my $total_insig_children_szB = 0;
     my $this_prefix2 = $this_prefix . $child_midfix;
+
     for (my $i = 0; $i < $n_children; $i++) {
         # If child is the last sibling, the midfix is empty.
         my $child_midfix2 = ( $i+1 == $n_children ? "  " : "| " );
-        my ($is_child_insignificant, $child_insig_bytes) =
-            # '0' means it's not the top node of the tree.
+        my ($this_size, $this_name, $ignored1, $ignored2) =
             read_heap_tree(0, $this_prefix2, $child_midfix2, "->",
                 $mem_total_B);
-        $n_insig_children += $is_child_insignificant;
-        $total_insig_children_szB += $child_insig_bytes;
 
-        #$child_bytes[$i] = $child_insig_bytes;
+        $child_bytes[$i] = $this_size;
+        $child_functions[$i] = $this_name;
     }
 
-    #push (@mem_heap_parts, child_bytes);
-
-    if ($is_significant) {
-        return (0, 0);
-
-    } else {
-        return (1, $bytes);
-    }
+    # Notice that we return array references, by using \@ instead of @.
+    # Otherwise the contents of the second array would be put into the first array.
+    return ($bytes, $details, \@child_bytes, \@child_functions)
 }
 
-#-----------------------------------------------------------------------------
-# Reading the input file: main
-#-----------------------------------------------------------------------------
 
-sub max_label_2($$)
-{
-    my ($szB, $szB_scaled) = @_;
-
-    # For the label, if $szB is 999B or below, we print it as an integer.
-    # Otherwise, we print it as a float with 5 characters (including the '.').
-    # Examples (for bytes):
-    #       1 -->     1  B
-    #     999 -->   999  B
-    #    1000 --> 0.977 KB
-    #    1024 --> 1.000 KB
-    #   10240 --> 10.00 KB
-    #  102400 --> 100.0 KB
-    # 1024000 --> 0.977 MB
-    # 1048576 --> 1.000 MB
-    #
-    if    ($szB < 1000)        { return sprintf("%5d",   $szB);        }
-    elsif ($szB_scaled < 10)   { return sprintf("%5.3f", $szB_scaled); }
-    elsif ($szB_scaled < 100)  { return sprintf("%5.2f", $szB_scaled); }
-    else                       { return sprintf("%5.1f", $szB_scaled); }
-}
-
-# Work out the units for the max value, measured in instructions.
-sub i_max_label($)
-{
-    my ($nI) = @_;
-
-    # We repeat until the number is less than 1000.
-    my $nI_scaled = $nI;
-    my $unit = "i";
-    # Nb: 'k' is the "kilo" (1000) prefix.
-    if ($nI_scaled >= 1000) { $unit = "ki"; $nI_scaled /= 1024; }
-    if ($nI_scaled >= 1000) { $unit = "Mi"; $nI_scaled /= 1024; }
-    if ($nI_scaled >= 1000) { $unit = "Gi"; $nI_scaled /= 1024; }
-    if ($nI_scaled >= 1000) { $unit = "Ti"; $nI_scaled /= 1024; }
-    if ($nI_scaled >= 1000) { $unit = "Pi"; $nI_scaled /= 1024; }
-    if ($nI_scaled >= 1000) { $unit = "Ei"; $nI_scaled /= 1024; }
-    if ($nI_scaled >= 1000) { $unit = "Zi"; $nI_scaled /= 1024; }
-    if ($nI_scaled >= 1000) { $unit = "Yi"; $nI_scaled /= 1024; }
-
-    return (max_label_2($nI, $nI_scaled), $unit);
-}
-
-# Work out the units for the max value, measured in bytes.
-sub B_max_label($)
-{
-    my ($szB) = @_;
-
-    # We repeat until the number is less than 1000, but we divide by 1024 on
-    # each scaling.
-    my $szB_scaled = $szB;
-    my $unit = "B";
-    # Nb: 'K' or 'k' are acceptable as the "binary kilo" (1024) prefix.
-    # (Strictly speaking, should use "KiB" (kibibyte), "MiB" (mebibyte), etc,
-    # but they're not in common use.)
-    if ($szB_scaled >= 1000) { $unit = "KB"; $szB_scaled /= 1024; }
-    if ($szB_scaled >= 1000) { $unit = "MB"; $szB_scaled /= 1024; }
-    if ($szB_scaled >= 1000) { $unit = "GB"; $szB_scaled /= 1024; }
-    if ($szB_scaled >= 1000) { $unit = "TB"; $szB_scaled /= 1024; }
-    if ($szB_scaled >= 1000) { $unit = "PB"; $szB_scaled /= 1024; }
-    if ($szB_scaled >= 1000) { $unit = "EB"; $szB_scaled /= 1024; }
-    if ($szB_scaled >= 1000) { $unit = "ZB"; $szB_scaled /= 1024; }
-    if ($szB_scaled >= 1000) { $unit = "YB"; $szB_scaled /= 1024; }
-
-    return (max_label_2($szB, $szB_scaled), $unit);
-}
-
-# Work out the units for the max value, measured in ms/s/h.
-sub t_max_label($)
-{
-    my ($szB) = @_;
-
-    # We scale from millisecond to seconds to hours.
-    #
-    # XXX: this allows a number with 6 chars, eg. "3599.0 s"
-    my $szB_scaled = $szB;
-    my $unit = "ms";
-    if ($szB_scaled >= 1000) { $unit = "s"; $szB_scaled /= 1000; }
-    if ($szB_scaled >= 3600) { $unit = "h"; $szB_scaled /= 3600; }
-
-    return (max_label_2($szB, $szB_scaled), $unit);
-}
 
 # This prints four things:
 #   - the output header
@@ -342,7 +259,6 @@ sub read_input_file()
     my @mem_heap_extra_Bs = ();
     my @mem_stacks_Bs = ();
     my @is_detaileds  = ();
-    my @mem_heap_parts = ();
     my $peak_num = -1;      # An initial value that will be ok if no peak
                             # entry is in the file.
     
@@ -373,6 +289,8 @@ sub read_input_file()
     $time_unit = $1;
 
 
+    my $function_name_id = 0;
+
     #-------------------------------------------------------------------------
     # Read body of input file.
     #-------------------------------------------------------------------------
@@ -397,8 +315,10 @@ sub read_input_file()
         $peak_mem_total_szB = $mem_total_B
             if $mem_total_B > $peak_mem_total_szB;
 
-        # Read the heap tree, and if it's detailed, print it and a subsequent
-        # snapshot list header to $tmp_file.
+        my @child_bytes = ();
+        my @child_functions = ();
+
+        # Read the heap tree:
         if      ($heap_tree eq "empty") {
             $line = get_line();
         } elsif ($heap_tree =~ "(detailed|peak)") {
@@ -406,14 +326,34 @@ sub read_input_file()
             if ($heap_tree eq "peak") {
                 $peak_num = $snapshot_num;
             }
-            # '1' means it's the top node of the tree.
-            read_heap_tree(1, "", "", "", $mem_total_B);
+
+            my ($bytes, $function_name, $child_bytes_ref, $child_functions_ref) = 
+                read_heap_tree(1, "", "", "", $mem_total_B);
+            @child_bytes = @$child_bytes_ref;
+            @child_functions = @$child_functions_ref;
 
             $line = get_line();
 
         } else {
             die("Line $.: expected 'empty' or '...' after 'heap_tree='\n");
         }
+
+        # Note that we add a reference (\@, not @) to the array,
+        # instead of adding the array itself, to simplify things.
+        push(@mem_heap_parts, \@child_bytes);
+        push(@mem_heap_part_names, \@child_functions);
+
+        # Process all discovered child functions, and assign a unqiue ID if necessary.
+        # We use this to specify a heap size (y) for all functions at all times (x) in the cummulative graph.
+        foreach (@child_functions) {
+            my $function_name = $_;
+            if (!(exists $hash_map_part_names{$function_name})) {
+              $hash_map_part_names{$function_name} = $function_name_id;
+              $hash_map_part_names_reverse{$function_name_id} = $function_name;
+              $function_name_id++;
+            }
+        }
+
     }
 
     close(INPUTFILE);
@@ -475,13 +415,12 @@ sub read_input_file()
 
        $x          = 0;
 
-    #print "DEBUG: n_snapshots=$n_snapshots\n";
-    print "DEBUG: peak_mem_total_szB=$peak_mem_total_szB\n";
-
     for (my $i = 0; $i < $n_snapshots; $i++) {
 
         # Fill an array for one column for an x item in the GD::Data. 
         my @gd_row;
+
+        # The y item label (to appear for the item on the X axis):
         $gd_row[0] = $times[$i];
  
         # Work out which column this snapshot belongs to.
@@ -490,9 +429,31 @@ sub read_input_file()
         $x = int($x_pos_frac) + 1;    # +1 due to Y-axis
 
         #Y axis values:
-        $gd_row[1] = $mem_heap_Bs[$i];
-        $gd_row[2] = $mem_heap_extra_Bs[$i];
-        $gd_row[3] = $mem_stacks_Bs[$i];
+        if ($arg_detailed && $is_detaileds[$i]) {
+            # Detailed values, with a y value for each function that is 
+            # mentioned in any snapshot:
+            my $heap_parts_ref = $mem_heap_parts[$i];
+            my @heap_parts_bytes = @$heap_parts_ref;
+
+            my $heap_parts_names_ref = $mem_heap_part_names[$i];
+            my @heap_parts_names = @$heap_parts_names_ref;
+
+            my $index = 0;
+            foreach my $function_name (@heap_parts_names) {
+                my $bytes = $heap_parts_bytes[$index];
+               
+                my $id = $hash_map_part_names{$function_name};
+                $gd_row[$id] = $bytes;
+
+                $index++;
+            }
+        }
+        else {
+            # Just show the overall heap and stack values:
+            $gd_row[1] = $mem_heap_Bs[$i];
+            $gd_row[2] = $mem_heap_extra_Bs[$i];
+            $gd_row[3] = $mem_stacks_Bs[$i];
+        }
 
         $gd_graph_data->add_point(@gd_row);
     }
@@ -507,7 +468,20 @@ sub read_input_file()
 
     # Specify a large area so people can zoom in:
     my $gd_graph = GD::Graph::area->new(1024, 798);
-    my @legend = ("Heap", "Extra Heap", "Stacks");
+
+    my @legend = ();
+
+    if ($arg_detailed) {
+        my $hash_map_size = keys(%hash_map_part_names_reverse) . "\n";
+        for (my $i = 0; $i < $hash_map_size; $i++) {
+            my $function_name = $hash_map_part_names_reverse{$i};
+            push (@legend, $function_name)
+        }
+    }
+    else {
+        @legend = ("Heap", "Extra Heap", "Stacks");
+    }
+
     $gd_graph->set_legend(@legend); 
 
     $gd_graph->set(
