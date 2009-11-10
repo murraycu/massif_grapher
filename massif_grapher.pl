@@ -71,12 +71,16 @@ usage: massif_grapher [options] massif-out-file
   options for the user, with defaults in [ ], are:
     -h --help             show this message
     --version             show version
-    --threshold=<m.n>     significance threshold, in percent [$threshold]
+    --threshold=<m.n>     significance threshold, in percent [$threshold] (specify this to massif too).
     --detailed            Print allocation details, using only the detailed snapshots.
 
   massif_grapher is Copyright (C) 2007-2007 Nicholas Nethercote, and Copyright (C) 2009 Murray Cumming 
   and licensed under the GNU General Public License, version 2.
   Bug reports, feedback, admiration, abuse, etc, to: njn\@valgrind.org.
+
+
+  For best results run valgrind massif with --details-freq=1. For instance,
+    valgrind --tool=massif --detailed-freq=1 yourapp
                                                 
 END
 ;
@@ -474,11 +478,11 @@ sub read_input_file()
     $gd_graph_data->make_strict();
 
     # Specify a large area so people can zoom in:
-    # If this isn't big enough then we get a "Vertical size too small" error 
+    # If this isn't big enough then we get a "Vertical size too small" or "Horizontal size too small" error 
     # from Gd::Graph's axestype.pm: setup_boundaries().
     # Using the defaults (not specify a size) don't help either.
     # TODO: File a bug about that and/or guess a suitable size. 
-    my $gd_graph = GD::Graph::area->new(2000, 2000);
+    my $gd_graph = GD::Graph::area->new(4000, 2000);
 
     my @legend = ();
 
