@@ -35,7 +35,7 @@ use strict;
 # This it the libgd-graph-perl package on Ubuntu/Debian.
 use GD::Graph::area;
 use GD::Graph::Data;
-
+use GD::Graph::colour;
 
 #----------------------------------------------------------------------------
 # Global variables, main data structures
@@ -494,6 +494,12 @@ sub read_input_file()
 
     $gd_graph->set_legend(@legend); 
 
+    # Use the biggest-possible list of colors,
+    # to avoid reusing the same color.
+    my @all_colors = GD::Graph::colour::colour_list();
+    # Do not use "white" - that's the same as the background:
+    my @colors = grep({$_ ne 'white'} @all_colors);
+
     $gd_graph->set(
         #show_values => $gd_graph_data,
         x_label => 'Instructions (millions)',
@@ -508,7 +514,7 @@ sub read_input_file()
         #shadowclr => 'dred',
         transparent => 0,
         'bgclr' => 'white', 
-        #'dclrs' => [ qw(lblue lyellow blue yellow lgreen lred green red purple orange pink dyellow) ], 
+        'dclrs' => \@colors, 
         accent_treshold => 100_000, # Don't draw the vertical lines for each x item.
 
         t_margin => 20,
@@ -519,7 +525,8 @@ sub read_input_file()
         y_min_value => 0,
         y_max_value => $peak_mem_total_szB,
 
-        x_labels_vertical => 1
+        x_labels_vertical => 1,
+
         )
         or warn $gd_graph->error;
 
