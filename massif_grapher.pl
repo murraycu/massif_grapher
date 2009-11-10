@@ -479,9 +479,8 @@ sub read_input_file()
     my @legend = ();
 
     if ($arg_detailed) {
-        my $hash_map_size = keys(%hash_map_part_names_reverse) . "\n";
-        for (my $i = 0; $i < $hash_map_size; $i++) {
-            my $function_name = $hash_map_part_names_reverse{$i};
+        foreach my $id (keys(%hash_map_part_names_reverse)) {
+            my $function_name = $hash_map_part_names_reverse{$id};
             push (@legend, $function_name)
         }
     }
