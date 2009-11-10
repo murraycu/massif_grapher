@@ -289,7 +289,7 @@ sub read_input_file()
     $time_unit = $1;
 
 
-    my $function_name_id = 0;
+    my $function_name_id = 1; #Start with 0 because row 0 is the Gd::Graph axis label
 
     #-------------------------------------------------------------------------
     # Read body of input file.
@@ -432,6 +432,13 @@ sub read_input_file()
         if ($arg_detailed && $is_detaileds[$i]) {
             # Detailed values, with a y value for each function that is 
             # mentioned in any snapshot:
+
+            # Default to 0 for all items,
+            # to avoid undefined values.
+            foreach my $id (keys(%hash_map_part_names_reverse)) {
+                $gd_row[$id] = 0;
+            }
+
             my $heap_parts_ref = $mem_heap_parts[$i];
             my @heap_parts_bytes = @$heap_parts_ref;
 
