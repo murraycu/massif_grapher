@@ -377,15 +377,11 @@ sub print_graph() {
    
     my $n_snapshots = scalar(@snapshot_nums);
     ($n_snapshots > 0) or die;
-    my $end_time = $times[$n_snapshots-1];
-    ($end_time >= 0) or die;
 
 
     # Work out how many bytes each row represents.  If the peak size was 0,
     # make it 1 so that the Y-axis covers a non-zero range of values.
-    # Likewise for end_time.
     if (0 == $peak_mem_total_szB) { $peak_mem_total_szB = 1; }
-    if (0 == $end_time          ) { $end_time           = 1; }
     my $K = $peak_mem_total_szB;
 
     for (my $i = 0; $i < $n_snapshots; $i++) {
