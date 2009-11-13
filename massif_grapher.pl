@@ -106,12 +106,6 @@ my %hash_map_part_names = ();
 # Reverse (Map of all unique indexes to function names):
 my %hash_map_part_names_reverse = ();
 
-# Returns 0 if the denominator is 0.
-sub safe_div_0($$)
-{
-    my ($x, $y) = @_;
-    return ($y ? $x / $y : 0);
-}
 
 #-----------------------------------------------------------------------------
 # Argument and option handling
@@ -218,7 +212,6 @@ sub read_heap_tree($$$$$)
     my $n_children = $1;
     my $bytes      = $2;
     my $details    = $3;
-    my $perc       = safe_div_0(100 * $bytes, $mem_total_B);
     # Nb: we always print the alloc-XPt, even if its size is zero.
     my $is_significant = is_significant_XPt($is_top_node, $bytes, $mem_total_B);
 
@@ -373,27 +366,11 @@ sub read_input_file()
     print("\n\n");
 }
 
-#-----------------------------------------------------------------------------
-# Misc functions
-#-----------------------------------------------------------------------------
-sub commify ($) {
-    my ($val) = @_;
-    1 while ($val =~ s/^(\d+)(\d{3})/$1,$2/);
-    return $val;
-}
-
 sub print_graph() {
 
     #-------------------------------------------------------------------------
     # Setup for graph.
     #-------------------------------------------------------------------------
-    # The ASCII graph.
-    # Row    0 is the X-axis.
-    # Column 0 is the Y-axis.
-    # The rest ([1][1]..[graph_x][graph_y]) is the usable graph area.
-    my @graph;
-    my $x;
-    my $y;
 
     my $gd_graph_data = GD::Graph::Data->new()
       or die GD::Graph::Data->error;
@@ -403,24 +380,6 @@ sub print_graph() {
     my $end_time = $times[$n_snapshots-1];
     ($end_time >= 0) or die;
 
-    #-------------------------------------------------------------------------
-    # Write snapshot bars into graph[][].
-    #-------------------------------------------------------------------------
-    # Each row represents K bytes, which is 1/graph_y of the peak size
-    # (and K can be non-integral).  When drawing the column for a snapshot,
-    # in order to fill the slot in row y (where the first row drawn on is
-    # row 1) with a full-char (eg. ':'), it must be >= y*K.  For example, if
-    # K = 10 bytes, then the values 0, 4, 5, 9, 10, 14, 15, 19, 20, 24, 25,
-    # 29, 30 would be drawn like this (showing one per column):
-    #
-    #                       y    y * K
-    #                       -    -----------
-    # 30 |            :     3    3 * 10 = 30
-    # 20 |        :::::     2    2 * 10 = 20
-    # 10 |    :::::::::     1    1 * 10 = 10
-    # 0  +-------------
-
-    my $normal_char   = ':';
 
     # Work out how many bytes each row represents.  If the peak size was 0,
     # make it 1 so that the Y-axis covers a non-zero range of values.
@@ -429,8 +388,6 @@ sub print_graph() {
     if (0 == $end_time          ) { $end_time           = 1; }
     my $K = $peak_mem_total_szB;
 
-       $x          = 0;
-
     for (my $i = 0; $i < $n_snapshots; $i++) {
 
         # Fill an array for one column for an x item in the GD::Data. 
@@ -438,11 +395,6 @@ sub print_graph() {
 
         # The y item label (to appear for the item on the X axis):
         $gd_row[0] = $times[$i];
- 
-        # Work out which column this snapshot belongs to.
-        # TODO: Make the x axis proportional, not just a set of items.
-        my $x_pos_frac = ($times[$i] / ($end_time));
-        $x = int($x_pos_frac) + 1;    # +1 due to Y-axis
 
         #Y axis values:
         if ($arg_detailed && $is_detaileds[$i]) {
