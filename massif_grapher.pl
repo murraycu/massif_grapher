@@ -91,8 +91,15 @@ my $fancy_nl = $fancy . "\n";
 
 # Details of the snapshots' trees:
 # Arrays of references to arrays:
+my @snapshot_nums = ();
+my @times         = ();
 my @mem_heap_parts = ();
 my @mem_heap_part_names = ();
+my @mem_heap_Bs = ();
+my @mem_heap_extra_Bs = ();
+my @mem_stacks_Bs = ();
+my @is_detaileds  = ();
+my $peak_mem_total_szB = 0;
 
 # Map of all function names to a unique index:
 my %hash_map_part_names = (); 
@@ -253,16 +260,9 @@ sub read_heap_tree($$$$$)
 sub read_input_file() 
 {
     my $desc = "";              # Concatenated description lines.
-    my $peak_mem_total_szB = 0;
 
     # Info about each snapshot.
-    my @snapshot_nums = ();
-    my @times         = ();
     my @mem_total_Bs  = ();
-    my @mem_heap_Bs = ();
-    my @mem_heap_extra_Bs = ();
-    my @mem_stacks_Bs = ();
-    my @is_detaileds  = ();
     my $peak_num = -1;      # An initial value that will be ok if no peak
                             # entry is in the file.
     
@@ -371,6 +371,18 @@ sub read_input_file()
     print("ms_print arguments:$ms_print_args\n");
     print($fancy_nl);
     print("\n\n");
+}
+
+#-----------------------------------------------------------------------------
+# Misc functions
+#-----------------------------------------------------------------------------
+sub commify ($) {
+    my ($val) = @_;
+    1 while ($val =~ s/^(\d+)(\d{3})/$1,$2/);
+    return $val;
+}
+
+sub print_graph() {
 
     #-------------------------------------------------------------------------
     # Setup for graph.
@@ -563,21 +575,12 @@ sub read_input_file()
     print IMG $gd->png;
 }
 
-#-----------------------------------------------------------------------------
-# Misc functions
-#-----------------------------------------------------------------------------
-sub commify ($) {
-    my ($val) = @_;
-    1 while ($val =~ s/^(\d+)(\d{3})/$1,$2/);
-    return $val;
-}
-
-
 #----------------------------------------------------------------------------
 # "main()"
 #----------------------------------------------------------------------------
 process_cmd_line();
 read_input_file();
+print_graph();
 
 ##--------------------------------------------------------------------##
 ##--- end                                              ms_print.in ---##
