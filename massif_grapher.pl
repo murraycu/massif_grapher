@@ -301,6 +301,12 @@ sub read_input_file()
         my $mem_total_B      = $mem_heap_B + $mem_heap_extra_B + $mem_stacks_B;
         my $heap_tree        = equals_num_line(get_line(), "heap_tree");
 
+        #TODO: Or change the formatting on the graph?
+        $mem_heap_B = $mem_heap_B / 1024;
+        $mem_heap_extra_B = $mem_heap_extra_B / 1024;
+        $mem_stacks_B = $mem_stacks_B / 1024;
+        $time = $time / 1000000;
+
         # Remember the snapshot data.
         push(@snapshot_nums, $snapshot_num);
         push(@times,         $time);
@@ -446,7 +452,7 @@ sub print_graph() {
                     my $id = $hash_map_part_names{$function_name};
                     my $dataset_array_ref = $hash_map_part_bytes{$function_name};
                     my @dataset_array = @$dataset_array_ref;
-                    $dataset_array[$i_detailed] = $bytes;
+                    $dataset_array[$i_detailed] = $bytes / 1024; #TODO: Or change the formatting on the graph?
 
                     #TODO: How can we make this unnnecessary?
                     #Without doing this we seem to be just changing a copy of the array.
@@ -505,7 +511,12 @@ sub print_graph() {
 
     my $graph = Chart::Gnuplot->new(
         output => "massif_pretty.ps",
-        bg => { color   => "white" } );
+        bg => { color   => "white" },
+        legend => {position => "outside bottom"},
+        xlabel => "Instructions (millions)",
+        ylabel => "Kilobytes (KiB)",
+        xtics  => {mirror => 'off', labelfmt => "%.0f", rotate => "90"},
+        ytics  => {mirror => 'off', labelfmt => "%.0fk"}  );
 
     $graph->plot2d(@data_sets);
 }
