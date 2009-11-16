@@ -410,8 +410,8 @@ sub print_graph() {
                 $bytes[$i] = 0;
             }
 
-            print "debug: function_name=" . $function_name  . "\n";
-            print "  debug: zeroed size=" . scalar(@bytes) . "\n";
+            #print "debug: function_name=" . $function_name  . "\n";
+            #print "  debug: zeroed size=" . scalar(@bytes) . "\n";
 
             #TODO: How can we make this unnnecessary?
             #Without doing this we seem to be just changing a copy of the array.
@@ -459,8 +459,6 @@ sub print_graph() {
             }
         }
 
-        print "DEBUG: times_detailed=" . scalar(@times_detailed) . "\n";
-
         # Create a data set for each item that is ever mentioned in any snapshot:
         # We sort by the ID so we show the first-mentioned functions lower:
         foreach my $id (sort {$a <=> $b} keys (%hash_map_part_names_reverse)) {
@@ -468,8 +466,7 @@ sub print_graph() {
             my $function_name = $hash_map_part_names_reverse{$id};
             my $bytes_ref = $hash_map_part_bytes{$function_name};
             my @bytes = @$bytes_ref;
-            print "DEBUG:   " . $function_name . "\n";
-            print "DEBUG:     size=" . scalar(@bytes) . "\n";
+
             my $data_set = Chart::Gnuplot::DataSet->new(
                 xdata => \@times_detailed,
                 ydata => \@bytes,
@@ -507,7 +504,7 @@ sub print_graph() {
     #-------------------------------------------------------------------------
 
     my $graph = Chart::Gnuplot->new(
-        output => "massif_pretty.png",
+        output => "massif_pretty.ps",
         bg => { color   => "white" } );
 
     $graph->plot2d(@data_sets);
