@@ -32,10 +32,8 @@
 use warnings;
 use strict;
 
-# This it the libgd-graph-perl package on Ubuntu/Debian.
-use GD::Graph::area;
-use GD::Graph::Data;
-use GD::Graph::colour;
+# This it the libchart-gnuplot-perl package on Ubuntu/Debian.
+use Chart::Gnuplot;
 
 #----------------------------------------------------------------------------
 # Global variables, main data structures
@@ -105,6 +103,8 @@ my $peak_mem_total_szB = 0;
 my %hash_map_part_names = (); 
 # Reverse (Map of all unique indexes to function names):
 my %hash_map_part_names_reverse = ();
+# Map of all function names to an array of the bytes (for each snapshot).
+my %hash_map_part_bytes = (); 
 
 
 #-----------------------------------------------------------------------------
@@ -347,6 +347,11 @@ sub read_input_file()
             if (!(exists $hash_map_part_names{$function_name})) {
               $hash_map_part_names{$function_name} = $function_name_id;
               $hash_map_part_names_reverse{$function_name_id} = $function_name;
+
+              #Initialize the bytes array for this function name too:
+              my @bytes = ();
+              $hash_map_part_bytes{$function_name} = \@bytes;
+
               $function_name_id++;
             }
         }
@@ -372,155 +377,140 @@ sub print_graph() {
     # Setup for graph.
     #-------------------------------------------------------------------------
 
-    my $gd_graph_data = GD::Graph::Data->new()
-      or die GD::Graph::Data->error;
-   
-    my $n_snapshots = scalar(@snapshot_nums);
-    ($n_snapshots > 0) or die;
-
+    my @data_sets = ();
 
     # Work out how many bytes each row represents.  If the peak size was 0,
     # make it 1 so that the Y-axis covers a non-zero range of values.
     if (0 == $peak_mem_total_szB) { $peak_mem_total_szB = 1; }
     my $K = $peak_mem_total_szB;
 
-    for (my $i = 0; $i < $n_snapshots; $i++) {
 
-        # Fill an array for one column for an x item in the GD::Data. 
-        my @gd_row;
+    if ($arg_detailed) {
 
-        # The y item label (to appear for the item on the X axis):
-        $gd_row[0] = $times[$i];
+        my $n_snapshots = scalar(@snapshot_nums);
+        ($n_snapshots > 0) or die;
 
-        #Y axis values:
-        if ($arg_detailed && $is_detaileds[$i]) {
-            # Detailed values, with a y value for each function that is 
-            # mentioned in any snapshot:
+        my @times_detailed = (); 
 
-            # Default to 0 for all items,
-            # to avoid undefined values.
-            foreach my $id (keys(%hash_map_part_names_reverse)) {
-                $gd_row[$id] = 0;
-            }
-
-            my $heap_parts_ref = $mem_heap_parts[$i];
-            my @heap_parts_bytes = @$heap_parts_ref;
-
-            my $heap_parts_names_ref = $mem_heap_part_names[$i];
-            my @heap_parts_names = @$heap_parts_names_ref;
-
-            my $index = 0;
-            foreach my $function_name (@heap_parts_names) {
-                my $bytes = $heap_parts_bytes[$index];
-               
-                my $id = $hash_map_part_names{$function_name};
-                $gd_row[$id] = $bytes;
-
-                $index++;
+        # Make sure that all bytes arrays are big enough, and zeroed,
+        # for each function name, even if they are not mentioned in every snapshot:
+        my $n_snapshots_detailed = 0;
+        for (my $i = 0; $i < $n_snapshots; $i++) {
+            if ($is_detaileds[$i]) {
+                $n_snapshots_detailed++;
             }
         }
-        else {
-            # Just show the overall heap and stack values:
-            $gd_row[1] = $mem_heap_Bs[$i];
-            $gd_row[2] = $mem_heap_extra_Bs[$i];
-            $gd_row[3] = $mem_stacks_Bs[$i];
+
+        my $n_functions = scalar( keys (%hash_map_part_bytes) );
+        foreach my $function_name (keys (%hash_map_part_bytes)) {
+            my $bytes_ref = $hash_map_part_bytes{$function_name};
+            my @bytes = @$bytes_ref;
+
+            for(my $i = 0; $i < $n_snapshots_detailed; $i++) {
+                $bytes[$i] = 0;
+            }
+
+            print "debug: function_name=" . $function_name  . "\n";
+            print "  debug: zeroed size=" . scalar(@bytes) . "\n";
+
+            #TODO: How can we make this unnnecessary?
+            #Without doing this we seem to be just changing a copy of the array.
+            $hash_map_part_bytes{$function_name} = \@bytes;
+
+            #my $bytes_ref2 = $hash_map_part_bytes{$function_name};
+            #my @bytes2 = @$bytes_ref2;
+            #print "  debug: zeroed size2=" . scalar(@bytes2) . "\n";
         }
 
-        $gd_graph_data->add_point(@gd_row);
-    }
+        # Look at each snapshot, and get the bytes for each function:
+        my $i_detailed = 0;
+        for (my $i = 0; $i < $n_snapshots; $i++) {
+
+            #Y axis values:
+            if ($is_detaileds[$i]) {
+                # Detailed values, with a y value for each function that is 
+                # mentioned in any snapshot:
+
+                $times_detailed[$i_detailed] = $times[$i];
+
+                my $heap_parts_ref = $mem_heap_parts[$i];
+                my @heap_parts_bytes = @$heap_parts_ref;
+
+                my $heap_parts_names_ref = $mem_heap_part_names[$i];
+                my @heap_parts_names = @$heap_parts_names_ref;
+
+                my $index = 0;
+                foreach my $function_name (@heap_parts_names) {
+                    my $bytes = $heap_parts_bytes[$index];
+                   
+                    my $id = $hash_map_part_names{$function_name};
+                    my $dataset_array_ref = $hash_map_part_bytes{$function_name};
+                    my @dataset_array = @$dataset_array_ref;
+                    $dataset_array[$i_detailed] = $bytes;
+
+                    #TODO: How can we make this unnnecessary?
+                    #Without doing this we seem to be just changing a copy of the array.
+                    $hash_map_part_bytes{$function_name} = \@dataset_array;
+
+                    $index++;
+                }
+
+                $i_detailed++;
+            }
+        }
+
+        print "DEBUG: times_detailed=" . scalar(@times_detailed) . "\n";
+
+        # Create a data set for each item that is ever mentioned in any snapshot:
+        # We sort by the ID so we show the first-mentioned functions lower:
+        foreach my $id (sort {$a <=> $b} keys (%hash_map_part_names_reverse)) {
+            #print "DEBUG: " . $id . "\n";
+            my $function_name = $hash_map_part_names_reverse{$id};
+            my $bytes_ref = $hash_map_part_bytes{$function_name};
+            my @bytes = @$bytes_ref;
+            print "DEBUG:   " . $function_name . "\n";
+            print "DEBUG:     size=" . scalar(@bytes) . "\n";
+            my $data_set = Chart::Gnuplot::DataSet->new(
+                xdata => \@times_detailed,
+                ydata => \@bytes,
+                style => "lines",
+                title => $function_name);
+            push (@data_sets, $data_set);
+        }
+        
+    } else {
+        my $data_set_simple_heap = Chart::Gnuplot::DataSet->new(
+            xdata => \@times,
+            ydata => \@mem_heap_Bs,
+            style => "lines",
+            title => "Heap");
+        push (@data_sets, $data_set_simple_heap);
+
+        my $data_set_simple_heap_extra = Chart::Gnuplot::DataSet->new(
+            xdata => \@times,
+            ydata => \@mem_heap_extra_Bs,
+            style => "lines",
+            title => "Extra Heap");
+       push (@data_sets, $data_set_simple_heap_extra);
+
+        my $data_set_simple_stack = Chart::Gnuplot::DataSet->new(
+            xdata => \@times,
+            ydata => \@mem_stacks_Bs,
+            style => "lines",
+            title => "Stack");
+       push (@data_sets, $data_set_simple_stack);
+   }
+
 
     #-------------------------------------------------------------------------
     # Print graph[][].
     #-------------------------------------------------------------------------
 
-    # Make sure that all arrays are properly sized and initialized,
-    # just to avoid crashes in unexpected situations.
-    $gd_graph_data->make_strict();
+    my $graph = Chart::Gnuplot->new(
+        output => "massif_pretty.png",
+        bg => { color   => "white" } );
 
-    # Specify a large area so people can zoom in:
-    # If this isn't big enough then we get a "Vertical size too small" or "Horizontal size too small" error 
-    # from Gd::Graph's axestype.pm: setup_boundaries().
-    # Using the defaults (not specify a size) don't help either.
-    # TODO: File a bug about that and/or guess a suitable size. 
-    my $gd_graph = GD::Graph::area->new(4000, 2000);
-
-    my @legend = ();
-
-    if ($arg_detailed) {
-        foreach my $id (keys(%hash_map_part_names_reverse)) {
-            my $function_name = $hash_map_part_names_reverse{$id};
-            push (@legend, $function_name)
-        }
-    }
-    else {
-        @legend = ("Heap", "Extra Heap", "Stacks");
-    }
-
-    $gd_graph->set_legend(@legend); 
-
-    my @colors = ();
-    if ($arg_detailed) {
-        # Use the biggest-possible list of colors,
-        # to avoid reusing the same color.
-
-        #Add some more colors:
-        for (my $i = 0; $i < 500; $i++) {
-            my $hexcolor = '#';
-            for (my $j = 0; $j < 3; $j++) {
-               my $num = rand() * 255;
-               my $hextext = sprintf("%02x", $num);
-               $hexcolor .= $hextext;
-            }
-
-            GD::Graph::colour::add_colour($hexcolor);
-        }
-
-        my @all_colors = GD::Graph::colour::colour_list();
-        # Do not use "white" - that's the same as the background:
-        @colors = grep({$_ ne 'white'} @all_colors);
-    } else {
-      @colors = qw(red green blue);
-    }
-
-    
-
-    $gd_graph->set(
-        #show_values => $gd_graph_data,
-        x_label => 'Instructions (millions)',
-        y_label => 'Kilobytes (KiB)',
-        title   => 'Massif Snapshots',
-        cumulate => 1, # Meaning True
-        #long_ticks => 1, 
-        tick_length => 0,
-        #x_ticks => 0,
-        #y_ticks => 0,
-        #shadow_depth => 4,
-        #shadowclr => 'dred',
-        transparent => 0,
-        'bgclr' => 'white', 
-        'dclrs' => \@colors, 
-        legend_placement => 'RB', 
-        accent_treshold => 100_000, # Don't draw the vertical lines for each x item.
-
-        t_margin => 20,
-        b_margin => 20,
-        l_margin => 20,
-        r_margin => 20,
-
-        y_min_value => 0,
-        y_max_value => $peak_mem_total_szB,
-
-        x_labels_vertical => 1, # Meaning True
-
-        )
-        or warn $gd_graph->error;
-
-    my $gd = $gd_graph->plot($gd_graph_data)
-        or die $gd_graph->error;
-
-    open(IMG, ">massif_pretty.png") or die $!;
-    binmode IMG;
-    print IMG $gd->png;
+    $graph->plot2d(@data_sets);
 }
 
 #----------------------------------------------------------------------------
