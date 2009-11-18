@@ -377,6 +377,88 @@ sub read_input_file()
     print("\n\n");
 }
 
+# Returns the temp file name and the gnuplot using string to map that to the graph.
+sub save_data_to_temp_file() {
+
+    my $file = 'gnuplot.dat';
+    open (TABLE, ">$file");
+
+    #Print the column titles:
+    print TABLE "Time";
+
+    if ($arg_detailed) {
+        foreach my $id (sort {$a <=> $b} keys (%hash_map_part_names_reverse)) {
+            my $function_name = $hash_map_part_names_reverse{$id};
+            print TABLE "\t" . $function_name;
+        }
+    } else {
+        print TABLE "\tHeap\tExtra Heap\tStack\n";
+    }
+
+    # Print the contents of the arrays:
+    my $n_snapshots = scalar(@snapshot_nums);
+    for (my $i = 0; $i < $n_snapshots; $i++) {
+
+        if ($arg_detailed) {
+
+            if ($is_detaileds[$i]) {
+                print TABLE $times[$i];
+
+                my $heap_parts_ref = $mem_heap_parts[$i];
+                my @heap_parts_bytes = @$heap_parts_ref;
+            
+                foreach my $id (sort {$a <=> $b} keys (%hash_map_part_names_reverse)) {
+                     my $function_name = $hash_map_part_names_reverse{$id};
+                     my $bytes_ref = $hash_map_part_bytes{$function_name};
+                     my @bytes = @$bytes_ref;
+
+                     foreach my $bytes_num (@bytes) {
+                         print TABLE "\t" . $bytes_num;
+                    }
+                }
+            }
+        } else {
+            print TABLE $times[$i];
+            print TABLE "\t" . $mem_heap_Bs[$i];
+            print TABLE "\t" . $mem_heap_extra_Bs[$i];
+            print TABLE "\t" . $mem_stacks_Bs[$i];
+        }
+
+        print TABLE "\n";
+    }
+    close (TABLE);
+
+    my $using = "";
+
+    # Construct the "using" string for the DataSet object.
+    # This tells gnuplot what to do with each column from the data file.
+    # Note that the columns are 1-indexed, not 0-indexed.
+    if ($arg_detailed) {
+        $using = "";
+
+        my $col_index = 1;
+        foreach my $id (sort {$a <=> $b} keys (%hash_map_part_names_reverse)) {
+          my $title = $hash_map_part_names_reverse{$id};
+
+          if($using eq "") {
+            $using = "2:xtic(1)";
+          } else {
+            $using .= ", '' using " . $col_index;
+          }
+
+          $col_index++;
+        }
+    } else {
+        $using = "2";
+        $using .= ", '' using 3";
+        $using .= ", '' using 4";
+    }
+
+    print "debug: using=" . $using . "\n";
+
+    return ($file, $using);
+}
+
 sub print_graph() {
 
     #-------------------------------------------------------------------------
@@ -384,6 +466,7 @@ sub print_graph() {
     #-------------------------------------------------------------------------
 
     my @data_sets = ();
+    my $data_set = undef;
 
     # Work out how many bytes each row represents.  If the peak size was 0,
     # make it 1 so that the Y-axis covers a non-zero range of values.
@@ -464,50 +547,21 @@ sub print_graph() {
                 $i_detailed++;
             }
         }
-
-        # Create a data set for each item that is ever mentioned in any snapshot:
-        # We sort by the ID so we show the first-mentioned functions lower:
-        foreach my $id (sort {$a <=> $b} keys (%hash_map_part_names_reverse)) {
-            #print "DEBUG: " . $id . "\n";
-            my $function_name = $hash_map_part_names_reverse{$id};
-            my $bytes_ref = $hash_map_part_bytes{$function_name};
-            my @bytes = @$bytes_ref;
-
-            my $data_set = Chart::Gnuplot::DataSet->new(
-                xdata => \@times_detailed,
-                ydata => \@bytes,
-                style => "lines",
-                title => $function_name);
-            push (@data_sets, $data_set);
-        }
-        
-    } else {
-        my $data_set_simple_heap = Chart::Gnuplot::DataSet->new(
-            xdata => \@times,
-            ydata => \@mem_heap_Bs,
-            style => "lines",
-            title => "Heap");
-        push (@data_sets, $data_set_simple_heap);
-
-        my $data_set_simple_heap_extra = Chart::Gnuplot::DataSet->new(
-            xdata => \@times,
-            ydata => \@mem_heap_extra_Bs,
-            style => "lines",
-            title => "Extra Heap");
-       push (@data_sets, $data_set_simple_heap_extra);
-
-        my $data_set_simple_stack = Chart::Gnuplot::DataSet->new(
-            xdata => \@times,
-            ydata => \@mem_stacks_Bs,
-            style => "lines",
-            title => "Stack");
-       push (@data_sets, $data_set_simple_stack);
-   }
-
+    }
 
     #-------------------------------------------------------------------------
     # Print graph[][].
     #-------------------------------------------------------------------------
+
+    # We save the data to a temporary file and tell Chart::Gnuplot to use 
+    # that file, because that is the only way to use the histograms rowstacked 
+    # style with the Chart::Gnuplot perl API, according to its (helpful) 
+    # maintainer, Ka-Wai Mak:  
+    my ($filename_temp, $gnuplot_using) = save_data_to_temp_file();
+
+    $data_set = Chart::Gnuplot::DataSet->new(
+            datafile => $filename_temp,
+            using    => $gnuplot_using);
 
     my $graph = Chart::Gnuplot->new(
         output => "massif_pretty.ps",
@@ -516,9 +570,17 @@ sub print_graph() {
         xlabel => "Instructions (millions)",
         ylabel => "Kilobytes (KiB)",
         xtics  => {mirror => 'off', labelfmt => "%.0f", rotate => "90"},
-        ytics  => {mirror => 'off', labelfmt => "%.0fk"}  );
+        ytics  => {mirror => 'off', labelfmt => "%.0fk"},  );
 
-    $graph->plot2d(@data_sets);
+    # Custom gnuplot commands that are not supported by the regular 
+    # Graph::Gnuplot perl API:
+    $graph->command("set datafile separator '\t'"); #Otherwise it uses spaces, which would break up the titles.
+    $graph->command("set key autotitle columnheader"); #We can't specify these in $using because Chart::Gnuplot then adds an extra title ''.
+    $graph->command("set style data histogram");
+    $graph->command("set style histogram rowstacked");  # command for rowstacked
+    $graph->command("set style fill solid border -1");
+
+    $graph->plot2d($data_set);
 }
 
 #----------------------------------------------------------------------------
