@@ -33,7 +33,6 @@ use warnings;
 use strict;
 
 # This it the libchart-gnuplot-perl package on Ubuntu/Debian.
-use Chart::Gnuplot;
 
 #----------------------------------------------------------------------------
 # Global variables, main data structures
@@ -559,28 +558,21 @@ sub print_graph() {
     # maintainer, Ka-Wai Mak:  
     my ($filename_temp, $gnuplot_using) = save_data_to_temp_file();
 
-    $data_set = Chart::Gnuplot::DataSet->new(
-            datafile => $filename_temp,
-            using    => $gnuplot_using);
 
-    my $graph = Chart::Gnuplot->new(
-        output => "massif_pretty.ps",
-        bg => { color   => "white" },
-        legend => {position => "outside bottom"},
-        xlabel => "Instructions (millions)",
-        ylabel => "Kilobytes (KiB)",
-        xtics  => {mirror => 'off', labelfmt => "%.0f", rotate => "90"},
-        ytics  => {mirror => 'off', labelfmt => "%.0fk"},  );
-
-    # Custom gnuplot commands that are not supported by the regular 
-    # Graph::Gnuplot perl API:
-    $graph->command("set datafile separator '\t'"); #Otherwise it uses spaces, which would break up the titles.
-    $graph->command("set key autotitle columnheader"); #We can't specify these in $using because Chart::Gnuplot then adds an extra title ''.
-    $graph->command("set style data histogram");
-    $graph->command("set style histogram rowstacked");  # command for rowstacked
-    $graph->command("set style fill solid border -1");
-
-    $graph->plot2d($data_set);
+    open (GNUPLOT, "| gnuplot");
+    print GNUPLOT <<EOPLOT;
+set output 'massif_pretty.ps'
+set datafile separator '\t'
+set key autotitle columnheader
+set style data histogram
+set style histogram rowstacked
+set style fill solid border -1
+set xlabel 'Instructions (millions)'
+set ylabel 'Kilobytes (KiB)'
+plot '$filename_temp' using $gnuplot_using
+set output
+EOPLOT
+    close (GNUPLOT);
 }
 
 #----------------------------------------------------------------------------
