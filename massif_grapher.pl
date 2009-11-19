@@ -570,6 +570,11 @@ set style histogram rowstacked
 set style fill solid border -1
 set xlabel 'Instructions (millions)'
 set ylabel 'Kilobytes (KiB)'
+set key outside bottom reverse
+set xtics nomirror rotate by 90
+set format x "%.0f"
+set ytics nomirror
+set format y "%.0fk"
 plot '$filename_temp' using $gnuplot_using
 EOPLOT
     close (GNUPLOT);
