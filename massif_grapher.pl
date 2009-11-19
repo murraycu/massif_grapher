@@ -442,6 +442,7 @@ sub save_data_to_temp_file() {
           if($using eq "") {
             $using = "2:xtic(1)";
           } else {
+            # '' seems to mean "the same data file as previously mentioned". 
             $using .= ", '' using " . $col_index;
           }
 
@@ -449,6 +450,7 @@ sub save_data_to_temp_file() {
         }
     } else {
         $using = "2:xtic(1)";
+        # '' seems to mean "the same data file as previously mentioned". 
         $using .= ", '' using 3";
         $using .= ", '' using 4";
     }
