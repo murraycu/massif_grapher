@@ -561,6 +561,7 @@ sub print_graph() {
 
     open (GNUPLOT, "| gnuplot");
     print GNUPLOT <<EOPLOT;
+set terminal postscript enhanced color
 set output 'massif_pretty.ps'
 set datafile separator '\t'
 set key autotitle columnheader
@@ -570,7 +571,6 @@ set style fill solid border -1
 set xlabel 'Instructions (millions)'
 set ylabel 'Kilobytes (KiB)'
 plot '$filename_temp' using $gnuplot_using
-set output
 EOPLOT
     close (GNUPLOT);
 }
