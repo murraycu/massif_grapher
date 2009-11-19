@@ -448,7 +448,7 @@ sub save_data_to_temp_file() {
           $col_index++;
         }
     } else {
-        $using = "2";
+        $using = "2:xtic(1)";
         $using .= ", '' using 3";
         $using .= ", '' using 4";
     }
