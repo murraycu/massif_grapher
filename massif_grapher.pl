@@ -518,7 +518,15 @@ sub print_graph() {
     my $gd = $gd_graph->plot($gd_graph_data)
         or die $gd_graph->error;
 
-    open(IMG, ">massif_pretty.png") or die $!;
+    my $output_filename = $input_file;
+    if ($arg_detailed) {
+      $output_filename .= "_detailed";
+    } else {
+      $output_filename .= "_simple";
+    }
+    $output_filename .= ".png";
+
+    open(IMG, ">$output_filename") or die $!;
     binmode IMG;
     print IMG $gd->png;
 }
