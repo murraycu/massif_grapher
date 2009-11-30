@@ -391,8 +391,10 @@ sub save_data_to_temp_file() {
             print TABLE "\t" . $function_name;
         }
     } else {
-        print TABLE "\tHeap\tExtra Heap\tStack\n";
+        print TABLE "\tHeap\tExtra Heap\tStack";
     }
+
+    print TABLE "\n";
 
     # Print the contents of the arrays:
     my $n_snapshots = scalar(@snapshot_nums);
@@ -411,9 +413,7 @@ sub save_data_to_temp_file() {
                      my $bytes_ref = $hash_map_part_bytes{$function_name};
                      my @bytes = @$bytes_ref;
 
-                     foreach my $bytes_num (@bytes) {
-                         print TABLE "\t" . $bytes_num;
-                    }
+                     print TABLE "\t" . @bytes[$i];
                 }
             }
         } else {
@@ -424,6 +424,7 @@ sub save_data_to_temp_file() {
         }
 
         print TABLE "\n";
+
     }
     close (TABLE);
 
