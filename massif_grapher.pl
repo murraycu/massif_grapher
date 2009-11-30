@@ -588,7 +588,7 @@ sub print_graph() {
 
     open (GNUPLOT, "| gnuplot");
     print GNUPLOT <<EOPLOT;
-set terminal postscript enhanced color size 80cm,29.7cm
+set terminal postscript enhanced color size 160cm,59.4cm
 set output '$output_filename'
 set datafile separator '\t'
 set key autotitle columnheader
