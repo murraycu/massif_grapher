@@ -413,7 +413,7 @@ sub save_data_to_temp_file() {
                      my $bytes_ref = $hash_map_part_bytes{$function_name};
                      my @bytes = @$bytes_ref;
 
-                     print TABLE "\t" . @bytes[$i];
+                     print TABLE "\t" . $bytes[$i];
                 }
             }
         } else {
@@ -430,6 +430,9 @@ sub save_data_to_temp_file() {
 
     my $using = "";
 
+    # All these (abbreviations) seem to be necessary:
+    my $color_specifier = "ti col fs solid lc ";
+
     # Construct the "using" string for the DataSet object.
     # This tells gnuplot what to do with each column from the data file.
     # Note that the columns are 1-indexed, not 0-indexed.
@@ -438,7 +441,8 @@ sub save_data_to_temp_file() {
 
         my $col_index = 1;
         foreach my $id (sort {$a <=> $b} keys (%hash_map_part_names_reverse)) {
-          my $title = $hash_map_part_names_reverse{$id};
+          #We do this in the file's first row instead: 
+          #my $title = $hash_map_part_names_reverse{$id};
 
           if($using eq "") {
             $using = "2:xtic(1)";
@@ -446,6 +450,18 @@ sub save_data_to_temp_file() {
             # '' seems to mean "the same data file as previously mentioned". 
             $using .= ", '' using " . $col_index;
           }
+
+          # Specify a random color for each item.
+          # Otherwise it (re)uses only around 10 colors.
+          my $hexcolor = "rgb \"#";
+          for (my $j = 0; $j < 3; $j++) {
+             my $num = rand() * 255;
+             my $hextext = sprintf("%02x", $num);
+             $hexcolor .= $hextext;
+          }
+          $hexcolor .= "\"";
+
+          $using .= $color_specifier . $hexcolor;
 
           $col_index++;
         }
@@ -456,7 +472,7 @@ sub save_data_to_temp_file() {
         $using .= ", '' using 4";
     }
 
-    print "debug: using=" . $using . "\n";
+    # print "debug: using=" . $using . "\n";
 
     return ($file, $using);
 }
@@ -561,7 +577,6 @@ sub print_graph() {
     # maintainer, Ka-Wai Mak:  
     my ($filename_temp, $gnuplot_using) = save_data_to_temp_file();
 
-
     open (GNUPLOT, "| gnuplot");
     print GNUPLOT <<EOPLOT;
 set terminal postscript enhanced color size 80cm,29.7cm
@@ -570,7 +585,7 @@ set datafile separator '\t'
 set key autotitle columnheader
 set style data histogram
 set style histogram rowstacked
-set style fill solid border -1
+set style fill solid noborder
 set xlabel 'Instructions (millions)'
 set ylabel 'Kilobytes (KiB)'
 set key outside bottom reverse
