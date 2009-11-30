@@ -591,7 +591,7 @@ sub print_graph() {
 set terminal postscript enhanced color size 160cm,59.4cm
 set output '$output_filename'
 set datafile separator '\t'
-set key autotitle columnheader
+set key autotitle columnheader invert
 set style data histogram
 set style histogram rowstacked
 set style fill solid noborder
