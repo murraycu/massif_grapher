@@ -571,16 +571,25 @@ sub print_graph() {
     # Print graph[][].
     #-------------------------------------------------------------------------
 
+
     # We save the data to a temporary file and tell Chart::Gnuplot to use 
     # that file, because that is the only way to use the histograms rowstacked 
     # style with the Chart::Gnuplot perl API, according to its (helpful) 
     # maintainer, Ka-Wai Mak:  
     my ($filename_temp, $gnuplot_using) = save_data_to_temp_file();
 
+    my $output_filename = $input_file;
+    if ($arg_detailed) {
+      $output_filename .= "_detailed";
+    } else {
+      $output_filename .= "_simple";
+    }
+    $output_filename .= ".ps";
+
     open (GNUPLOT, "| gnuplot");
     print GNUPLOT <<EOPLOT;
 set terminal postscript enhanced color size 80cm,29.7cm
-set output 'massif_pretty.ps'
+set output '$output_filename'
 set datafile separator '\t'
 set key autotitle columnheader
 set style data histogram

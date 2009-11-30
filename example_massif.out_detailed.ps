@@ -1,0 +1,5957 @@
+%!PS-Adobe-2.0
+%%Title: example_massif.out_detailed.ps
+%%Creator: gnuplot 4.2 patchlevel 5 
+%%CreationDate: Mon Nov 30 17:23:46 2009
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 891 2317
+%%Orientation: Landscape
+%%Pages: (atend)
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following 6 true/false flags may be edited by hand if required
+% The unit line width may also be changed
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape true def
+/Level1 false def
+/Rounded false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+%
+/vshift -46 def
+/dl1 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+Level1 {} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (example_massif.out_detailed.ps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 4.2 patchlevel 5 )
+  /Author (Murray Cumming,,,)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Mon Nov 30 17:23:46 2009)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Gnuplot Prolog Version 4.2 (August 2006)
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+% Default Line colors
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default Line Types
+/LTw {PL [] 1 setgray} def
+/LTb {BL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [4 dl1 2 dl2] LC1 DL} def
+/LT2 {PL [2 dl1 3 dl2] LC2 DL} def
+/LT3 {PL [1 dl1 1.5 dl2] LC3 DL} def
+/LT4 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC5 DL} def
+/LT6 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 4 dl2] LC8 DL} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  gsave 1 setgray fill grestore clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+ 2 lt
+	{/InterpretLevel1 true def}
+	{/InterpretLevel1 Level1 def}
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {show} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
+     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
+     show 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} bind def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get stringwidth pop add} {pop} ifelse} ifelse} forall} bind def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+50 50 translate
+0.100 0.100 scale
+90 rotate
+0 -8418 translate
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+gsave % colour palette begin
+/maxcolors 0 def
+/HSV2RGB {  exch dup 0.0 eq {pop exch pop dup dup} % achromatic gray
+  { /HSVs exch def /HSVv exch def 6.0 mul dup floor dup 3 1 roll sub
+     /HSVf exch def /HSVi exch cvi def /HSVp HSVv 1.0 HSVs sub mul def
+	 /HSVq HSVv 1.0 HSVs HSVf mul sub mul def 
+	 /HSVt HSVv 1.0 HSVs 1.0 HSVf sub mul sub mul def
+	 /HSVi HSVi 6 mod def 0 HSVi eq {HSVv HSVt HSVp}
+	 {1 HSVi eq {HSVq HSVv HSVp}{2 HSVi eq {HSVp HSVv HSVt}
+	 {3 HSVi eq {HSVp HSVq HSVv}{4 HSVi eq {HSVt HSVp HSVv}
+	 {HSVv HSVp HSVq} ifelse} ifelse} ifelse} ifelse} ifelse
+  } ifelse} def
+/Constrain {
+  dup 0 lt {0 exch pop}{dup 1 gt {1 exch pop} if} ifelse} def
+/YIQ2RGB {
+  3 copy -1.702 mul exch -1.105 mul add add Constrain 4 1 roll
+  3 copy -0.647 mul exch -0.272 mul add add Constrain 5 1 roll
+  0.621 mul exch -0.956 mul add add Constrain 3 1 roll } def
+/CMY2RGB {  1 exch sub exch 1 exch sub 3 2 roll 1 exch sub 3 1 roll exch } def
+/XYZ2RGB {  3 copy -0.9017 mul exch -0.1187 mul add exch 0.0585 mul exch add
+  Constrain 4 1 roll 3 copy -0.0279 mul exch 1.999 mul add exch
+  -0.9844 mul add Constrain 5 1 roll -0.2891 mul exch -0.5338 mul add
+  exch 1.91 mul exch add Constrain 3 1 roll} def
+/SelectSpace {ColorSpace (HSV) eq {HSV2RGB}{ColorSpace (XYZ) eq {
+  XYZ2RGB}{ColorSpace (CMY) eq {CMY2RGB}{ColorSpace (YIQ) eq {YIQ2RGB}
+  if} ifelse} ifelse} ifelse} def
+/InterpolatedColor false def
+/cF7 {sqrt} bind def	% sqrt(x)
+/cF5 {dup dup mul mul} bind def	% x^3
+/cF15 {360 mul sin} bind def	% sin(360x)
+/pm3dround {maxcolors 0 gt {dup 1 ge
+	{pop 1} {maxcolors mul floor maxcolors 1 sub div} ifelse} if} def
+/pm3dGamma 1.0 1.5 div def
+/ColorSpace (RGB) def
+Color InterpolatedColor or { % COLOUR vs. GRAY map
+  InterpolatedColor { %% Interpolation vs. RGB-Formula
+    /g {stroke pm3dround /grayv exch def interpolate
+        SelectSpace setrgbcolor} bind def
+  }{
+  /g {stroke pm3dround dup cF7 Constrain exch dup cF5 Constrain exch cF15 Constrain 
+       SelectSpace setrgbcolor} bind def
+  } ifelse
+}{
+  /g {stroke pm3dround pm3dGamma exp setgray} bind def
+} ifelse
+1.000 UL
+LTb
+938 1232 M
+63 0 V
+stroke
+854 1232 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0k)]
+] -46.7 MRshow
+1.000 UL
+LTb
+938 2235 M
+63 0 V
+stroke
+854 2235 M
+[ [(Helvetica) 140.0 0.0 true true 0 (1000k)]
+] -46.7 MRshow
+1.000 UL
+LTb
+938 3237 M
+63 0 V
+stroke
+854 3237 M
+[ [(Helvetica) 140.0 0.0 true true 0 (2000k)]
+] -46.7 MRshow
+1.000 UL
+LTb
+938 4240 M
+63 0 V
+stroke
+854 4240 M
+[ [(Helvetica) 140.0 0.0 true true 0 (3000k)]
+] -46.7 MRshow
+1.000 UL
+LTb
+938 5242 M
+63 0 V
+stroke
+854 5242 M
+[ [(Helvetica) 140.0 0.0 true true 0 (4000k)]
+] -46.7 MRshow
+1.000 UL
+LTb
+938 6245 M
+63 0 V
+stroke
+854 6245 M
+[ [(Helvetica) 140.0 0.0 true true 0 (5000k)]
+] -46.7 MRshow
+1.000 UL
+LTb
+938 7247 M
+63 0 V
+stroke
+854 7247 M
+[ [(Helvetica) 140.0 0.0 true true 0 (6000k)]
+] -46.7 MRshow
+1.000 UL
+LTb
+938 8250 M
+63 0 V
+stroke
+854 8250 M
+[ [(Helvetica) 140.0 0.0 true true 0 (7000k)]
+] -46.7 MRshow
+1.000 UL
+LTb
+1090 1232 M
+0 63 V
+stroke
+1090 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (0)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+1242 1232 M
+0 63 V
+stroke
+1242 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (46.630998)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+1394 1232 M
+0 63 V
+stroke
+1394 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (103.782873)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+1546 1232 M
+0 63 V
+stroke
+1546 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (140.560091)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+1698 1232 M
+0 63 V
+stroke
+1698 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (181.402739)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+1850 1232 M
+0 63 V
+stroke
+1850 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (228.019956)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+2001 1232 M
+0 63 V
+stroke
+2001 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (256.741269)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+2153 1232 M
+0 63 V
+stroke
+2153 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (307.253235)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+2305 1232 M
+0 63 V
+stroke
+2305 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (339.736411)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+2457 1232 M
+0 63 V
+stroke
+2457 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (369.091648)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+2609 1232 M
+0 63 V
+stroke
+2609 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (418.954595)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+2761 1232 M
+0 63 V
+stroke
+2761 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (466.924742)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+2913 1232 M
+0 63 V
+stroke
+2913 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (499.822399)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+3065 1232 M
+0 63 V
+stroke
+3065 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (548.794562)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+3217 1232 M
+0 63 V
+stroke
+3217 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (593.621466)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+3369 1232 M
+0 63 V
+stroke
+3369 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (637.008893)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+3521 1232 M
+0 63 V
+stroke
+3521 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (663.765825)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+3673 1232 M
+0 63 V
+stroke
+3673 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (696.835436)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+3825 1232 M
+0 63 V
+stroke
+3825 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (742.116662)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+3977 1232 M
+0 63 V
+stroke
+3977 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (772.909861)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+4128 1232 M
+0 63 V
+stroke
+4128 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (810.789593)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+4280 1232 M
+0 63 V
+stroke
+4280 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (840.182171)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+4432 1232 M
+0 63 V
+stroke
+4432 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (868.093781)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+4584 1232 M
+0 63 V
+stroke
+4584 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (923.928224)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+4736 1232 M
+0 63 V
+stroke
+4736 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (961.13648)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+4888 1232 M
+0 63 V
+stroke
+4888 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (998.351122)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+5040 1232 M
+0 63 V
+stroke
+5040 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1026.259935)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+5192 1232 M
+0 63 V
+stroke
+5192 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1072.777545)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+5344 1232 M
+0 63 V
+stroke
+5344 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1109.986198)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+5496 1232 M
+0 63 V
+stroke
+5496 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1147.206241)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+5648 1232 M
+0 63 V
+stroke
+5648 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1203.03152)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+5800 1232 M
+0 63 V
+stroke
+5800 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1232.782519)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+5952 1232 M
+0 63 V
+stroke
+5952 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1270.908076)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+6104 1232 M
+0 63 V
+stroke
+6104 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1299.72913)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+6255 1232 M
+0 63 V
+stroke
+6255 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1333.715994)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+6407 1232 M
+0 63 V
+stroke
+6407 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1372.757088)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+6559 1232 M
+0 63 V
+stroke
+6559 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1426.847628)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+6711 1232 M
+0 63 V
+stroke
+6711 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1455.668779)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+6863 1232 M
+0 63 V
+stroke
+6863 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1496.160915)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+7015 1232 M
+0 63 V
+stroke
+7015 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1524.983742)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+7167 1232 M
+0 63 V
+stroke
+7167 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1559.405914)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+7319 1232 M
+0 63 V
+stroke
+7319 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1588.331868)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+7471 1232 M
+0 63 V
+stroke
+7471 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1617.155873)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+7623 1232 M
+0 63 V
+stroke
+7623 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1645.983797)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+7775 1232 M
+0 63 V
+stroke
+7775 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1686.53122)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+7927 1232 M
+0 63 V
+stroke
+7927 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1717.425996)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+8079 1232 M
+0 63 V
+stroke
+8079 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1746.25075)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+8231 1232 M
+0 63 V
+stroke
+8231 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1777.216696)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+8382 1232 M
+0 63 V
+stroke
+8382 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1830.894757)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+8534 1232 M
+0 63 V
+stroke
+8534 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1874.710666)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+8686 1232 M
+0 63 V
+stroke
+8686 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1879.608396)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+8838 1232 M
+0 63 V
+stroke
+8838 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1906.368654)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+8990 1232 M
+0 63 V
+stroke
+8990 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1914.23297)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+9142 1232 M
+0 63 V
+stroke
+9142 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1940.991939)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+9294 1232 M
+0 63 V
+stroke
+9294 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1967.75125)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+9446 1232 M
+0 63 V
+stroke
+9446 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (1994.514391)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+9598 1232 M
+0 63 V
+stroke
+9598 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (2021.2754)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+9750 1232 M
+0 63 V
+stroke
+9750 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (2048.033377)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+9902 1232 M
+0 63 V
+stroke
+9902 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (2074.790496)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+10054 1232 M
+0 63 V
+stroke
+10054 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (2101.548346)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+10206 1232 M
+0 63 V
+stroke
+10206 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (2128.305551)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+10358 1232 M
+0 63 V
+stroke
+10358 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (2155.062808)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+10509 1232 M
+0 63 V
+stroke
+10509 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (2181.821042)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+10661 1232 M
+0 63 V
+stroke
+10661 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (2208.57928)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+10813 1232 M
+0 63 V
+stroke
+10813 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (2235.339914)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+10965 1232 M
+0 63 V
+stroke
+10965 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (2262.444525)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+11117 1232 M
+0 63 V
+stroke
+11117 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (2289.201756)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+11269 1232 M
+0 63 V
+stroke
+11269 1148 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (2318.524449)]
+] -46.7 MRshow
+grestore
+1.000 UL
+LTb
+1.000 UL
+LTb
+938 8250 N
+0 -7018 V
+10483 0 V
+0 7018 V
+938 8250 L
+Z stroke
+LCb setrgbcolor
+280 4741 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (Kilobytes \(KiB\))]
+] -46.7 MCshow
+grestore
+LTb
+LCb setrgbcolor
+6179 98 M
+[ [(Helvetica) 140.0 0.0 true true 0 (Instructions \(millions\))]
+] -46.7 MCshow
+LTb
+1.000 UP
+1.000 UL
+LTb
+1.000 UL
+LT0
+0.17 0.04 0.05 C LTb
+17070 5362 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x5A22DDD: )]
+[(Helvetica) 89.6 -75.6 true true 0 (f)]
+[(Helvetica) 140.0 0.0 true true 0 (open)]
+[(Helvetica) 112.0 -42.0 true true 0 (i)]
+[(Helvetica) 140.0 0.0 true true 0 (nternal \(iofopen.c:76\))]
+] -21.5 MRshow
+LT0
+0.17 0.04 0.05 C 11631 5327 N 0 -70 399 0 0 70 h
+LTw
+LT0
+0.17 0.04 0.05 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1232 N 0 -1 153 0 0 1 h
+1318 1232 N 0 -1 153 0 0 1 h
+1470 1232 N 0 -1 153 0 0 1 h
+1622 1232 N 0 -1 153 0 0 1 h
+1774 1232 N 0 -1 153 0 0 1 h
+1926 1232 N 0 -1 152 0 0 1 h
+2077 1232 N 0 -1 153 0 0 1 h
+2229 1232 N 0 -1 153 0 0 1 h
+2381 1232 N 0 -1 153 0 0 1 h
+2533 1232 N 0 -1 153 0 0 1 h
+2685 1232 N 0 -1 153 0 0 1 h
+2837 1232 N 0 -1 153 0 0 1 h
+2989 1232 N 0 -1 153 0 0 1 h
+3141 1232 N 0 -1 153 0 0 1 h
+3293 1232 N 0 -1 153 0 0 1 h
+3445 1232 N 0 -1 153 0 0 1 h
+3597 1232 N 0 -1 153 0 0 1 h
+3749 1232 N 0 -1 153 0 0 1 h
+3901 1232 N 0 -1 153 0 0 1 h
+4053 1232 N 0 -1 152 0 0 1 h
+4204 1232 N 0 -1 153 0 0 1 h
+4356 1232 N 0 -1 153 0 0 1 h
+4508 1232 N 0 -1 153 0 0 1 h
+4660 1232 N 0 -1 153 0 0 1 h
+4812 1232 N 0 -1 153 0 0 1 h
+4964 1232 N 0 -1 153 0 0 1 h
+5116 1232 N 0 -1 153 0 0 1 h
+5268 1232 N 0 -1 153 0 0 1 h
+5420 1232 N 0 -1 153 0 0 1 h
+5572 1232 N 0 -1 153 0 0 1 h
+5724 1232 N 0 -1 153 0 0 1 h
+5876 1232 N 0 -1 153 0 0 1 h
+6028 1232 N 0 -1 153 0 0 1 h
+6180 1232 N 0 -1 152 0 0 1 h
+6331 1232 N 0 -1 153 0 0 1 h
+6483 1232 N 0 -1 153 0 0 1 h
+6635 1232 N 0 -1 153 0 0 1 h
+6787 1232 N 0 -1 153 0 0 1 h
+6939 1232 N 0 -1 153 0 0 1 h
+7091 1232 N 0 -1 153 0 0 1 h
+7243 1232 N 0 -1 153 0 0 1 h
+7395 1232 N 0 -1 153 0 0 1 h
+7547 1232 N 0 -1 153 0 0 1 h
+7699 1232 N 0 -1 153 0 0 1 h
+7851 1232 N 0 -1 153 0 0 1 h
+8003 1232 N 0 -1 153 0 0 1 h
+8155 1232 N 0 -1 152 0 0 1 h
+8306 1232 N 0 -1 153 0 0 1 h
+8458 1232 N 0 -1 153 0 0 1 h
+8610 1232 N 0 -1 153 0 0 1 h
+8762 1232 N 0 -1 153 0 0 1 h
+8914 1232 N 0 -1 153 0 0 1 h
+9066 1232 N 0 -1 153 0 0 1 h
+9218 1232 N 0 -1 153 0 0 1 h
+9370 1232 N 0 -1 153 0 0 1 h
+9522 1232 N 0 -1 153 0 0 1 h
+9674 1232 N 0 -1 153 0 0 1 h
+9826 1232 N 0 -1 153 0 0 1 h
+9978 1232 N 0 -1 153 0 0 1 h
+10130 1232 N 0 -1 153 0 0 1 h
+10282 1232 N 0 -1 152 0 0 1 h
+10433 1232 N 0 -1 153 0 0 1 h
+10585 1232 N 0 -1 153 0 0 1 h
+10737 1232 N 0 -1 153 0 0 1 h
+10889 1232 N 0 -1 153 0 0 1 h
+11041 1232 N 0 -1 153 0 0 1 h
+11193 1232 N 0 -1 153 0 0 1 h
+1.000 UL
+LT1
+0.18 0.84 0.14 C LTb
+17070 5222 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x5A22DDD: )]
+[(Helvetica) 89.6 -75.6 true true 0 (f)]
+[(Helvetica) 140.0 0.0 true true 0 (open)]
+[(Helvetica) 112.0 -42.0 true true 0 (i)]
+[(Helvetica) 140.0 0.0 true true 0 (nternal \(iofopen.c:76\))]
+] -21.5 MRshow
+LT1
+0.18 0.84 0.14 C 11631 5187 N 0 -70 399 0 0 70 h
+LTw
+LT1
+0.18 0.84 0.14 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1232 N 0 -2 153 0 0 2 h
+1318 1232 N 0 -1 153 0 0 1 h
+1470 1232 N 0 -1 153 0 0 1 h
+1622 1232 N 0 -1 153 0 0 1 h
+1774 1232 N 0 -1 153 0 0 1 h
+1926 1232 N 0 -1 152 0 0 1 h
+2077 1232 N 0 -1 153 0 0 1 h
+2229 1232 N 0 -1 153 0 0 1 h
+2381 1232 N 0 -1 153 0 0 1 h
+2533 1232 N 0 -1 153 0 0 1 h
+2685 1232 N 0 -1 153 0 0 1 h
+2837 1232 N 0 -1 153 0 0 1 h
+2989 1232 N 0 -1 153 0 0 1 h
+3141 1232 N 0 -1 153 0 0 1 h
+3293 1232 N 0 -1 153 0 0 1 h
+3445 1232 N 0 -1 153 0 0 1 h
+3597 1232 N 0 -1 153 0 0 1 h
+3749 1232 N 0 -1 153 0 0 1 h
+3901 1232 N 0 -1 153 0 0 1 h
+4053 1232 N 0 -1 152 0 0 1 h
+4204 1232 N 0 -1 153 0 0 1 h
+4356 1232 N 0 -1 153 0 0 1 h
+4508 1232 N 0 -1 153 0 0 1 h
+4660 1232 N 0 -1 153 0 0 1 h
+4812 1232 N 0 -1 153 0 0 1 h
+4964 1232 N 0 -1 153 0 0 1 h
+5116 1232 N 0 -1 153 0 0 1 h
+5268 1232 N 0 -1 153 0 0 1 h
+5420 1232 N 0 -1 153 0 0 1 h
+5572 1232 N 0 -1 153 0 0 1 h
+5724 1232 N 0 -1 153 0 0 1 h
+5876 1232 N 0 -1 153 0 0 1 h
+6028 1232 N 0 -1 153 0 0 1 h
+6180 1232 N 0 -1 152 0 0 1 h
+6331 1232 N 0 -1 153 0 0 1 h
+6483 1232 N 0 -1 153 0 0 1 h
+6635 1232 N 0 -1 153 0 0 1 h
+6787 1232 N 0 -1 153 0 0 1 h
+6939 1232 N 0 -1 153 0 0 1 h
+7091 1232 N 0 -1 153 0 0 1 h
+7243 1232 N 0 -1 153 0 0 1 h
+7395 1232 N 0 -1 153 0 0 1 h
+7547 1232 N 0 -1 153 0 0 1 h
+7699 1232 N 0 -1 153 0 0 1 h
+7851 1232 N 0 -1 153 0 0 1 h
+8003 1232 N 0 -1 153 0 0 1 h
+8155 1232 N 0 -1 152 0 0 1 h
+8306 1232 N 0 -1 153 0 0 1 h
+8458 1232 N 0 -1 153 0 0 1 h
+8610 1232 N 0 -1 153 0 0 1 h
+8762 1232 N 0 -1 153 0 0 1 h
+8914 1232 N 0 -1 153 0 0 1 h
+9066 1232 N 0 -1 153 0 0 1 h
+9218 1232 N 0 -1 153 0 0 1 h
+9370 1232 N 0 -1 153 0 0 1 h
+9522 1232 N 0 -1 153 0 0 1 h
+9674 1232 N 0 -1 153 0 0 1 h
+9826 1232 N 0 -1 153 0 0 1 h
+9978 1232 N 0 -1 153 0 0 1 h
+10130 1232 N 0 -1 153 0 0 1 h
+10282 1232 N 0 -1 152 0 0 1 h
+10433 1232 N 0 -1 153 0 0 1 h
+10585 1232 N 0 -1 153 0 0 1 h
+10737 1232 N 0 -1 153 0 0 1 h
+10889 1232 N 0 -1 153 0 0 1 h
+11041 1232 N 0 -1 153 0 0 1 h
+11193 1232 N 0 -1 153 0 0 1 h
+1.000 UL
+LT2
+0.69 0.56 0.58 C LTb
+17070 5082 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x57985E2: PyObject)]
+[(Helvetica) 112.0 -42.0 true true 0 (M)]
+[(Helvetica) 140.0 0.0 true true 0 (alloc \(obmalloc.c:563\))]
+] -32.7 MRshow
+LT2
+0.69 0.56 0.58 C 11631 5047 N 0 -70 399 0 0 70 h
+LTw
+LT2
+0.69 0.56 0.58 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 1232 N 0 -514 153 0 0 514 h
+1470 1232 N 0 -514 153 0 0 514 h
+1622 1232 N 0 -771 153 0 0 771 h
+1774 1232 N 0 -771 153 0 0 771 h
+1926 1232 N 0 -771 152 0 0 771 h
+2077 1232 N 0 -771 153 0 0 771 h
+2229 1232 N 0 -771 153 0 0 771 h
+2381 1232 N 0 -771 153 0 0 771 h
+2533 1232 N 0 -771 153 0 0 771 h
+2685 1232 N 0 -771 153 0 0 771 h
+2837 1232 N 0 -771 153 0 0 771 h
+2989 1232 N 0 -771 153 0 0 771 h
+3141 1232 N 0 -771 153 0 0 771 h
+3293 1232 N 0 -771 153 0 0 771 h
+3445 1232 N 0 -771 153 0 0 771 h
+3597 1232 N 0 -771 153 0 0 771 h
+3749 1232 N 0 -771 153 0 0 771 h
+3901 1232 N 0 -771 153 0 0 771 h
+4053 1232 N 0 -771 152 0 0 771 h
+4204 1232 N 0 -771 153 0 0 771 h
+4356 1232 N 0 -771 153 0 0 771 h
+4508 1232 N 0 -771 153 0 0 771 h
+4660 1232 N 0 -771 153 0 0 771 h
+4812 1232 N 0 -771 153 0 0 771 h
+4964 1232 N 0 -771 153 0 0 771 h
+5116 1232 N 0 -771 153 0 0 771 h
+5268 1232 N 0 -771 153 0 0 771 h
+5420 1232 N 0 -771 153 0 0 771 h
+5572 1232 N 0 -771 153 0 0 771 h
+5724 1232 N 0 -771 153 0 0 771 h
+5876 1232 N 0 -771 153 0 0 771 h
+6028 1232 N 0 -771 153 0 0 771 h
+6180 1232 N 0 -771 152 0 0 771 h
+6331 1232 N 0 -771 153 0 0 771 h
+6483 1232 N 0 -771 153 0 0 771 h
+6635 1232 N 0 -771 153 0 0 771 h
+6787 1232 N 0 -771 153 0 0 771 h
+6939 1232 N 0 -771 153 0 0 771 h
+7091 1232 N 0 -771 153 0 0 771 h
+7243 1232 N 0 -771 153 0 0 771 h
+7395 1232 N 0 -771 153 0 0 771 h
+7547 1232 N 0 -771 153 0 0 771 h
+7699 1232 N 0 -771 153 0 0 771 h
+7851 1232 N 0 -771 153 0 0 771 h
+8003 1232 N 0 -771 153 0 0 771 h
+8155 1232 N 0 -771 152 0 0 771 h
+8306 1232 N 0 -771 153 0 0 771 h
+8458 1232 N 0 -771 153 0 0 771 h
+8610 1232 N 0 -771 153 0 0 771 h
+8762 1232 N 0 -771 153 0 0 771 h
+8914 1232 N 0 -771 153 0 0 771 h
+9066 1232 N 0 -771 153 0 0 771 h
+9218 1232 N 0 -771 153 0 0 771 h
+9370 1232 N 0 -771 153 0 0 771 h
+9522 1232 N 0 -771 153 0 0 771 h
+9674 1232 N 0 -771 153 0 0 771 h
+9826 1232 N 0 -771 153 0 0 771 h
+9978 1232 N 0 -771 153 0 0 771 h
+10130 1232 N 0 -771 153 0 0 771 h
+10282 1232 N 0 -771 152 0 0 771 h
+10433 1232 N 0 -771 153 0 0 771 h
+10585 1232 N 0 -771 153 0 0 771 h
+10737 1232 N 0 -771 153 0 0 771 h
+10889 1232 N 0 -771 153 0 0 771 h
+11041 1232 N 0 -771 153 0 0 771 h
+11193 1232 N 0 -771 153 0 0 771 h
+1.000 UL
+LT3
+0.94 0.47 0.50 C LTb
+17070 4942 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x5792ABD: dictresize \(dictobject.c:517\))]
+] -46.7 MRshow
+LT3
+0.94 0.47 0.50 C 11631 4907 N 0 -70 399 0 0 70 h
+LTw
+LT3
+0.94 0.47 0.50 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 1745 N 0 -206 153 0 0 206 h
+1470 1745 N 0 -206 153 0 0 206 h
+1622 2002 N 0 -281 153 0 0 281 h
+1774 2002 N 0 -416 153 0 0 416 h
+1926 2002 N 0 -416 152 0 0 416 h
+2077 2002 N 0 -416 153 0 0 416 h
+2229 2002 N 0 -416 153 0 0 416 h
+2381 2002 N 0 -416 153 0 0 416 h
+2533 2002 N 0 -416 153 0 0 416 h
+2685 2002 N 0 -416 153 0 0 416 h
+2837 2002 N 0 -416 153 0 0 416 h
+2989 2002 N 0 -416 153 0 0 416 h
+3141 2002 N 0 -416 153 0 0 416 h
+3293 2002 N 0 -416 153 0 0 416 h
+3445 2002 N 0 -416 153 0 0 416 h
+3597 2002 N 0 -416 153 0 0 416 h
+3749 2002 N 0 -416 153 0 0 416 h
+3901 2002 N 0 -416 153 0 0 416 h
+4053 2002 N 0 -416 152 0 0 416 h
+4204 2002 N 0 -416 153 0 0 416 h
+4356 2002 N 0 -416 153 0 0 416 h
+4508 2002 N 0 -416 153 0 0 416 h
+4660 2002 N 0 -416 153 0 0 416 h
+4812 2002 N 0 -416 153 0 0 416 h
+4964 2002 N 0 -416 153 0 0 416 h
+5116 2002 N 0 -416 153 0 0 416 h
+5268 2002 N 0 -416 153 0 0 416 h
+5420 2002 N 0 -416 153 0 0 416 h
+5572 2002 N 0 -416 153 0 0 416 h
+5724 2002 N 0 -416 153 0 0 416 h
+5876 2002 N 0 -416 153 0 0 416 h
+6028 2002 N 0 -416 153 0 0 416 h
+6180 2002 N 0 -416 152 0 0 416 h
+6331 2002 N 0 -416 153 0 0 416 h
+6483 2002 N 0 -416 153 0 0 416 h
+6635 2002 N 0 -416 153 0 0 416 h
+6787 2002 N 0 -416 153 0 0 416 h
+6939 2002 N 0 -416 153 0 0 416 h
+7091 2002 N 0 -416 153 0 0 416 h
+7243 2002 N 0 -416 153 0 0 416 h
+7395 2002 N 0 -416 153 0 0 416 h
+7547 2002 N 0 -416 153 0 0 416 h
+7699 2002 N 0 -416 153 0 0 416 h
+7851 2002 N 0 -416 153 0 0 416 h
+8003 2002 N 0 -416 153 0 0 416 h
+8155 2002 N 0 -416 152 0 0 416 h
+8306 2002 N 0 -416 153 0 0 416 h
+8458 2002 N 0 -416 153 0 0 416 h
+8610 2002 N 0 -416 153 0 0 416 h
+8762 2002 N 0 -416 153 0 0 416 h
+8914 2002 N 0 -416 153 0 0 416 h
+9066 2002 N 0 -416 153 0 0 416 h
+9218 2002 N 0 -416 153 0 0 416 h
+9370 2002 N 0 -416 153 0 0 416 h
+9522 2002 N 0 -416 153 0 0 416 h
+9674 2002 N 0 -416 153 0 0 416 h
+9826 2002 N 0 -416 153 0 0 416 h
+9978 2002 N 0 -416 153 0 0 416 h
+10130 2002 N 0 -416 153 0 0 416 h
+10282 2002 N 0 -416 152 0 0 416 h
+10433 2002 N 0 -416 153 0 0 416 h
+10585 2002 N 0 -416 153 0 0 416 h
+10737 2002 N 0 -416 153 0 0 416 h
+10889 2002 N 0 -416 153 0 0 416 h
+11041 2002 N 0 -416 153 0 0 416 h
+11193 2002 N 0 -416 153 0 0 416 h
+1.000 UL
+LT4
+0.49 0.66 0.61 C LTb
+17070 4802 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x567F712: g)]
+[(Helvetica) 112.0 -42.0 true true 0 (m)]
+[(Helvetica) 140.0 0.0 true true 0 (alloc0 \(gmem.c:151\))]
+] -32.7 MRshow
+LT4
+0.49 0.66 0.61 C 11631 4767 N 0 -70 399 0 0 70 h
+LTw
+LT4
+0.49 0.66 0.61 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 1950 N 0 -138 153 0 0 138 h
+1470 1950 N 0 -161 153 0 0 161 h
+1622 2282 N 0 -187 153 0 0 187 h
+1774 2417 N 0 -220 153 0 0 220 h
+1926 2417 N 0 -238 152 0 0 238 h
+2077 2417 N 0 -297 153 0 0 297 h
+2229 2417 N 0 -329 153 0 0 329 h
+2381 2417 N 0 -349 153 0 0 349 h
+2533 2417 N 0 -515 153 0 0 515 h
+2685 2417 N 0 -507 153 0 0 507 h
+2837 2417 N 0 -545 153 0 0 545 h
+2989 2417 N 0 -554 153 0 0 554 h
+3141 2417 N 0 -573 153 0 0 573 h
+3293 2417 N 0 -560 153 0 0 560 h
+3445 2417 N 0 -560 153 0 0 560 h
+3597 2417 N 0 -561 153 0 0 561 h
+3749 2417 N 0 -567 153 0 0 567 h
+3901 2417 N 0 -706 153 0 0 706 h
+4053 2417 N 0 -795 152 0 0 795 h
+4204 2417 N 0 -834 153 0 0 834 h
+4356 2417 N 0 -874 153 0 0 874 h
+4508 2417 N 0 -984 153 0 0 984 h
+4660 2417 N 0 -1032 153 0 0 1032 h
+4812 2417 N 0 -1090 153 0 0 1090 h
+4964 2417 N 0 -1097 153 0 0 1097 h
+5116 2417 N 0 -1105 153 0 0 1105 h
+5268 2417 N 0 -1107 153 0 0 1107 h
+5420 2417 N 0 -1116 153 0 0 1116 h
+5572 2417 N 0 -1117 153 0 0 1117 h
+5724 2417 N 0 -1126 153 0 0 1126 h
+5876 2417 N 0 -1131 153 0 0 1131 h
+6028 2417 N 0 -1154 153 0 0 1154 h
+6180 2417 N 0 -1207 152 0 0 1207 h
+6331 2417 N 0 -1220 153 0 0 1220 h
+6483 2417 N 0 -1223 153 0 0 1223 h
+6635 2417 N 0 -1226 153 0 0 1226 h
+6787 2417 N 0 -1248 153 0 0 1248 h
+6939 2417 N 0 -1258 153 0 0 1258 h
+7091 2417 N 0 -1262 153 0 0 1262 h
+7243 2417 N 0 -1262 153 0 0 1262 h
+7395 2417 N 0 -1264 153 0 0 1264 h
+7547 2417 N 0 -1269 153 0 0 1269 h
+7699 2417 N 0 -1325 153 0 0 1325 h
+7851 2417 N 0 -1311 153 0 0 1311 h
+8003 2417 N 0 -1314 153 0 0 1314 h
+8155 2417 N 0 -1321 152 0 0 1321 h
+8306 2417 N 0 -1323 153 0 0 1323 h
+8458 2417 N 0 -1322 153 0 0 1322 h
+8610 2417 N 0 -1322 153 0 0 1322 h
+8762 2417 N 0 -1321 153 0 0 1321 h
+8914 2417 N 0 -1353 153 0 0 1353 h
+9066 2417 N 0 -1322 153 0 0 1322 h
+9218 2417 N 0 -1323 153 0 0 1323 h
+9370 2417 N 0 -1323 153 0 0 1323 h
+9522 2417 N 0 -1323 153 0 0 1323 h
+9674 2417 N 0 -1296 153 0 0 1296 h
+9826 2417 N 0 -1323 153 0 0 1323 h
+9978 2417 N 0 -1325 153 0 0 1325 h
+10130 2417 N 0 -1324 153 0 0 1324 h
+10282 2417 N 0 -1313 152 0 0 1313 h
+10433 2417 N 0 -1331 153 0 0 1331 h
+10585 2417 N 0 -1329 153 0 0 1329 h
+10737 2417 N 0 -1329 153 0 0 1329 h
+10889 2417 N 0 -1327 153 0 0 1327 h
+11041 2417 N 0 -1322 153 0 0 1322 h
+11193 2417 N 0 -1314 153 0 0 1314 h
+1.000 UL
+LT5
+0.89 0.40 0.32 C LTb
+17070 4662 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x579861A: PyObject)]
+[(Helvetica) 112.0 -42.0 true true 0 (M)]
+[(Helvetica) 140.0 0.0 true true 0 (alloc \(obmalloc.c:902\))]
+] -32.7 MRshow
+LT5
+0.89 0.40 0.32 C 11631 4627 N 0 -70 399 0 0 70 h
+LTw
+LT5
+0.89 0.40 0.32 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2087 N 0 -135 153 0 0 135 h
+1470 2110 N 0 -135 153 0 0 135 h
+1622 2468 N 0 -233 153 0 0 233 h
+1774 2636 N 0 -246 153 0 0 246 h
+1926 2654 N 0 -246 152 0 0 246 h
+2077 2713 N 0 -246 153 0 0 246 h
+2229 2745 N 0 -247 153 0 0 247 h
+2381 2765 N 0 -246 153 0 0 246 h
+2533 2931 N 0 -246 153 0 0 246 h
+2685 2923 N 0 -246 153 0 0 246 h
+2837 2961 N 0 -246 153 0 0 246 h
+2989 2970 N 0 -246 153 0 0 246 h
+3141 2989 N 0 -246 153 0 0 246 h
+3293 2976 N 0 -246 153 0 0 246 h
+3445 2976 N 0 -246 153 0 0 246 h
+3597 2977 N 0 -246 153 0 0 246 h
+3749 2983 N 0 -246 153 0 0 246 h
+3901 3122 N 0 -246 153 0 0 246 h
+4053 3211 N 0 -246 152 0 0 246 h
+4204 3250 N 0 -246 153 0 0 246 h
+4356 3290 N 0 -246 153 0 0 246 h
+4508 3400 N 0 -247 153 0 0 247 h
+4660 3448 N 0 -246 153 0 0 246 h
+4812 3506 N 0 -246 153 0 0 246 h
+4964 3513 N 0 -246 153 0 0 246 h
+5116 3521 N 0 -246 153 0 0 246 h
+5268 3523 N 0 -246 153 0 0 246 h
+5420 3532 N 0 -246 153 0 0 246 h
+5572 3533 N 0 -247 153 0 0 247 h
+5724 3542 N 0 -246 153 0 0 246 h
+5876 3547 N 0 -246 153 0 0 246 h
+6028 3570 N 0 -246 153 0 0 246 h
+6180 3623 N 0 -246 152 0 0 246 h
+6331 3636 N 0 -246 153 0 0 246 h
+6483 3639 N 0 -246 153 0 0 246 h
+6635 3642 N 0 -246 153 0 0 246 h
+6787 3664 N 0 -246 153 0 0 246 h
+6939 3674 N 0 -246 153 0 0 246 h
+7091 3678 N 0 -246 153 0 0 246 h
+7243 3678 N 0 -246 153 0 0 246 h
+7395 3680 N 0 -246 153 0 0 246 h
+7547 3685 N 0 -246 153 0 0 246 h
+7699 3741 N 0 -246 153 0 0 246 h
+7851 3727 N 0 -246 153 0 0 246 h
+8003 3730 N 0 -246 153 0 0 246 h
+8155 3737 N 0 -247 152 0 0 247 h
+8306 3739 N 0 -246 153 0 0 246 h
+8458 3738 N 0 -246 153 0 0 246 h
+8610 3738 N 0 -246 153 0 0 246 h
+8762 3737 N 0 -246 153 0 0 246 h
+8914 3769 N 0 -246 153 0 0 246 h
+9066 3738 N 0 -246 153 0 0 246 h
+9218 3739 N 0 -246 153 0 0 246 h
+9370 3739 N 0 -246 153 0 0 246 h
+9522 3739 N 0 -246 153 0 0 246 h
+9674 3712 N 0 -246 153 0 0 246 h
+9826 3739 N 0 -246 153 0 0 246 h
+9978 3741 N 0 -246 153 0 0 246 h
+10130 3740 N 0 -246 153 0 0 246 h
+10282 3729 N 0 -246 152 0 0 246 h
+10433 3747 N 0 -246 153 0 0 246 h
+10585 3745 N 0 -246 153 0 0 246 h
+10737 3745 N 0 -246 153 0 0 246 h
+10889 3743 N 0 -246 153 0 0 246 h
+11041 3738 N 0 -246 153 0 0 246 h
+11193 3730 N 0 -246 153 0 0 246 h
+1.000 UL
+LT6
+0.97 0.79 0.36 C LTb
+17070 4522 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 238 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT6
+0.97 0.79 0.36 C 11631 4487 N 0 -70 399 0 0 70 h
+LTw
+LT6
+0.97 0.79 0.36 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2221 N 0 -114 153 0 0 114 h
+1470 2244 N 0 -1 153 0 0 1 h
+1622 2700 N 0 -1 153 0 0 1 h
+1774 2881 N 0 -1 153 0 0 1 h
+1926 2899 N 0 -1 152 0 0 1 h
+2077 2958 N 0 -1 153 0 0 1 h
+2229 2991 N 0 -1 153 0 0 1 h
+2381 3010 N 0 -1 153 0 0 1 h
+2533 3176 N 0 -1 153 0 0 1 h
+2685 3168 N 0 -1 153 0 0 1 h
+2837 3206 N 0 -1 153 0 0 1 h
+2989 3215 N 0 -1 153 0 0 1 h
+3141 3234 N 0 -1 153 0 0 1 h
+3293 3221 N 0 -1 153 0 0 1 h
+3445 3221 N 0 -1 153 0 0 1 h
+3597 3222 N 0 -1 153 0 0 1 h
+3749 3228 N 0 -1 153 0 0 1 h
+3901 3367 N 0 -1 153 0 0 1 h
+4053 3456 N 0 -1 152 0 0 1 h
+4204 3495 N 0 -1 153 0 0 1 h
+4356 3535 N 0 -1 153 0 0 1 h
+4508 3646 N 0 -1 153 0 0 1 h
+4660 3693 N 0 -1 153 0 0 1 h
+4812 3751 N 0 -1 153 0 0 1 h
+4964 3758 N 0 -1 153 0 0 1 h
+5116 3766 N 0 -1 153 0 0 1 h
+5268 3768 N 0 -1 153 0 0 1 h
+5420 3777 N 0 -1 153 0 0 1 h
+5572 3779 N 0 -1 153 0 0 1 h
+5724 3787 N 0 -1 153 0 0 1 h
+5876 3792 N 0 -1 153 0 0 1 h
+6028 3815 N 0 -1 153 0 0 1 h
+6180 3868 N 0 -1 152 0 0 1 h
+6331 3881 N 0 -1 153 0 0 1 h
+6483 3884 N 0 -1 153 0 0 1 h
+6635 3887 N 0 -1 153 0 0 1 h
+6787 3909 N 0 -1 153 0 0 1 h
+6939 3919 N 0 -1 153 0 0 1 h
+7091 3923 N 0 -1 153 0 0 1 h
+7243 3923 N 0 -1 153 0 0 1 h
+7395 3925 N 0 -1 153 0 0 1 h
+7547 3930 N 0 -1 153 0 0 1 h
+7699 3986 N 0 -1 153 0 0 1 h
+7851 3972 N 0 -1 153 0 0 1 h
+8003 3975 N 0 -1 153 0 0 1 h
+8155 3983 N 0 -1 152 0 0 1 h
+8306 3984 N 0 -1 153 0 0 1 h
+8458 3983 N 0 -1 153 0 0 1 h
+8610 3983 N 0 -1 153 0 0 1 h
+8762 3982 N 0 -1 153 0 0 1 h
+8914 4014 N 0 -1 153 0 0 1 h
+9066 3983 N 0 -1 153 0 0 1 h
+9218 3984 N 0 -1 153 0 0 1 h
+9370 3984 N 0 -1 153 0 0 1 h
+9522 3984 N 0 -1 153 0 0 1 h
+9674 3957 N 0 -1 153 0 0 1 h
+9826 3984 N 0 -1 153 0 0 1 h
+9978 3986 N 0 -1 153 0 0 1 h
+10130 3985 N 0 -1 153 0 0 1 h
+10282 3974 N 0 -1 152 0 0 1 h
+10433 3992 N 0 -1 153 0 0 1 h
+10585 3990 N 0 -1 153 0 0 1 h
+10737 3990 N 0 -1 153 0 0 1 h
+10889 3988 N 0 -1 153 0 0 1 h
+11041 3983 N 0 -1 153 0 0 1 h
+11193 3975 N 0 -1 153 0 0 1 h
+1.000 UL
+LT7
+0.65 0.01 0.71 C LTb
+17070 4382 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x5945434: std::string::)]
+[(Helvetica) 112.0 -42.0 true true 0 (R)]
+[(Helvetica) 140.0 0.0 true true 0 (ep::)]
+[(Helvetica) 112.0 -42.0 true true 0 (S)]
+[(Helvetica) 112.0 -42.0 true true 0 (c)]
+[(Helvetica) 140.0 0.0 true true 0 (reate\(unsigned int, unsigned )]
+] -32.7 MRshow
+LT7
+0.65 0.01 0.71 C 11631 4347 N 0 -70 399 0 0 70 h
+LTw
+LT7
+0.65 0.01 0.71 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2334 N 0 -55 153 0 0 55 h
+1470 2244 N 0 -55 153 0 0 55 h
+1622 2700 N 0 -56 153 0 0 56 h
+1774 2881 N 0 -56 153 0 0 56 h
+1926 2899 N 0 -56 152 0 0 56 h
+2077 2958 N 0 -58 153 0 0 58 h
+2229 2991 N 0 -60 153 0 0 60 h
+2381 3010 N 0 -61 153 0 0 61 h
+2533 3176 N 0 -61 153 0 0 61 h
+2685 3168 N 0 -61 153 0 0 61 h
+2837 3206 N 0 -61 153 0 0 61 h
+2989 3215 N 0 -61 153 0 0 61 h
+3141 3234 N 0 -61 153 0 0 61 h
+3293 3221 N 0 -62 153 0 0 62 h
+3445 3221 N 0 -61 153 0 0 61 h
+3597 3222 N 0 -61 153 0 0 61 h
+3749 3228 N 0 -97 153 0 0 97 h
+3901 3367 N 0 -97 153 0 0 97 h
+4053 3456 N 0 -97 152 0 0 97 h
+4204 3495 N 0 -97 153 0 0 97 h
+4356 3535 N 0 -96 153 0 0 96 h
+4508 3646 N 0 -96 153 0 0 96 h
+4660 3693 N 0 -96 153 0 0 96 h
+4812 3751 N 0 -96 153 0 0 96 h
+4964 3758 N 0 -96 153 0 0 96 h
+5116 3766 N 0 -96 153 0 0 96 h
+5268 3768 N 0 -97 153 0 0 97 h
+5420 3777 N 0 -97 153 0 0 97 h
+5572 3779 N 0 -96 153 0 0 96 h
+5724 3787 N 0 -96 153 0 0 96 h
+5876 3792 N 0 -96 153 0 0 96 h
+6028 3815 N 0 -97 153 0 0 97 h
+6180 3868 N 0 -97 152 0 0 97 h
+6331 3881 N 0 -97 153 0 0 97 h
+6483 3884 N 0 -97 153 0 0 97 h
+6635 3887 N 0 -97 153 0 0 97 h
+6787 3909 N 0 -97 153 0 0 97 h
+6939 3919 N 0 -97 153 0 0 97 h
+7091 3923 N 0 -97 153 0 0 97 h
+7243 3923 N 0 -97 153 0 0 97 h
+7395 3925 N 0 -97 153 0 0 97 h
+7547 3930 N 0 -97 153 0 0 97 h
+7699 3986 N 0 -97 153 0 0 97 h
+7851 3972 N 0 -97 153 0 0 97 h
+8003 3975 N 0 -97 153 0 0 97 h
+8155 3983 N 0 -97 152 0 0 97 h
+8306 3984 N 0 -97 153 0 0 97 h
+8458 3983 N 0 -97 153 0 0 97 h
+8610 3983 N 0 -97 153 0 0 97 h
+8762 3982 N 0 -97 153 0 0 97 h
+8914 4014 N 0 -97 153 0 0 97 h
+9066 3983 N 0 -97 153 0 0 97 h
+9218 3984 N 0 -97 153 0 0 97 h
+9370 3984 N 0 -97 153 0 0 97 h
+9522 3984 N 0 -97 153 0 0 97 h
+9674 3957 N 0 -97 153 0 0 97 h
+9826 3984 N 0 -97 153 0 0 97 h
+9978 3986 N 0 -97 153 0 0 97 h
+10130 3985 N 0 -97 153 0 0 97 h
+10282 3974 N 0 -97 152 0 0 97 h
+10433 3992 N 0 -97 153 0 0 97 h
+10585 3990 N 0 -98 153 0 0 98 h
+10737 3990 N 0 -97 153 0 0 97 h
+10889 3988 N 0 -97 153 0 0 97 h
+11041 3983 N 0 -97 153 0 0 97 h
+11193 3975 N 0 -1 153 0 0 1 h
+1.000 UL
+LT8
+0.90 0.77 0.11 C LTb
+17070 4242 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x554E715: xmlHashCreate \(hash.c:156\))]
+] -46.7 MRshow
+LT8
+0.90 0.77 0.11 C 11631 4207 N 0 -70 399 0 0 70 h
+LTw
+LT8
+0.90 0.77 0.11 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2388 N 0 -50 153 0 0 50 h
+1470 2298 N 0 -67 153 0 0 67 h
+1622 2755 N 0 -49 153 0 0 49 h
+1774 2936 N 0 -49 153 0 0 49 h
+1926 2954 N 0 -49 152 0 0 49 h
+2077 3015 N 0 -49 153 0 0 49 h
+2229 3050 N 0 -49 153 0 0 49 h
+2381 3070 N 0 -49 153 0 0 49 h
+2533 3236 N 0 -49 153 0 0 49 h
+2685 3228 N 0 -49 153 0 0 49 h
+2837 3266 N 0 -1 153 0 0 1 h
+2989 3275 N 0 -1 153 0 0 1 h
+3141 3294 N 0 -1 153 0 0 1 h
+3293 3282 N 0 -1 153 0 0 1 h
+3445 3281 N 0 -1 153 0 0 1 h
+3597 3282 N 0 -1 153 0 0 1 h
+3749 3324 N 0 -1 153 0 0 1 h
+3901 3463 N 0 -1 153 0 0 1 h
+4053 3552 N 0 -1 152 0 0 1 h
+4204 3591 N 0 -67 153 0 0 67 h
+4356 3630 N 0 -68 153 0 0 68 h
+4508 3741 N 0 -1 153 0 0 1 h
+4660 3788 N 0 -86 153 0 0 86 h
+4812 3846 N 0 -86 153 0 0 86 h
+4964 3853 N 0 -86 153 0 0 86 h
+5116 3861 N 0 -86 153 0 0 86 h
+5268 3864 N 0 -85 153 0 0 85 h
+5420 3873 N 0 -85 153 0 0 85 h
+5572 3874 N 0 -85 153 0 0 85 h
+5724 3882 N 0 -86 153 0 0 86 h
+5876 3887 N 0 -86 153 0 0 86 h
+6028 3911 N 0 -85 153 0 0 85 h
+6180 3964 N 0 -85 152 0 0 85 h
+6331 3977 N 0 -85 153 0 0 85 h
+6483 3980 N 0 -85 153 0 0 85 h
+6635 3983 N 0 -85 153 0 0 85 h
+6787 4005 N 0 -85 153 0 0 85 h
+6939 4015 N 0 -86 153 0 0 86 h
+7091 4019 N 0 -85 153 0 0 85 h
+7243 4019 N 0 -85 153 0 0 85 h
+7395 4021 N 0 -85 153 0 0 85 h
+7547 4026 N 0 -85 153 0 0 85 h
+7699 4082 N 0 -85 153 0 0 85 h
+7851 4068 N 0 -86 153 0 0 86 h
+8003 4071 N 0 -85 153 0 0 85 h
+8155 4079 N 0 -85 152 0 0 85 h
+8306 4080 N 0 -86 153 0 0 86 h
+8458 4079 N 0 -1 153 0 0 1 h
+8610 4079 N 0 -1 153 0 0 1 h
+8762 4078 N 0 -85 153 0 0 85 h
+8914 4110 N 0 -1 153 0 0 1 h
+9066 4079 N 0 -85 153 0 0 85 h
+9218 4080 N 0 -85 153 0 0 85 h
+9370 4080 N 0 -85 153 0 0 85 h
+9522 4080 N 0 -1 153 0 0 1 h
+9674 4053 N 0 -1 153 0 0 1 h
+9826 4080 N 0 -85 153 0 0 85 h
+9978 4082 N 0 -86 153 0 0 86 h
+10130 4081 N 0 -85 153 0 0 85 h
+10282 4070 N 0 -1 152 0 0 1 h
+10433 4088 N 0 -86 153 0 0 86 h
+10585 4087 N 0 -85 153 0 0 85 h
+10737 4086 N 0 -85 153 0 0 85 h
+10889 4084 N 0 -86 153 0 0 86 h
+11041 4079 N 0 -85 153 0 0 85 h
+11193 3975 N 0 -85 153 0 0 85 h
+1.000 UL
+LT0
+0.60 0.40 0.86 C LTb
+17070 4102 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x5694476: slab)]
+[(Helvetica) 112.0 -42.0 true true 0 (a)]
+[(Helvetica) 140.0 0.0 true true 0 (llocator)]
+[(Helvetica) 112.0 -42.0 true true 0 (a)]
+[(Helvetica) 140.0 0.0 true true 0 (lloc)]
+[(Helvetica) 112.0 -42.0 true true 0 (c)]
+[(Helvetica) 140.0 0.0 true true 0 (hunk \(gslice.c:1136\))]
+] -32.7 MRshow
+LT0
+0.60 0.40 0.86 C 11631 4067 N 0 -70 399 0 0 70 h
+LTw
+LT0
+0.60 0.40 0.86 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2437 N 0 -48 153 0 0 48 h
+1470 2364 N 0 -60 153 0 0 60 h
+1622 2803 N 0 -67 153 0 0 67 h
+1774 2984 N 0 -135 153 0 0 135 h
+1926 3002 N 0 -173 152 0 0 173 h
+2077 3063 N 0 -253 153 0 0 253 h
+2229 3098 N 0 -322 153 0 0 322 h
+2381 3118 N 0 -367 153 0 0 367 h
+2533 3284 N 0 -458 153 0 0 458 h
+2685 3276 N 0 -483 153 0 0 483 h
+2837 3266 N 0 -494 153 0 0 494 h
+2989 3275 N 0 -501 153 0 0 501 h
+3141 3294 N 0 -513 153 0 0 513 h
+3293 3282 N 0 -530 153 0 0 530 h
+3445 3281 N 0 -530 153 0 0 530 h
+3597 3282 N 0 -531 153 0 0 531 h
+3749 3324 N 0 -531 153 0 0 531 h
+3901 3463 N 0 -581 153 0 0 581 h
+4053 3552 N 0 -623 152 0 0 623 h
+4204 3657 N 0 -650 153 0 0 650 h
+4356 3697 N 0 -671 153 0 0 671 h
+4508 3741 N 0 -725 153 0 0 725 h
+4660 3873 N 0 -752 153 0 0 752 h
+4812 3931 N 0 -787 153 0 0 787 h
+4964 3938 N 0 -799 153 0 0 799 h
+5116 3946 N 0 -805 153 0 0 805 h
+5268 3948 N 0 -811 153 0 0 811 h
+5420 3957 N 0 -816 153 0 0 816 h
+5572 3958 N 0 -826 153 0 0 826 h
+5724 3967 N 0 -831 153 0 0 831 h
+5876 3972 N 0 -834 153 0 0 834 h
+6028 3995 N 0 -842 153 0 0 842 h
+6180 4048 N 0 -859 152 0 0 859 h
+6331 4061 N 0 -862 153 0 0 862 h
+6483 4064 N 0 -874 153 0 0 874 h
+6635 4067 N 0 -874 153 0 0 874 h
+6787 4089 N 0 -882 153 0 0 882 h
+6939 4100 N 0 -881 153 0 0 881 h
+7091 4103 N 0 -885 153 0 0 885 h
+7243 4103 N 0 -891 153 0 0 891 h
+7395 4105 N 0 -895 153 0 0 895 h
+7547 4110 N 0 -898 153 0 0 898 h
+7699 4166 N 0 -941 153 0 0 941 h
+7851 4153 N 0 -981 153 0 0 981 h
+8003 4155 N 0 -984 153 0 0 984 h
+8155 4163 N 0 -1020 152 0 0 1020 h
+8306 4165 N 0 -1038 153 0 0 1038 h
+8458 4079 N 0 -1041 153 0 0 1041 h
+8610 4079 N 0 -1041 153 0 0 1041 h
+8762 4162 N 0 -1041 153 0 0 1041 h
+8914 4110 N 0 -1055 153 0 0 1055 h
+9066 4163 N 0 -1063 153 0 0 1063 h
+9218 4164 N 0 -1065 153 0 0 1065 h
+9370 4164 N 0 -1065 153 0 0 1065 h
+9522 4080 N 0 -1065 153 0 0 1065 h
+9674 4053 N 0 -1065 153 0 0 1065 h
+9826 4164 N 0 -1065 153 0 0 1065 h
+9978 4167 N 0 -1066 153 0 0 1066 h
+10130 4165 N 0 -1069 153 0 0 1069 h
+10282 4070 N 0 -1069 152 0 0 1069 h
+10433 4173 N 0 -1068 153 0 0 1068 h
+10585 4171 N 0 -1071 153 0 0 1071 h
+10737 4170 N 0 -1077 153 0 0 1077 h
+10889 4169 N 0 -1077 153 0 0 1077 h
+11041 4163 N 0 -1077 153 0 0 1077 h
+11193 4059 N 0 -1077 153 0 0 1077 h
+1.000 UL
+LT1
+0.59 0.95 0.01 C LTb
+17070 3962 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x59F623F: )]
+[(Helvetica) 89.6 -75.6 true true 0 (n)]
+[(Helvetica) 140.0 0.0 true true 0 (ew)]
+[(Helvetica) 112.0 -42.0 true true 0 (e)]
+[(Helvetica) 140.0 0.0 true true 0 (xitfn \(cxa)]
+[(Helvetica) 112.0 -42.0 true true 0 (a)]
+[(Helvetica) 140.0 0.0 true true 0 (texit.c:101\))]
+] -21.5 MRshow
+LT1
+0.59 0.95 0.01 C 11631 3927 N 0 -70 399 0 0 70 h
+LTw
+LT1
+0.59 0.95 0.01 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2484 N 0 -36 153 0 0 36 h
+1470 2423 N 0 -36 153 0 0 36 h
+1622 2869 N 0 -37 153 0 0 37 h
+1774 3118 N 0 -37 153 0 0 37 h
+1926 3174 N 0 -37 152 0 0 37 h
+2077 3315 N 0 -38 153 0 0 38 h
+2229 3419 N 0 -37 153 0 0 37 h
+2381 3484 N 0 -1 153 0 0 1 h
+2533 3741 N 0 -1 153 0 0 1 h
+2685 3758 N 0 -1 153 0 0 1 h
+2837 3759 N 0 -1 153 0 0 1 h
+2989 3775 N 0 -1 153 0 0 1 h
+3141 3806 N 0 -1 153 0 0 1 h
+3293 3811 N 0 -1 153 0 0 1 h
+3445 3810 N 0 -1 153 0 0 1 h
+3597 3812 N 0 -1 153 0 0 1 h
+3749 3854 N 0 -1 153 0 0 1 h
+3901 4043 N 0 -1 153 0 0 1 h
+4053 4174 N 0 -1 152 0 0 1 h
+4204 4306 N 0 -1 153 0 0 1 h
+4356 4367 N 0 -1 153 0 0 1 h
+4508 4465 N 0 -1 153 0 0 1 h
+4660 4624 N 0 -1 153 0 0 1 h
+4812 4717 N 0 -1 153 0 0 1 h
+4964 4736 N 0 -1 153 0 0 1 h
+5116 4750 N 0 -1 153 0 0 1 h
+5268 4758 N 0 -1 153 0 0 1 h
+5420 4772 N 0 -1 153 0 0 1 h
+5572 4783 N 0 -1 153 0 0 1 h
+5724 4797 N 0 -1 153 0 0 1 h
+5876 4805 N 0 -1 153 0 0 1 h
+6028 4836 N 0 -1 153 0 0 1 h
+6180 4906 N 0 -1 152 0 0 1 h
+6331 4922 N 0 -1 153 0 0 1 h
+6483 4937 N 0 -1 153 0 0 1 h
+6635 4940 N 0 -1 153 0 0 1 h
+6787 4970 N 0 -1 153 0 0 1 h
+6939 4980 N 0 -1 153 0 0 1 h
+7091 4987 N 0 -1 153 0 0 1 h
+7243 4993 N 0 -1 153 0 0 1 h
+7395 4999 N 0 -1 153 0 0 1 h
+7547 5007 N 0 -1 153 0 0 1 h
+7699 5106 N 0 -1 153 0 0 1 h
+7851 5133 N 0 -1 153 0 0 1 h
+8003 5138 N 0 -1 153 0 0 1 h
+8155 5182 N 0 -1 152 0 0 1 h
+8306 5202 N 0 -1 153 0 0 1 h
+8458 5119 N 0 -1 153 0 0 1 h
+8610 5119 N 0 -1 153 0 0 1 h
+8762 5202 N 0 -1 153 0 0 1 h
+8914 5164 N 0 -1 153 0 0 1 h
+9066 5225 N 0 -1 153 0 0 1 h
+9218 5228 N 0 -1 153 0 0 1 h
+9370 5228 N 0 -1 153 0 0 1 h
+9522 5144 N 0 -1 153 0 0 1 h
+9674 5117 N 0 -1 153 0 0 1 h
+9826 5228 N 0 -1 153 0 0 1 h
+9978 5232 N 0 -1 153 0 0 1 h
+10130 5233 N 0 -1 153 0 0 1 h
+10282 5138 N 0 -1 152 0 0 1 h
+10433 5240 N 0 -1 153 0 0 1 h
+10585 5241 N 0 -1 153 0 0 1 h
+10737 5246 N 0 -1 153 0 0 1 h
+10889 5245 N 0 -1 153 0 0 1 h
+11041 5239 N 0 -1 153 0 0 1 h
+11193 5135 N 0 -1 153 0 0 1 h
+1.000 UL
+LT2
+0.91 0.28 0.77 C LTb
+17070 3822 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x567F783: g)]
+[(Helvetica) 112.0 -42.0 true true 0 (m)]
+[(Helvetica) 140.0 0.0 true true 0 (alloc \(gmem.c:131\))]
+] -32.7 MRshow
+LT2
+0.91 0.28 0.77 C 11631 3787 N 0 -70 399 0 0 70 h
+LTw
+LT2
+0.91 0.28 0.77 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2519 N 0 -31 153 0 0 31 h
+1470 2458 N 0 -48 153 0 0 48 h
+1622 2905 N 0 -56 153 0 0 56 h
+1774 3154 N 0 -78 153 0 0 78 h
+1926 3210 N 0 -83 152 0 0 83 h
+2077 3352 N 0 -103 153 0 0 103 h
+2229 3455 N 0 -133 153 0 0 133 h
+2381 3484 N 0 -142 153 0 0 142 h
+2533 3741 N 0 -367 153 0 0 367 h
+2685 3758 N 0 -402 153 0 0 402 h
+2837 3759 N 0 -429 153 0 0 429 h
+2989 3775 N 0 -440 153 0 0 440 h
+3141 3806 N 0 -472 153 0 0 472 h
+3293 3811 N 0 -444 153 0 0 444 h
+3445 3810 N 0 -437 153 0 0 437 h
+3597 3812 N 0 -437 153 0 0 437 h
+3749 3854 N 0 -444 153 0 0 444 h
+3901 4043 N 0 -462 153 0 0 462 h
+4053 4174 N 0 -478 152 0 0 478 h
+4204 4306 N 0 -486 153 0 0 486 h
+4356 4367 N 0 -492 153 0 0 492 h
+4508 4465 N 0 -509 153 0 0 509 h
+4660 4624 N 0 -518 153 0 0 518 h
+4812 4717 N 0 -529 153 0 0 529 h
+4964 4736 N 0 -530 153 0 0 530 h
+5116 4750 N 0 -532 153 0 0 532 h
+5268 4758 N 0 -530 153 0 0 530 h
+5420 4772 N 0 -533 153 0 0 533 h
+5572 4783 N 0 -531 153 0 0 531 h
+5724 4797 N 0 -532 153 0 0 532 h
+5876 4805 N 0 -533 153 0 0 533 h
+6028 4836 N 0 -533 153 0 0 533 h
+6180 4906 N 0 -554 152 0 0 554 h
+6331 4922 N 0 -579 153 0 0 579 h
+6483 4937 N 0 -553 153 0 0 553 h
+6635 4940 N 0 -554 153 0 0 554 h
+6787 4970 N 0 -562 153 0 0 562 h
+6939 4980 N 0 -563 153 0 0 563 h
+7091 4987 N 0 -626 153 0 0 626 h
+7243 4993 N 0 -565 153 0 0 565 h
+7395 4999 N 0 -565 153 0 0 565 h
+7547 5007 N 0 -568 153 0 0 568 h
+7699 5106 N 0 -572 153 0 0 572 h
+7851 5133 N 0 -575 153 0 0 575 h
+8003 5138 N 0 -575 153 0 0 575 h
+8155 5182 N 0 -582 152 0 0 582 h
+8306 5202 N 0 -583 153 0 0 583 h
+8458 5119 N 0 -581 153 0 0 581 h
+8610 5119 N 0 -581 153 0 0 581 h
+8762 5202 N 0 -580 153 0 0 580 h
+8914 5164 N 0 -621 153 0 0 621 h
+9066 5225 N 0 -581 153 0 0 581 h
+9218 5228 N 0 -582 153 0 0 582 h
+9370 5228 N 0 -582 153 0 0 582 h
+9522 5144 N 0 -581 153 0 0 581 h
+9674 5117 N 0 -554 153 0 0 554 h
+9826 5228 N 0 -581 153 0 0 581 h
+9978 5232 N 0 -582 153 0 0 582 h
+10130 5233 N 0 -582 153 0 0 582 h
+10282 5138 N 0 -572 152 0 0 572 h
+10433 5240 N 0 -584 153 0 0 584 h
+10585 5241 N 0 -584 153 0 0 584 h
+10737 5246 N 0 -590 153 0 0 590 h
+10889 5245 N 0 -583 153 0 0 583 h
+11041 5239 N 0 -577 153 0 0 577 h
+11193 5135 N 0 -574 153 0 0 574 h
+1.000 UL
+LT3
+0.94 0.96 0.65 C LTb
+17070 3682 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x567F680: g)]
+[(Helvetica) 112.0 -42.0 true true 0 (r)]
+[(Helvetica) 140.0 0.0 true true 0 (ealloc \(gmem.c:170\))]
+] -32.7 MRshow
+LT3
+0.94 0.96 0.65 C 11631 3647 N 0 -70 399 0 0 70 h
+LTw
+LT3
+0.94 0.96 0.65 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2549 N 0 -29 153 0 0 29 h
+1470 2505 N 0 -33 153 0 0 33 h
+1622 2960 N 0 -35 153 0 0 35 h
+1774 3231 N 0 -50 153 0 0 50 h
+1926 3292 N 0 -58 152 0 0 58 h
+2077 3454 N 0 -73 153 0 0 73 h
+2229 3587 N 0 -79 153 0 0 79 h
+2381 3625 N 0 -95 153 0 0 95 h
+2533 4107 N 0 -195 153 0 0 195 h
+2685 4159 N 0 -208 153 0 0 208 h
+2837 4187 N 0 -496 153 0 0 496 h
+2989 4214 N 0 -501 153 0 0 501 h
+3141 4277 N 0 -640 153 0 0 640 h
+3293 4254 N 0 -516 153 0 0 516 h
+3445 4246 N 0 -516 153 0 0 516 h
+3597 4248 N 0 -516 153 0 0 516 h
+3749 4297 N 0 -518 153 0 0 518 h
+3901 4504 N 0 -535 153 0 0 535 h
+4053 4651 N 0 -553 152 0 0 553 h
+4204 4791 N 0 -560 153 0 0 560 h
+4356 4858 N 0 -566 153 0 0 566 h
+4508 4973 N 0 -581 153 0 0 581 h
+4660 5141 N 0 -589 153 0 0 589 h
+4812 5245 N 0 -598 153 0 0 598 h
+4964 5265 N 0 -602 153 0 0 602 h
+5116 5281 N 0 -607 153 0 0 607 h
+5268 5287 N 0 -611 153 0 0 611 h
+5420 5304 N 0 -616 153 0 0 616 h
+5572 5313 N 0 -623 153 0 0 623 h
+5724 5328 N 0 -626 153 0 0 626 h
+5876 5337 N 0 -630 153 0 0 630 h
+6028 5368 N 0 -634 153 0 0 634 h
+6180 5459 N 0 -641 152 0 0 641 h
+6331 5500 N 0 -643 153 0 0 643 h
+6483 5489 N 0 -644 153 0 0 644 h
+6635 5493 N 0 -645 153 0 0 645 h
+6787 5531 N 0 -647 153 0 0 647 h
+6939 5542 N 0 -648 153 0 0 648 h
+7091 5612 N 0 -653 153 0 0 653 h
+7243 5557 N 0 -650 153 0 0 650 h
+7395 5563 N 0 -652 153 0 0 652 h
+7547 5574 N 0 -652 153 0 0 652 h
+7699 5677 N 0 -662 153 0 0 662 h
+7851 5707 N 0 -667 153 0 0 667 h
+8003 5712 N 0 -669 153 0 0 669 h
+8155 5763 N 0 -673 152 0 0 673 h
+8306 5784 N 0 -681 153 0 0 681 h
+8458 5699 N 0 -810 153 0 0 810 h
+8610 5699 N 0 -939 153 0 0 939 h
+8762 5781 N 0 -665 153 0 0 665 h
+8914 5784 N 0 -909 153 0 0 909 h
+9066 5805 N 0 -675 153 0 0 675 h
+9218 5809 N 0 -675 153 0 0 675 h
+9370 5809 N 0 -676 153 0 0 676 h
+9522 5724 N 0 -677 153 0 0 677 h
+9674 5670 N 0 -667 153 0 0 667 h
+9826 5808 N 0 -667 153 0 0 667 h
+9978 5813 N 0 -676 153 0 0 676 h
+10130 5814 N 0 -676 153 0 0 676 h
+10282 5709 N 0 -678 152 0 0 678 h
+10433 5823 N 0 -678 153 0 0 678 h
+10585 5824 N 0 -677 153 0 0 677 h
+10737 5835 N 0 -684 153 0 0 684 h
+10889 5827 N 0 -682 153 0 0 682 h
+11041 5815 N 0 -660 153 0 0 660 h
+11193 5708 N 0 -652 153 0 0 652 h
+1.000 UL
+LT4
+0.88 0.62 0.58 C LTb
+17070 3542 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x5B67FCF: xcb)]
+[(Helvetica) 112.0 -42.0 true true 0 (c)]
+[(Helvetica) 140.0 0.0 true true 0 (onnect)]
+[(Helvetica) 112.0 -42.0 true true 0 (t)]
+[(Helvetica) 140.0 0.0 true true 0 (o)]
+[(Helvetica) 112.0 -42.0 true true 0 (f)]
+[(Helvetica) 140.0 0.0 true true 0 (d \(in /usr/lib/libxcb.so.1.1.0\))]
+] -32.7 MRshow
+LT4
+0.88 0.62 0.58 C 11631 3507 N 0 -70 399 0 0 70 h
+LTw
+LT4
+0.88 0.62 0.58 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2577 N 0 -22 153 0 0 22 h
+1470 2537 N 0 -42 153 0 0 42 h
+1622 2994 N 0 -42 153 0 0 42 h
+1774 3280 N 0 -42 153 0 0 42 h
+1926 3349 N 0 -42 152 0 0 42 h
+2077 3526 N 0 -42 153 0 0 42 h
+2229 3665 N 0 -42 153 0 0 42 h
+2381 3719 N 0 -42 153 0 0 42 h
+2533 4301 N 0 -1 153 0 0 1 h
+2685 4366 N 0 -1 153 0 0 1 h
+2837 4682 N 0 -1 153 0 0 1 h
+2989 4714 N 0 -1 153 0 0 1 h
+3141 4916 N 0 -1 153 0 0 1 h
+3293 4769 N 0 -1 153 0 0 1 h
+3445 4761 N 0 -1 153 0 0 1 h
+3597 4763 N 0 -1 153 0 0 1 h
+3749 4814 N 0 -1 153 0 0 1 h
+3901 5038 N 0 -1 153 0 0 1 h
+4053 5203 N 0 -1 152 0 0 1 h
+4204 5350 N 0 -1 153 0 0 1 h
+4356 5423 N 0 -1 153 0 0 1 h
+4508 5553 N 0 -1 153 0 0 1 h
+4660 5729 N 0 -1 153 0 0 1 h
+4812 5842 N 0 -1 153 0 0 1 h
+4964 5866 N 0 -1 153 0 0 1 h
+5116 5887 N 0 -1 153 0 0 1 h
+5268 5897 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6400 N 0 -1 153 0 0 1 h
+9674 6336 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6386 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT5
+0.11 0.72 0.31 C LTb
+17070 3402 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x5082E63: XOpenDisplay \(in /usr/lib/libX11.so.6.2.0\))]
+] -46.7 MRshow
+LT5
+0.11 0.72 0.31 C 11631 3367 N 0 -70 399 0 0 70 h
+LTw
+LT5
+0.11 0.72 0.31 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2598 N 0 -17 153 0 0 17 h
+1470 2578 N 0 -33 153 0 0 33 h
+1622 3035 N 0 -33 153 0 0 33 h
+1774 3321 N 0 -33 153 0 0 33 h
+1926 3390 N 0 -33 152 0 0 33 h
+2077 3567 N 0 -1 153 0 0 1 h
+2229 3706 N 0 -1 153 0 0 1 h
+2381 3760 N 0 -1 153 0 0 1 h
+2533 4301 N 0 -1 153 0 0 1 h
+2685 4366 N 0 -1 153 0 0 1 h
+2837 4682 N 0 -1 153 0 0 1 h
+2989 4714 N 0 -1 153 0 0 1 h
+3141 4916 N 0 -1 153 0 0 1 h
+3293 4769 N 0 -1 153 0 0 1 h
+3445 4761 N 0 -1 153 0 0 1 h
+3597 4763 N 0 -1 153 0 0 1 h
+3749 4814 N 0 -1 153 0 0 1 h
+3901 5038 N 0 -1 153 0 0 1 h
+4053 5203 N 0 -1 152 0 0 1 h
+4204 5350 N 0 -1 153 0 0 1 h
+4356 5423 N 0 -1 153 0 0 1 h
+4508 5553 N 0 -1 153 0 0 1 h
+4660 5729 N 0 -1 153 0 0 1 h
+4812 5842 N 0 -1 153 0 0 1 h
+4964 5866 N 0 -1 153 0 0 1 h
+5116 5887 N 0 -1 153 0 0 1 h
+5268 5897 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6400 N 0 -1 153 0 0 1 h
+9674 6336 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6386 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT6
+0.50 0.84 0.98 C LTb
+17070 3262 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 270 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT6
+0.50 0.84 0.98 C 11631 3227 N 0 -70 399 0 0 70 h
+LTw
+LT6
+0.50 0.84 0.98 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2610 N 0 -162 153 0 0 162 h
+1622 3067 N 0 -1 153 0 0 1 h
+1774 3353 N 0 -1 153 0 0 1 h
+1926 3422 N 0 -1 152 0 0 1 h
+2077 3567 N 0 -1 153 0 0 1 h
+2229 3706 N 0 -1 153 0 0 1 h
+2381 3760 N 0 -1 153 0 0 1 h
+2533 4301 N 0 -1 153 0 0 1 h
+2685 4366 N 0 -1 153 0 0 1 h
+2837 4682 N 0 -1 153 0 0 1 h
+2989 4714 N 0 -1 153 0 0 1 h
+3141 4916 N 0 -1 153 0 0 1 h
+3293 4769 N 0 -1 153 0 0 1 h
+3445 4761 N 0 -1 153 0 0 1 h
+3597 4763 N 0 -1 153 0 0 1 h
+3749 4814 N 0 -1 153 0 0 1 h
+3901 5038 N 0 -1 153 0 0 1 h
+4053 5203 N 0 -1 152 0 0 1 h
+4204 5350 N 0 -1 153 0 0 1 h
+4356 5423 N 0 -1 153 0 0 1 h
+4508 5553 N 0 -1 153 0 0 1 h
+4660 5729 N 0 -1 153 0 0 1 h
+4812 5842 N 0 -1 153 0 0 1 h
+4964 5866 N 0 -1 153 0 0 1 h
+5116 5887 N 0 -1 153 0 0 1 h
+5268 5897 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6400 N 0 -1 153 0 0 1 h
+9674 6336 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6386 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT7
+0.09 0.25 0.58 C LTb
+17070 3122 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x55EB73D: xmlSAX2TextNode \(SAX2.c:1805\))]
+] -46.7 MRshow
+LT7
+0.09 0.25 0.58 C 11631 3087 N 0 -70 399 0 0 70 h
+LTw
+LT7
+0.09 0.25 0.58 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2771 N 0 -62 153 0 0 62 h
+1622 3067 N 0 -1 153 0 0 1 h
+1774 3353 N 0 -1 153 0 0 1 h
+1926 3422 N 0 -1 152 0 0 1 h
+2077 3567 N 0 -1 153 0 0 1 h
+2229 3706 N 0 -1 153 0 0 1 h
+2381 3760 N 0 -1 153 0 0 1 h
+2533 4301 N 0 -1 153 0 0 1 h
+2685 4366 N 0 -1 153 0 0 1 h
+2837 4682 N 0 -1 153 0 0 1 h
+2989 4714 N 0 -1 153 0 0 1 h
+3141 4916 N 0 -1 153 0 0 1 h
+3293 4769 N 0 -1 153 0 0 1 h
+3445 4761 N 0 -1 153 0 0 1 h
+3597 4763 N 0 -1 153 0 0 1 h
+3749 4814 N 0 -131 153 0 0 131 h
+3901 5038 N 0 -134 153 0 0 134 h
+4053 5203 N 0 -333 152 0 0 333 h
+4204 5350 N 0 -1 153 0 0 1 h
+4356 5423 N 0 -1 153 0 0 1 h
+4508 5553 N 0 -1 153 0 0 1 h
+4660 5729 N 0 -125 153 0 0 125 h
+4812 5842 N 0 -1 153 0 0 1 h
+4964 5866 N 0 -1 153 0 0 1 h
+5116 5887 N 0 -1 153 0 0 1 h
+5268 5897 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6400 N 0 -1 153 0 0 1 h
+9674 6336 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6386 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT8
+0.95 0.53 0.64 C LTb
+17070 2982 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x5544E91: xmlNewPropInternal \(tree.c:1800\))]
+] -46.7 MRshow
+LT8
+0.95 0.53 0.64 C 11631 2947 N 0 -70 399 0 0 70 h
+LTw
+LT8
+0.95 0.53 0.64 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2832 N 0 -45 153 0 0 45 h
+1622 3067 N 0 -1 153 0 0 1 h
+1774 3353 N 0 -1 153 0 0 1 h
+1926 3422 N 0 -1 152 0 0 1 h
+2077 3567 N 0 -1 153 0 0 1 h
+2229 3706 N 0 -1 153 0 0 1 h
+2381 3760 N 0 -1 153 0 0 1 h
+2533 4301 N 0 -1 153 0 0 1 h
+2685 4366 N 0 -1 153 0 0 1 h
+2837 4682 N 0 -1 153 0 0 1 h
+2989 4714 N 0 -1 153 0 0 1 h
+3141 4916 N 0 -1 153 0 0 1 h
+3293 4769 N 0 -1 153 0 0 1 h
+3445 4761 N 0 -1 153 0 0 1 h
+3597 4763 N 0 -1 153 0 0 1 h
+3749 4944 N 0 -66 153 0 0 66 h
+3901 5171 N 0 -68 153 0 0 68 h
+4053 5535 N 0 -197 152 0 0 197 h
+4204 5350 N 0 -1 153 0 0 1 h
+4356 5423 N 0 -1 153 0 0 1 h
+4508 5553 N 0 -1 153 0 0 1 h
+4660 5853 N 0 -1 153 0 0 1 h
+4812 5842 N 0 -1 153 0 0 1 h
+4964 5866 N 0 -1 153 0 0 1 h
+5116 5887 N 0 -1 153 0 0 1 h
+5268 5897 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6400 N 0 -1 153 0 0 1 h
+9674 6336 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6386 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT0
+0.05 0.35 0.91 C LTb
+17070 2842 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x5A59427: )]
+[(Helvetica) 89.6 -75.6 true true 0 (a)]
+[(Helvetica) 140.0 0.0 true true 0 (lloc)]
+[(Helvetica) 112.0 -42.0 true true 0 (d)]
+[(Helvetica) 140.0 0.0 true true 0 (ir \(opendir.c:186\))]
+] -21.5 MRshow
+LT0
+0.05 0.35 0.91 C 11631 2807 N 0 -70 399 0 0 70 h
+LTw
+LT0
+0.05 0.35 0.91 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2876 N 0 -33 153 0 0 33 h
+1622 3067 N 0 -1 153 0 0 1 h
+1774 3353 N 0 -1 153 0 0 1 h
+1926 3422 N 0 -1 152 0 0 1 h
+2077 3567 N 0 -1 153 0 0 1 h
+2229 3706 N 0 -1 153 0 0 1 h
+2381 3760 N 0 -1 153 0 0 1 h
+2533 4301 N 0 -1 153 0 0 1 h
+2685 4366 N 0 -1 153 0 0 1 h
+2837 4682 N 0 -1 153 0 0 1 h
+2989 4714 N 0 -1 153 0 0 1 h
+3141 4916 N 0 -1 153 0 0 1 h
+3293 4769 N 0 -1 153 0 0 1 h
+3445 4761 N 0 -1 153 0 0 1 h
+3597 4763 N 0 -1 153 0 0 1 h
+3749 5009 N 0 -1 153 0 0 1 h
+3901 5238 N 0 -1 153 0 0 1 h
+4053 5731 N 0 -1 152 0 0 1 h
+4204 5350 N 0 -1 153 0 0 1 h
+4356 5423 N 0 -1 153 0 0 1 h
+4508 5553 N 0 -1 153 0 0 1 h
+4660 5853 N 0 -1 153 0 0 1 h
+4812 5842 N 0 -1 153 0 0 1 h
+4964 5866 N 0 -1 153 0 0 1 h
+5116 5887 N 0 -1 153 0 0 1 h
+5268 5897 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6400 N 0 -1 153 0 0 1 h
+9674 6336 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6386 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT1
+0.32 0.66 0.59 C LTb
+17070 2702 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x559ADF6: xmlStrndup \(xmlstring.c:45\))]
+] -46.7 MRshow
+LT1
+0.32 0.66 0.59 C 11631 2667 N 0 -70 399 0 0 70 h
+LTw
+LT1
+0.32 0.66 0.59 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2908 N 0 -32 153 0 0 32 h
+1622 3067 N 0 -1 153 0 0 1 h
+1774 3353 N 0 -1 153 0 0 1 h
+1926 3422 N 0 -1 152 0 0 1 h
+2077 3567 N 0 -1 153 0 0 1 h
+2229 3706 N 0 -1 153 0 0 1 h
+2381 3760 N 0 -1 153 0 0 1 h
+2533 4301 N 0 -1 153 0 0 1 h
+2685 4366 N 0 -1 153 0 0 1 h
+2837 4682 N 0 -1 153 0 0 1 h
+2989 4714 N 0 -1 153 0 0 1 h
+3141 4916 N 0 -1 153 0 0 1 h
+3293 4769 N 0 -1 153 0 0 1 h
+3445 4761 N 0 -1 153 0 0 1 h
+3597 4763 N 0 -1 153 0 0 1 h
+3749 5009 N 0 -1 153 0 0 1 h
+3901 5238 N 0 -1 153 0 0 1 h
+4053 5731 N 0 -109 152 0 0 109 h
+4204 5350 N 0 -1 153 0 0 1 h
+4356 5423 N 0 -1 153 0 0 1 h
+4508 5553 N 0 -1 153 0 0 1 h
+4660 5853 N 0 -1 153 0 0 1 h
+4812 5842 N 0 -1 153 0 0 1 h
+4964 5866 N 0 -1 153 0 0 1 h
+5116 5887 N 0 -1 153 0 0 1 h
+5268 5897 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6400 N 0 -1 153 0 0 1 h
+9674 6336 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6386 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT2
+0.47 0.39 0.85 C LTb
+17070 2562 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x567F5B0: g)]
+[(Helvetica) 112.0 -42.0 true true 0 (t)]
+[(Helvetica) 140.0 0.0 true true 0 (ry)]
+[(Helvetica) 112.0 -42.0 true true 0 (m)]
+[(Helvetica) 140.0 0.0 true true 0 (alloc \(gmem.c:199\))]
+] -32.7 MRshow
+LT2
+0.47 0.39 0.85 C 11631 2527 N 0 -70 399 0 0 70 h
+LTw
+LT2
+0.47 0.39 0.85 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2939 N 0 -28 153 0 0 28 h
+1622 3067 N 0 -1 153 0 0 1 h
+1774 3353 N 0 -1 153 0 0 1 h
+1926 3422 N 0 -1 152 0 0 1 h
+2077 3567 N 0 -167 153 0 0 167 h
+2229 3706 N 0 -1 153 0 0 1 h
+2381 3760 N 0 -1 153 0 0 1 h
+2533 4301 N 0 -1 153 0 0 1 h
+2685 4366 N 0 -1 153 0 0 1 h
+2837 4682 N 0 -1 153 0 0 1 h
+2989 4714 N 0 -1 153 0 0 1 h
+3141 4916 N 0 -1 153 0 0 1 h
+3293 4769 N 0 -1 153 0 0 1 h
+3445 4761 N 0 -1 153 0 0 1 h
+3597 4763 N 0 -1 153 0 0 1 h
+3749 5009 N 0 -1 153 0 0 1 h
+3901 5238 N 0 -1 153 0 0 1 h
+4053 5839 N 0 -1 152 0 0 1 h
+4204 5350 N 0 -1 153 0 0 1 h
+4356 5423 N 0 -1 153 0 0 1 h
+4508 5553 N 0 -1 153 0 0 1 h
+4660 5853 N 0 -1 153 0 0 1 h
+4812 5842 N 0 -1 153 0 0 1 h
+4964 5866 N 0 -1 153 0 0 1 h
+5116 5887 N 0 -1 153 0 0 1 h
+5268 5897 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6400 N 0 -197 153 0 0 197 h
+9674 6336 N 0 -197 153 0 0 197 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6386 N 0 -202 152 0 0 202 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT3
+0.02 0.66 0.36 C LTb
+17070 2422 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 284 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT3
+0.02 0.66 0.36 C 11631 2387 N 0 -70 399 0 0 70 h
+LTw
+LT3
+0.02 0.66 0.36 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3067 N 0 -149 153 0 0 149 h
+1774 3353 N 0 -1 153 0 0 1 h
+1926 3422 N 0 -1 152 0 0 1 h
+2077 3733 N 0 -1 153 0 0 1 h
+2229 3706 N 0 -1 153 0 0 1 h
+2381 3760 N 0 -1 153 0 0 1 h
+2533 4301 N 0 -1 153 0 0 1 h
+2685 4366 N 0 -1 153 0 0 1 h
+2837 4682 N 0 -1 153 0 0 1 h
+2989 4714 N 0 -1 153 0 0 1 h
+3141 4916 N 0 -1 153 0 0 1 h
+3293 4769 N 0 -1 153 0 0 1 h
+3445 4761 N 0 -1 153 0 0 1 h
+3597 4763 N 0 -1 153 0 0 1 h
+3749 5009 N 0 -1 153 0 0 1 h
+3901 5238 N 0 -1 153 0 0 1 h
+4053 5839 N 0 -1 152 0 0 1 h
+4204 5350 N 0 -1 153 0 0 1 h
+4356 5423 N 0 -1 153 0 0 1 h
+4508 5553 N 0 -1 153 0 0 1 h
+4660 5853 N 0 -1 153 0 0 1 h
+4812 5842 N 0 -1 153 0 0 1 h
+4964 5866 N 0 -1 153 0 0 1 h
+5116 5887 N 0 -1 153 0 0 1 h
+5268 5897 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6596 N 0 -1 153 0 0 1 h
+9674 6532 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6587 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT4
+0.79 0.82 0.71 C LTb
+17070 2282 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 389 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT4
+0.79 0.82 0.71 C 11631 2247 N 0 -70 399 0 0 70 h
+LTw
+LT4
+0.79 0.82 0.71 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3353 N 0 -158 153 0 0 158 h
+1926 3422 N 0 -1 152 0 0 1 h
+2077 3733 N 0 -1 153 0 0 1 h
+2229 3706 N 0 -1 153 0 0 1 h
+2381 3760 N 0 -1 153 0 0 1 h
+2533 4301 N 0 -1 153 0 0 1 h
+2685 4366 N 0 -1 153 0 0 1 h
+2837 4682 N 0 -1 153 0 0 1 h
+2989 4714 N 0 -1 153 0 0 1 h
+3141 4916 N 0 -1 153 0 0 1 h
+3293 4769 N 0 -1 153 0 0 1 h
+3445 4761 N 0 -1 153 0 0 1 h
+3597 4763 N 0 -1 153 0 0 1 h
+3749 5009 N 0 -1 153 0 0 1 h
+3901 5238 N 0 -1 153 0 0 1 h
+4053 5839 N 0 -1 152 0 0 1 h
+4204 5350 N 0 -1 153 0 0 1 h
+4356 5423 N 0 -1 153 0 0 1 h
+4508 5553 N 0 -1 153 0 0 1 h
+4660 5853 N 0 -1 153 0 0 1 h
+4812 5842 N 0 -1 153 0 0 1 h
+4964 5866 N 0 -1 153 0 0 1 h
+5116 5887 N 0 -1 153 0 0 1 h
+5268 5897 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6596 N 0 -1 153 0 0 1 h
+9674 6532 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6587 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT5
+0.38 0.77 0.92 C LTb
+17070 2142 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 466 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT5
+0.38 0.77 0.92 C 11631 2107 N 0 -70 399 0 0 70 h
+LTw
+LT5
+0.38 0.77 0.92 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3422 N 0 -216 152 0 0 216 h
+2077 3733 N 0 -1 153 0 0 1 h
+2229 3706 N 0 -1 153 0 0 1 h
+2381 3760 N 0 -1 153 0 0 1 h
+2533 4301 N 0 -1 153 0 0 1 h
+2685 4366 N 0 -1 153 0 0 1 h
+2837 4682 N 0 -1 153 0 0 1 h
+2989 4714 N 0 -1 153 0 0 1 h
+3141 4916 N 0 -1 153 0 0 1 h
+3293 4769 N 0 -1 153 0 0 1 h
+3445 4761 N 0 -1 153 0 0 1 h
+3597 4763 N 0 -1 153 0 0 1 h
+3749 5009 N 0 -1 153 0 0 1 h
+3901 5238 N 0 -1 153 0 0 1 h
+4053 5839 N 0 -1 152 0 0 1 h
+4204 5350 N 0 -1 153 0 0 1 h
+4356 5423 N 0 -1 153 0 0 1 h
+4508 5553 N 0 -1 153 0 0 1 h
+4660 5853 N 0 -1 153 0 0 1 h
+4812 5842 N 0 -1 153 0 0 1 h
+4964 5866 N 0 -1 153 0 0 1 h
+5116 5887 N 0 -1 153 0 0 1 h
+5268 5897 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6596 N 0 -1 153 0 0 1 h
+9674 6532 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6587 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT6
+0.82 0.76 0.13 C LTb
+17070 2002 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x5A39C8E: strdup \(strdup.c:43\))]
+] -46.7 MRshow
+LT6
+0.82 0.76 0.13 C 11631 1967 N 0 -70 399 0 0 70 h
+LTw
+LT6
+0.82 0.76 0.13 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3637 N 0 -57 152 0 0 57 h
+2077 3733 N 0 -57 153 0 0 57 h
+2229 3706 N 0 -56 153 0 0 56 h
+2381 3760 N 0 -57 153 0 0 57 h
+2533 4301 N 0 -57 153 0 0 57 h
+2685 4366 N 0 -69 153 0 0 69 h
+2837 4682 N 0 -73 153 0 0 73 h
+2989 4714 N 0 -58 153 0 0 58 h
+3141 4916 N 0 -73 153 0 0 73 h
+3293 4769 N 0 -72 153 0 0 72 h
+3445 4761 N 0 -73 153 0 0 73 h
+3597 4763 N 0 -73 153 0 0 73 h
+3749 5009 N 0 -72 153 0 0 72 h
+3901 5238 N 0 -72 153 0 0 72 h
+4053 5839 N 0 -72 152 0 0 72 h
+4204 5350 N 0 -72 153 0 0 72 h
+4356 5423 N 0 -73 153 0 0 73 h
+4508 5553 N 0 -72 153 0 0 72 h
+4660 5853 N 0 -72 153 0 0 72 h
+4812 5842 N 0 -72 153 0 0 72 h
+4964 5866 N 0 -72 153 0 0 72 h
+5116 5887 N 0 -72 153 0 0 72 h
+5268 5897 N 0 -73 153 0 0 73 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6596 N 0 -1 153 0 0 1 h
+9674 6532 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6587 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT7
+0.82 0.43 0.18 C LTb
+17070 1862 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x546A6E6: )]
+[(Helvetica) 112.0 -42.0 true true 0 (x)]
+[(Helvetica) 140.0 0.0 true true 0 (dg)]
+[(Helvetica) 112.0 -42.0 true true 0 (g)]
+[(Helvetica) 140.0 0.0 true true 0 (lob)]
+[(Helvetica) 112.0 -42.0 true true 0 (h)]
+[(Helvetica) 140.0 0.0 true true 0 (ash)]
+[(Helvetica) 112.0 -42.0 true true 0 (n)]
+[(Helvetica) 140.0 0.0 true true 0 (ode)]
+[(Helvetica) 112.0 -42.0 true true 0 (n)]
+[(Helvetica) 140.0 0.0 true true 0 (ew \(xdgmimeglob.c:143\))]
+] -32.7 MRshow
+LT7
+0.82 0.43 0.18 C 11631 1827 N 0 -70 399 0 0 70 h
+LTw
+LT7
+0.82 0.43 0.18 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3693 N 0 -45 152 0 0 45 h
+2077 3789 N 0 -44 153 0 0 44 h
+2229 3761 N 0 -45 153 0 0 45 h
+2381 3816 N 0 -44 153 0 0 44 h
+2533 4357 N 0 -1 153 0 0 1 h
+2685 4434 N 0 -1 153 0 0 1 h
+2837 4754 N 0 -1 153 0 0 1 h
+2989 4771 N 0 -1 153 0 0 1 h
+3141 4988 N 0 -1 153 0 0 1 h
+3293 4840 N 0 -1 153 0 0 1 h
+3445 4833 N 0 -1 153 0 0 1 h
+3597 4835 N 0 -1 153 0 0 1 h
+3749 5080 N 0 -1 153 0 0 1 h
+3901 5309 N 0 -1 153 0 0 1 h
+4053 5910 N 0 -1 152 0 0 1 h
+4204 5421 N 0 -1 153 0 0 1 h
+4356 5495 N 0 -1 153 0 0 1 h
+4508 5624 N 0 -1 153 0 0 1 h
+4660 5924 N 0 -1 153 0 0 1 h
+4812 5913 N 0 -1 153 0 0 1 h
+4964 5937 N 0 -1 153 0 0 1 h
+5116 5958 N 0 -1 153 0 0 1 h
+5268 5969 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6596 N 0 -1 153 0 0 1 h
+9674 6532 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6587 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT8
+0.92 0.23 0.70 C LTb
+17070 1722 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 624 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT8
+0.92 0.23 0.70 C 11631 1687 N 0 -70 399 0 0 70 h
+LTw
+LT8
+0.92 0.23 0.70 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 3832 N 0 -291 153 0 0 291 h
+2229 3805 N 0 -1 153 0 0 1 h
+2381 3859 N 0 -1 153 0 0 1 h
+2533 4357 N 0 -1 153 0 0 1 h
+2685 4434 N 0 -1 153 0 0 1 h
+2837 4754 N 0 -1 153 0 0 1 h
+2989 4771 N 0 -1 153 0 0 1 h
+3141 4988 N 0 -1 153 0 0 1 h
+3293 4840 N 0 -1 153 0 0 1 h
+3445 4833 N 0 -1 153 0 0 1 h
+3597 4835 N 0 -1 153 0 0 1 h
+3749 5080 N 0 -1 153 0 0 1 h
+3901 5309 N 0 -1 153 0 0 1 h
+4053 5910 N 0 -1 152 0 0 1 h
+4204 5421 N 0 -1 153 0 0 1 h
+4356 5495 N 0 -1 153 0 0 1 h
+4508 5624 N 0 -1 153 0 0 1 h
+4660 5924 N 0 -1 153 0 0 1 h
+4812 5913 N 0 -1 153 0 0 1 h
+4964 5937 N 0 -1 153 0 0 1 h
+5116 5958 N 0 -1 153 0 0 1 h
+5268 5969 N 0 -1 153 0 0 1 h
+5420 5919 N 0 -1 153 0 0 1 h
+5572 5935 N 0 -1 153 0 0 1 h
+5724 5953 N 0 -1 153 0 0 1 h
+5876 5966 N 0 -1 153 0 0 1 h
+6028 6001 N 0 -1 153 0 0 1 h
+6180 6099 N 0 -1 152 0 0 1 h
+6331 6142 N 0 -1 153 0 0 1 h
+6483 6132 N 0 -1 153 0 0 1 h
+6635 6137 N 0 -1 153 0 0 1 h
+6787 6177 N 0 -1 153 0 0 1 h
+6939 6189 N 0 -1 153 0 0 1 h
+7091 6264 N 0 -1 153 0 0 1 h
+7243 6206 N 0 -1 153 0 0 1 h
+7395 6214 N 0 -1 153 0 0 1 h
+7547 6225 N 0 -1 153 0 0 1 h
+7699 6338 N 0 -1 153 0 0 1 h
+7851 6373 N 0 -1 153 0 0 1 h
+8003 6380 N 0 -1 153 0 0 1 h
+8155 6435 N 0 -1 152 0 0 1 h
+8306 6464 N 0 -1 153 0 0 1 h
+8458 6508 N 0 -1 153 0 0 1 h
+8610 6637 N 0 -1 153 0 0 1 h
+8762 6445 N 0 -1 153 0 0 1 h
+8914 6692 N 0 -1 153 0 0 1 h
+9066 6479 N 0 -1 153 0 0 1 h
+9218 6483 N 0 -1 153 0 0 1 h
+9370 6484 N 0 -1 153 0 0 1 h
+9522 6596 N 0 -1 153 0 0 1 h
+9674 6532 N 0 -1 153 0 0 1 h
+9826 6474 N 0 -1 153 0 0 1 h
+9978 6488 N 0 -1 153 0 0 1 h
+10130 6489 N 0 -1 153 0 0 1 h
+10282 6587 N 0 -1 152 0 0 1 h
+10433 6500 N 0 -1 153 0 0 1 h
+10585 6500 N 0 -1 153 0 0 1 h
+10737 6518 N 0 -1 153 0 0 1 h
+10889 6508 N 0 -1 153 0 0 1 h
+11041 6474 N 0 -1 153 0 0 1 h
+11193 6359 N 0 -1 153 0 0 1 h
+1.000 UL
+LT0
+0.91 0.09 0.18 C LTb
+17070 1582 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x520003B: ??? \(in /usr/lib/libfreetype.so.6.3.20\))]
+] -46.7 MRshow
+LT0
+0.91 0.09 0.18 C 11631 1547 N 0 -70 399 0 0 70 h
+LTw
+LT0
+0.91 0.09 0.18 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4122 N 0 -74 153 0 0 74 h
+2229 3805 N 0 -73 153 0 0 73 h
+2381 3859 N 0 -102 153 0 0 102 h
+2533 4357 N 0 -102 153 0 0 102 h
+2685 4434 N 0 -102 153 0 0 102 h
+2837 4754 N 0 -102 153 0 0 102 h
+2989 4771 N 0 -102 153 0 0 102 h
+3141 4988 N 0 -102 153 0 0 102 h
+3293 4840 N 0 -102 153 0 0 102 h
+3445 4833 N 0 -102 153 0 0 102 h
+3597 4835 N 0 -102 153 0 0 102 h
+3749 5080 N 0 -102 153 0 0 102 h
+3901 5309 N 0 -102 153 0 0 102 h
+4053 5910 N 0 -102 152 0 0 102 h
+4204 5421 N 0 -102 153 0 0 102 h
+4356 5495 N 0 -102 153 0 0 102 h
+4508 5624 N 0 -102 153 0 0 102 h
+4660 5924 N 0 -102 153 0 0 102 h
+4812 5913 N 0 -102 153 0 0 102 h
+4964 5937 N 0 -102 153 0 0 102 h
+5116 5958 N 0 -102 153 0 0 102 h
+5268 5969 N 0 -102 153 0 0 102 h
+5420 5919 N 0 -102 153 0 0 102 h
+5572 5935 N 0 -102 153 0 0 102 h
+5724 5953 N 0 -102 153 0 0 102 h
+5876 5966 N 0 -102 153 0 0 102 h
+6028 6001 N 0 -102 153 0 0 102 h
+6180 6099 N 0 -102 152 0 0 102 h
+6331 6142 N 0 -101 153 0 0 101 h
+6483 6132 N 0 -102 153 0 0 102 h
+6635 6137 N 0 -102 153 0 0 102 h
+6787 6177 N 0 -102 153 0 0 102 h
+6939 6189 N 0 -102 153 0 0 102 h
+7091 6264 N 0 -102 153 0 0 102 h
+7243 6206 N 0 -102 153 0 0 102 h
+7395 6214 N 0 -102 153 0 0 102 h
+7547 6225 N 0 -102 153 0 0 102 h
+7699 6338 N 0 -102 153 0 0 102 h
+7851 6373 N 0 -102 153 0 0 102 h
+8003 6380 N 0 -102 153 0 0 102 h
+8155 6435 N 0 -102 152 0 0 102 h
+8306 6464 N 0 -102 153 0 0 102 h
+8458 6508 N 0 -102 153 0 0 102 h
+8610 6637 N 0 -101 153 0 0 101 h
+8762 6445 N 0 -102 153 0 0 102 h
+8914 6692 N 0 -102 153 0 0 102 h
+9066 6479 N 0 -102 153 0 0 102 h
+9218 6483 N 0 -102 153 0 0 102 h
+9370 6484 N 0 -102 153 0 0 102 h
+9522 6596 N 0 -101 153 0 0 101 h
+9674 6532 N 0 -102 153 0 0 102 h
+9826 6474 N 0 -102 153 0 0 102 h
+9978 6488 N 0 -102 153 0 0 102 h
+10130 6489 N 0 -102 153 0 0 102 h
+10282 6587 N 0 -102 152 0 0 102 h
+10433 6500 N 0 -101 153 0 0 101 h
+10585 6500 N 0 -102 153 0 0 102 h
+10737 6518 N 0 -101 153 0 0 101 h
+10889 6508 N 0 -102 153 0 0 102 h
+11041 6474 N 0 -101 153 0 0 101 h
+11193 6359 N 0 -102 153 0 0 102 h
+1.000 UL
+LT1
+0.67 0.95 0.22 C LTb
+17070 1442 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 671 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT1
+0.67 0.95 0.22 C 11631 1407 N 0 -70 399 0 0 70 h
+LTw
+LT1
+0.67 0.95 0.22 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 3877 N 0 -309 153 0 0 309 h
+2381 3960 N 0 -1 153 0 0 1 h
+2533 4458 N 0 -1 153 0 0 1 h
+2685 4535 N 0 -1 153 0 0 1 h
+2837 4855 N 0 -1 153 0 0 1 h
+2989 4872 N 0 -1 153 0 0 1 h
+3141 5089 N 0 -1 153 0 0 1 h
+3293 4941 N 0 -1 153 0 0 1 h
+3445 4934 N 0 -1 153 0 0 1 h
+3597 4936 N 0 -1 153 0 0 1 h
+3749 5181 N 0 -1 153 0 0 1 h
+3901 5410 N 0 -1 153 0 0 1 h
+4053 6011 N 0 -1 152 0 0 1 h
+4204 5522 N 0 -1 153 0 0 1 h
+4356 5596 N 0 -1 153 0 0 1 h
+4508 5725 N 0 -1 153 0 0 1 h
+4660 6025 N 0 -1 153 0 0 1 h
+4812 6014 N 0 -1 153 0 0 1 h
+4964 6038 N 0 -1 153 0 0 1 h
+5116 6059 N 0 -1 153 0 0 1 h
+5268 6070 N 0 -1 153 0 0 1 h
+5420 6020 N 0 -1 153 0 0 1 h
+5572 6036 N 0 -1 153 0 0 1 h
+5724 6054 N 0 -1 153 0 0 1 h
+5876 6067 N 0 -1 153 0 0 1 h
+6028 6102 N 0 -1 153 0 0 1 h
+6180 6200 N 0 -1 152 0 0 1 h
+6331 6242 N 0 -1 153 0 0 1 h
+6483 6233 N 0 -1 153 0 0 1 h
+6635 6238 N 0 -1 153 0 0 1 h
+6787 6278 N 0 -1 153 0 0 1 h
+6939 6290 N 0 -1 153 0 0 1 h
+7091 6365 N 0 -1 153 0 0 1 h
+7243 6307 N 0 -1 153 0 0 1 h
+7395 6315 N 0 -1 153 0 0 1 h
+7547 6326 N 0 -1 153 0 0 1 h
+7699 6439 N 0 -1 153 0 0 1 h
+7851 6474 N 0 -1 153 0 0 1 h
+8003 6481 N 0 -1 153 0 0 1 h
+8155 6536 N 0 -1 152 0 0 1 h
+8306 6565 N 0 -1 153 0 0 1 h
+8458 6609 N 0 -1 153 0 0 1 h
+8610 6737 N 0 -1 153 0 0 1 h
+8762 6546 N 0 -1 153 0 0 1 h
+8914 6793 N 0 -1 153 0 0 1 h
+9066 6580 N 0 -1 153 0 0 1 h
+9218 6584 N 0 -1 153 0 0 1 h
+9370 6585 N 0 -1 153 0 0 1 h
+9522 6696 N 0 -1 153 0 0 1 h
+9674 6633 N 0 -1 153 0 0 1 h
+9826 6575 N 0 -1 153 0 0 1 h
+9978 6589 N 0 -1 153 0 0 1 h
+10130 6590 N 0 -1 153 0 0 1 h
+10282 6688 N 0 -1 152 0 0 1 h
+10433 6600 N 0 -1 153 0 0 1 h
+10585 6601 N 0 -1 153 0 0 1 h
+10737 6618 N 0 -1 153 0 0 1 h
+10889 6609 N 0 -1 153 0 0 1 h
+11041 6574 N 0 -1 153 0 0 1 h
+11193 6460 N 0 -1 153 0 0 1 h
+1.000 UL
+LT2
+0.00 0.28 0.45 C LTb
+17070 1302 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 676 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT2
+0.00 0.28 0.45 C 11631 1267 N 0 -70 399 0 0 70 h
+LTw
+LT2
+0.00 0.28 0.45 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 3960 N 0 -370 153 0 0 370 h
+2533 4458 N 0 -1 153 0 0 1 h
+2685 4535 N 0 -1 153 0 0 1 h
+2837 4855 N 0 -1 153 0 0 1 h
+2989 4872 N 0 -1 153 0 0 1 h
+3141 5089 N 0 -1 153 0 0 1 h
+3293 4941 N 0 -1 153 0 0 1 h
+3445 4934 N 0 -1 153 0 0 1 h
+3597 4936 N 0 -1 153 0 0 1 h
+3749 5181 N 0 -1 153 0 0 1 h
+3901 5410 N 0 -1 153 0 0 1 h
+4053 6011 N 0 -1 152 0 0 1 h
+4204 5522 N 0 -1 153 0 0 1 h
+4356 5596 N 0 -1 153 0 0 1 h
+4508 5725 N 0 -1 153 0 0 1 h
+4660 6025 N 0 -1 153 0 0 1 h
+4812 6014 N 0 -1 153 0 0 1 h
+4964 6038 N 0 -1 153 0 0 1 h
+5116 6059 N 0 -1 153 0 0 1 h
+5268 6070 N 0 -1 153 0 0 1 h
+5420 6020 N 0 -1 153 0 0 1 h
+5572 6036 N 0 -1 153 0 0 1 h
+5724 6054 N 0 -1 153 0 0 1 h
+5876 6067 N 0 -1 153 0 0 1 h
+6028 6102 N 0 -1 153 0 0 1 h
+6180 6200 N 0 -1 152 0 0 1 h
+6331 6242 N 0 -1 153 0 0 1 h
+6483 6233 N 0 -1 153 0 0 1 h
+6635 6238 N 0 -1 153 0 0 1 h
+6787 6278 N 0 -1 153 0 0 1 h
+6939 6290 N 0 -1 153 0 0 1 h
+7091 6365 N 0 -1 153 0 0 1 h
+7243 6307 N 0 -1 153 0 0 1 h
+7395 6315 N 0 -1 153 0 0 1 h
+7547 6326 N 0 -1 153 0 0 1 h
+7699 6439 N 0 -1 153 0 0 1 h
+7851 6474 N 0 -1 153 0 0 1 h
+8003 6481 N 0 -1 153 0 0 1 h
+8155 6536 N 0 -1 152 0 0 1 h
+8306 6565 N 0 -1 153 0 0 1 h
+8458 6609 N 0 -1 153 0 0 1 h
+8610 6737 N 0 -1 153 0 0 1 h
+8762 6546 N 0 -1 153 0 0 1 h
+8914 6793 N 0 -1 153 0 0 1 h
+9066 6580 N 0 -1 153 0 0 1 h
+9218 6584 N 0 -1 153 0 0 1 h
+9370 6585 N 0 -1 153 0 0 1 h
+9522 6696 N 0 -1 153 0 0 1 h
+9674 6633 N 0 -1 153 0 0 1 h
+9826 6575 N 0 -1 153 0 0 1 h
+9978 6589 N 0 -1 153 0 0 1 h
+10130 6590 N 0 -1 153 0 0 1 h
+10282 6688 N 0 -1 152 0 0 1 h
+10433 6600 N 0 -1 153 0 0 1 h
+10585 6601 N 0 -1 153 0 0 1 h
+10737 6618 N 0 -1 153 0 0 1 h
+10889 6609 N 0 -1 153 0 0 1 h
+11041 6574 N 0 -1 153 0 0 1 h
+11193 6460 N 0 -1 153 0 0 1 h
+1.000 UL
+LT3
+0.61 0.55 0.89 C LTb
+22593 5362 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 678 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT3
+0.61 0.55 0.89 C 17154 5327 N 0 -70 399 0 0 70 h
+LTw
+LT3
+0.61 0.55 0.89 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4458 N 0 -486 153 0 0 486 h
+2685 4535 N 0 -1 153 0 0 1 h
+2837 4855 N 0 -1 153 0 0 1 h
+2989 4872 N 0 -1 153 0 0 1 h
+3141 5089 N 0 -1 153 0 0 1 h
+3293 4941 N 0 -1 153 0 0 1 h
+3445 4934 N 0 -1 153 0 0 1 h
+3597 4936 N 0 -1 153 0 0 1 h
+3749 5181 N 0 -1 153 0 0 1 h
+3901 5410 N 0 -1 153 0 0 1 h
+4053 6011 N 0 -1 152 0 0 1 h
+4204 5522 N 0 -1 153 0 0 1 h
+4356 5596 N 0 -1 153 0 0 1 h
+4508 5725 N 0 -1 153 0 0 1 h
+4660 6025 N 0 -1 153 0 0 1 h
+4812 6014 N 0 -1 153 0 0 1 h
+4964 6038 N 0 -1 153 0 0 1 h
+5116 6059 N 0 -1 153 0 0 1 h
+5268 6070 N 0 -1 153 0 0 1 h
+5420 6020 N 0 -1 153 0 0 1 h
+5572 6036 N 0 -1 153 0 0 1 h
+5724 6054 N 0 -1 153 0 0 1 h
+5876 6067 N 0 -1 153 0 0 1 h
+6028 6102 N 0 -1 153 0 0 1 h
+6180 6200 N 0 -1 152 0 0 1 h
+6331 6242 N 0 -1 153 0 0 1 h
+6483 6233 N 0 -1 153 0 0 1 h
+6635 6238 N 0 -1 153 0 0 1 h
+6787 6278 N 0 -1 153 0 0 1 h
+6939 6290 N 0 -1 153 0 0 1 h
+7091 6365 N 0 -1 153 0 0 1 h
+7243 6307 N 0 -1 153 0 0 1 h
+7395 6315 N 0 -1 153 0 0 1 h
+7547 6326 N 0 -1 153 0 0 1 h
+7699 6439 N 0 -1 153 0 0 1 h
+7851 6474 N 0 -1 153 0 0 1 h
+8003 6481 N 0 -1 153 0 0 1 h
+8155 6536 N 0 -1 152 0 0 1 h
+8306 6565 N 0 -1 153 0 0 1 h
+8458 6609 N 0 -1 153 0 0 1 h
+8610 6737 N 0 -1 153 0 0 1 h
+8762 6546 N 0 -1 153 0 0 1 h
+8914 6793 N 0 -1 153 0 0 1 h
+9066 6580 N 0 -1 153 0 0 1 h
+9218 6584 N 0 -1 153 0 0 1 h
+9370 6585 N 0 -1 153 0 0 1 h
+9522 6696 N 0 -1 153 0 0 1 h
+9674 6633 N 0 -1 153 0 0 1 h
+9826 6575 N 0 -1 153 0 0 1 h
+9978 6589 N 0 -1 153 0 0 1 h
+10130 6590 N 0 -1 153 0 0 1 h
+10282 6688 N 0 -1 152 0 0 1 h
+10433 6600 N 0 -1 153 0 0 1 h
+10585 6601 N 0 -1 153 0 0 1 h
+10737 6618 N 0 -1 153 0 0 1 h
+10889 6609 N 0 -1 153 0 0 1 h
+11041 6574 N 0 -1 153 0 0 1 h
+11193 6460 N 0 -1 153 0 0 1 h
+1.000 UL
+LT4
+0.89 0.25 0.51 C LTb
+22593 5222 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 701 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT4
+0.89 0.25 0.51 C 17154 5187 N 0 -70 399 0 0 70 h
+LTw
+LT4
+0.89 0.25 0.51 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 4535 N 0 -503 153 0 0 503 h
+2837 4855 N 0 -1 153 0 0 1 h
+2989 4872 N 0 -1 153 0 0 1 h
+3141 5089 N 0 -1 153 0 0 1 h
+3293 4941 N 0 -1 153 0 0 1 h
+3445 4934 N 0 -1 153 0 0 1 h
+3597 4936 N 0 -1 153 0 0 1 h
+3749 5181 N 0 -1 153 0 0 1 h
+3901 5410 N 0 -1 153 0 0 1 h
+4053 6011 N 0 -1 152 0 0 1 h
+4204 5522 N 0 -1 153 0 0 1 h
+4356 5596 N 0 -1 153 0 0 1 h
+4508 5725 N 0 -1 153 0 0 1 h
+4660 6025 N 0 -1 153 0 0 1 h
+4812 6014 N 0 -1 153 0 0 1 h
+4964 6038 N 0 -1 153 0 0 1 h
+5116 6059 N 0 -1 153 0 0 1 h
+5268 6070 N 0 -1 153 0 0 1 h
+5420 6020 N 0 -1 153 0 0 1 h
+5572 6036 N 0 -1 153 0 0 1 h
+5724 6054 N 0 -1 153 0 0 1 h
+5876 6067 N 0 -1 153 0 0 1 h
+6028 6102 N 0 -1 153 0 0 1 h
+6180 6200 N 0 -1 152 0 0 1 h
+6331 6242 N 0 -1 153 0 0 1 h
+6483 6233 N 0 -1 153 0 0 1 h
+6635 6238 N 0 -1 153 0 0 1 h
+6787 6278 N 0 -1 153 0 0 1 h
+6939 6290 N 0 -1 153 0 0 1 h
+7091 6365 N 0 -1 153 0 0 1 h
+7243 6307 N 0 -1 153 0 0 1 h
+7395 6315 N 0 -1 153 0 0 1 h
+7547 6326 N 0 -1 153 0 0 1 h
+7699 6439 N 0 -1 153 0 0 1 h
+7851 6474 N 0 -1 153 0 0 1 h
+8003 6481 N 0 -1 153 0 0 1 h
+8155 6536 N 0 -1 152 0 0 1 h
+8306 6565 N 0 -1 153 0 0 1 h
+8458 6609 N 0 -1 153 0 0 1 h
+8610 6737 N 0 -1 153 0 0 1 h
+8762 6546 N 0 -1 153 0 0 1 h
+8914 6793 N 0 -1 153 0 0 1 h
+9066 6580 N 0 -1 153 0 0 1 h
+9218 6584 N 0 -1 153 0 0 1 h
+9370 6585 N 0 -1 153 0 0 1 h
+9522 6696 N 0 -1 153 0 0 1 h
+9674 6633 N 0 -1 153 0 0 1 h
+9826 6575 N 0 -1 153 0 0 1 h
+9978 6589 N 0 -1 153 0 0 1 h
+10130 6590 N 0 -1 153 0 0 1 h
+10282 6688 N 0 -1 152 0 0 1 h
+10433 6600 N 0 -1 153 0 0 1 h
+10585 6601 N 0 -1 153 0 0 1 h
+10737 6618 N 0 -1 153 0 0 1 h
+10889 6609 N 0 -1 153 0 0 1 h
+11041 6574 N 0 -1 153 0 0 1 h
+11193 6460 N 0 -1 153 0 0 1 h
+1.000 UL
+LT5
+0.00 0.18 0.77 C LTb
+22593 5082 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 727 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT5
+0.00 0.18 0.77 C 17154 5047 N 0 -70 399 0 0 70 h
+LTw
+LT5
+0.00 0.18 0.77 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 4855 N 0 -593 153 0 0 593 h
+2989 4872 N 0 -1 153 0 0 1 h
+3141 5089 N 0 -1 153 0 0 1 h
+3293 4941 N 0 -1 153 0 0 1 h
+3445 4934 N 0 -1 153 0 0 1 h
+3597 4936 N 0 -1 153 0 0 1 h
+3749 5181 N 0 -1 153 0 0 1 h
+3901 5410 N 0 -1 153 0 0 1 h
+4053 6011 N 0 -1 152 0 0 1 h
+4204 5522 N 0 -1 153 0 0 1 h
+4356 5596 N 0 -1 153 0 0 1 h
+4508 5725 N 0 -1 153 0 0 1 h
+4660 6025 N 0 -1 153 0 0 1 h
+4812 6014 N 0 -1 153 0 0 1 h
+4964 6038 N 0 -1 153 0 0 1 h
+5116 6059 N 0 -1 153 0 0 1 h
+5268 6070 N 0 -1 153 0 0 1 h
+5420 6020 N 0 -1 153 0 0 1 h
+5572 6036 N 0 -1 153 0 0 1 h
+5724 6054 N 0 -1 153 0 0 1 h
+5876 6067 N 0 -1 153 0 0 1 h
+6028 6102 N 0 -1 153 0 0 1 h
+6180 6200 N 0 -1 152 0 0 1 h
+6331 6242 N 0 -1 153 0 0 1 h
+6483 6233 N 0 -1 153 0 0 1 h
+6635 6238 N 0 -1 153 0 0 1 h
+6787 6278 N 0 -1 153 0 0 1 h
+6939 6290 N 0 -1 153 0 0 1 h
+7091 6365 N 0 -1 153 0 0 1 h
+7243 6307 N 0 -1 153 0 0 1 h
+7395 6315 N 0 -1 153 0 0 1 h
+7547 6326 N 0 -1 153 0 0 1 h
+7699 6439 N 0 -1 153 0 0 1 h
+7851 6474 N 0 -1 153 0 0 1 h
+8003 6481 N 0 -1 153 0 0 1 h
+8155 6536 N 0 -1 152 0 0 1 h
+8306 6565 N 0 -1 153 0 0 1 h
+8458 6609 N 0 -1 153 0 0 1 h
+8610 6737 N 0 -1 153 0 0 1 h
+8762 6546 N 0 -1 153 0 0 1 h
+8914 6793 N 0 -1 153 0 0 1 h
+9066 6580 N 0 -1 153 0 0 1 h
+9218 6584 N 0 -1 153 0 0 1 h
+9370 6585 N 0 -1 153 0 0 1 h
+9522 6696 N 0 -1 153 0 0 1 h
+9674 6633 N 0 -1 153 0 0 1 h
+9826 6575 N 0 -1 153 0 0 1 h
+9978 6589 N 0 -1 153 0 0 1 h
+10130 6590 N 0 -1 153 0 0 1 h
+10282 6688 N 0 -1 152 0 0 1 h
+10433 6600 N 0 -1 153 0 0 1 h
+10585 6601 N 0 -1 153 0 0 1 h
+10737 6618 N 0 -1 153 0 0 1 h
+10889 6609 N 0 -1 153 0 0 1 h
+11041 6574 N 0 -1 153 0 0 1 h
+11193 6460 N 0 -1 153 0 0 1 h
+1.000 UL
+LT6
+0.49 0.75 0.35 C LTb
+22593 4942 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 763 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT6
+0.49 0.75 0.35 C 17154 4907 N 0 -70 399 0 0 70 h
+LTw
+LT6
+0.49 0.75 0.35 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 4872 N 0 -631 153 0 0 631 h
+3141 5089 N 0 -1 153 0 0 1 h
+3293 4941 N 0 -1 153 0 0 1 h
+3445 4934 N 0 -1 153 0 0 1 h
+3597 4936 N 0 -1 153 0 0 1 h
+3749 5181 N 0 -1 153 0 0 1 h
+3901 5410 N 0 -1 153 0 0 1 h
+4053 6011 N 0 -1 152 0 0 1 h
+4204 5522 N 0 -1 153 0 0 1 h
+4356 5596 N 0 -1 153 0 0 1 h
+4508 5725 N 0 -1 153 0 0 1 h
+4660 6025 N 0 -1 153 0 0 1 h
+4812 6014 N 0 -1 153 0 0 1 h
+4964 6038 N 0 -1 153 0 0 1 h
+5116 6059 N 0 -1 153 0 0 1 h
+5268 6070 N 0 -1 153 0 0 1 h
+5420 6020 N 0 -1 153 0 0 1 h
+5572 6036 N 0 -1 153 0 0 1 h
+5724 6054 N 0 -1 153 0 0 1 h
+5876 6067 N 0 -1 153 0 0 1 h
+6028 6102 N 0 -1 153 0 0 1 h
+6180 6200 N 0 -1 152 0 0 1 h
+6331 6242 N 0 -1 153 0 0 1 h
+6483 6233 N 0 -1 153 0 0 1 h
+6635 6238 N 0 -1 153 0 0 1 h
+6787 6278 N 0 -1 153 0 0 1 h
+6939 6290 N 0 -1 153 0 0 1 h
+7091 6365 N 0 -1 153 0 0 1 h
+7243 6307 N 0 -1 153 0 0 1 h
+7395 6315 N 0 -1 153 0 0 1 h
+7547 6326 N 0 -1 153 0 0 1 h
+7699 6439 N 0 -1 153 0 0 1 h
+7851 6474 N 0 -1 153 0 0 1 h
+8003 6481 N 0 -1 153 0 0 1 h
+8155 6536 N 0 -1 152 0 0 1 h
+8306 6565 N 0 -1 153 0 0 1 h
+8458 6609 N 0 -1 153 0 0 1 h
+8610 6737 N 0 -1 153 0 0 1 h
+8762 6546 N 0 -1 153 0 0 1 h
+8914 6793 N 0 -1 153 0 0 1 h
+9066 6580 N 0 -1 153 0 0 1 h
+9218 6584 N 0 -1 153 0 0 1 h
+9370 6585 N 0 -1 153 0 0 1 h
+9522 6696 N 0 -1 153 0 0 1 h
+9674 6633 N 0 -1 153 0 0 1 h
+9826 6575 N 0 -1 153 0 0 1 h
+9978 6589 N 0 -1 153 0 0 1 h
+10130 6590 N 0 -1 153 0 0 1 h
+10282 6688 N 0 -1 152 0 0 1 h
+10433 6600 N 0 -1 153 0 0 1 h
+10585 6601 N 0 -1 153 0 0 1 h
+10737 6618 N 0 -1 153 0 0 1 h
+10889 6609 N 0 -1 153 0 0 1 h
+11041 6574 N 0 -1 153 0 0 1 h
+11193 6460 N 0 -1 153 0 0 1 h
+1.000 UL
+LT7
+0.96 0.05 0.97 C LTb
+22593 4802 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 792 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT7
+0.96 0.05 0.97 C 17154 4767 N 0 -70 399 0 0 70 h
+LTw
+LT7
+0.96 0.05 0.97 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5089 N 0 -639 153 0 0 639 h
+3293 4941 N 0 -658 153 0 0 658 h
+3445 4934 N 0 -612 153 0 0 612 h
+3597 4936 N 0 -1 153 0 0 1 h
+3749 5181 N 0 -1 153 0 0 1 h
+3901 5410 N 0 -1 153 0 0 1 h
+4053 6011 N 0 -1 152 0 0 1 h
+4204 5522 N 0 -1 153 0 0 1 h
+4356 5596 N 0 -1 153 0 0 1 h
+4508 5725 N 0 -1 153 0 0 1 h
+4660 6025 N 0 -1 153 0 0 1 h
+4812 6014 N 0 -1 153 0 0 1 h
+4964 6038 N 0 -1 153 0 0 1 h
+5116 6059 N 0 -1 153 0 0 1 h
+5268 6070 N 0 -1 153 0 0 1 h
+5420 6020 N 0 -1 153 0 0 1 h
+5572 6036 N 0 -1 153 0 0 1 h
+5724 6054 N 0 -1 153 0 0 1 h
+5876 6067 N 0 -1 153 0 0 1 h
+6028 6102 N 0 -1 153 0 0 1 h
+6180 6200 N 0 -1 152 0 0 1 h
+6331 6242 N 0 -1 153 0 0 1 h
+6483 6233 N 0 -1 153 0 0 1 h
+6635 6238 N 0 -1 153 0 0 1 h
+6787 6278 N 0 -1 153 0 0 1 h
+6939 6290 N 0 -1 153 0 0 1 h
+7091 6365 N 0 -1 153 0 0 1 h
+7243 6307 N 0 -1 153 0 0 1 h
+7395 6315 N 0 -1 153 0 0 1 h
+7547 6326 N 0 -1 153 0 0 1 h
+7699 6439 N 0 -1 153 0 0 1 h
+7851 6474 N 0 -1 153 0 0 1 h
+8003 6481 N 0 -1 153 0 0 1 h
+8155 6536 N 0 -1 152 0 0 1 h
+8306 6565 N 0 -1 153 0 0 1 h
+8458 6609 N 0 -1 153 0 0 1 h
+8610 6737 N 0 -1 153 0 0 1 h
+8762 6546 N 0 -1 153 0 0 1 h
+8914 6793 N 0 -1 153 0 0 1 h
+9066 6580 N 0 -1 153 0 0 1 h
+9218 6584 N 0 -1 153 0 0 1 h
+9370 6585 N 0 -1 153 0 0 1 h
+9522 6696 N 0 -1 153 0 0 1 h
+9674 6633 N 0 -1 153 0 0 1 h
+9826 6575 N 0 -1 153 0 0 1 h
+9978 6589 N 0 -1 153 0 0 1 h
+10130 6590 N 0 -1 153 0 0 1 h
+10282 6688 N 0 -1 152 0 0 1 h
+10433 6600 N 0 -1 153 0 0 1 h
+10585 6601 N 0 -1 153 0 0 1 h
+10737 6618 N 0 -1 153 0 0 1 h
+10889 6609 N 0 -1 153 0 0 1 h
+11041 6574 N 0 -1 153 0 0 1 h
+11193 6460 N 0 -1 153 0 0 1 h
+1.000 UL
+LT8
+0.01 0.18 0.61 C LTb
+22593 4662 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 793 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT8
+0.01 0.18 0.61 C 17154 4627 N 0 -70 399 0 0 70 h
+LTw
+LT8
+0.01 0.18 0.61 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 4936 N 0 -612 153 0 0 612 h
+3749 5181 N 0 -1 153 0 0 1 h
+3901 5410 N 0 -1 153 0 0 1 h
+4053 6011 N 0 -1 152 0 0 1 h
+4204 5522 N 0 -1 153 0 0 1 h
+4356 5596 N 0 -1 153 0 0 1 h
+4508 5725 N 0 -1 153 0 0 1 h
+4660 6025 N 0 -1 153 0 0 1 h
+4812 6014 N 0 -1 153 0 0 1 h
+4964 6038 N 0 -1 153 0 0 1 h
+5116 6059 N 0 -1 153 0 0 1 h
+5268 6070 N 0 -1 153 0 0 1 h
+5420 6020 N 0 -1 153 0 0 1 h
+5572 6036 N 0 -1 153 0 0 1 h
+5724 6054 N 0 -1 153 0 0 1 h
+5876 6067 N 0 -1 153 0 0 1 h
+6028 6102 N 0 -1 153 0 0 1 h
+6180 6200 N 0 -1 152 0 0 1 h
+6331 6242 N 0 -1 153 0 0 1 h
+6483 6233 N 0 -1 153 0 0 1 h
+6635 6238 N 0 -1 153 0 0 1 h
+6787 6278 N 0 -1 153 0 0 1 h
+6939 6290 N 0 -1 153 0 0 1 h
+7091 6365 N 0 -1 153 0 0 1 h
+7243 6307 N 0 -1 153 0 0 1 h
+7395 6315 N 0 -1 153 0 0 1 h
+7547 6326 N 0 -1 153 0 0 1 h
+7699 6439 N 0 -1 153 0 0 1 h
+7851 6474 N 0 -1 153 0 0 1 h
+8003 6481 N 0 -1 153 0 0 1 h
+8155 6536 N 0 -1 152 0 0 1 h
+8306 6565 N 0 -1 153 0 0 1 h
+8458 6609 N 0 -1 153 0 0 1 h
+8610 6737 N 0 -1 153 0 0 1 h
+8762 6546 N 0 -1 153 0 0 1 h
+8914 6793 N 0 -1 153 0 0 1 h
+9066 6580 N 0 -1 153 0 0 1 h
+9218 6584 N 0 -1 153 0 0 1 h
+9370 6585 N 0 -1 153 0 0 1 h
+9522 6696 N 0 -1 153 0 0 1 h
+9674 6633 N 0 -1 153 0 0 1 h
+9826 6575 N 0 -1 153 0 0 1 h
+9978 6589 N 0 -1 153 0 0 1 h
+10130 6590 N 0 -1 153 0 0 1 h
+10282 6688 N 0 -1 152 0 0 1 h
+10433 6600 N 0 -1 153 0 0 1 h
+10585 6601 N 0 -1 153 0 0 1 h
+10737 6618 N 0 -1 153 0 0 1 h
+10889 6609 N 0 -1 153 0 0 1 h
+11041 6574 N 0 -1 153 0 0 1 h
+11193 6460 N 0 -1 153 0 0 1 h
+1.000 UL
+LT0
+0.44 0.38 0.07 C LTb
+22593 4522 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 866 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT0
+0.44 0.38 0.07 C 17154 4487 N 0 -70 399 0 0 70 h
+LTw
+LT0
+0.44 0.38 0.07 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 5181 N 0 -789 153 0 0 789 h
+3901 5410 N 0 -756 153 0 0 756 h
+4053 6011 N 0 -845 152 0 0 845 h
+4204 5522 N 0 -1 153 0 0 1 h
+4356 5596 N 0 -1 153 0 0 1 h
+4508 5725 N 0 -1 153 0 0 1 h
+4660 6025 N 0 -1 153 0 0 1 h
+4812 6014 N 0 -1 153 0 0 1 h
+4964 6038 N 0 -1 153 0 0 1 h
+5116 6059 N 0 -1 153 0 0 1 h
+5268 6070 N 0 -1 153 0 0 1 h
+5420 6020 N 0 -1 153 0 0 1 h
+5572 6036 N 0 -1 153 0 0 1 h
+5724 6054 N 0 -1 153 0 0 1 h
+5876 6067 N 0 -1 153 0 0 1 h
+6028 6102 N 0 -1 153 0 0 1 h
+6180 6200 N 0 -1 152 0 0 1 h
+6331 6242 N 0 -1 153 0 0 1 h
+6483 6233 N 0 -1 153 0 0 1 h
+6635 6238 N 0 -1 153 0 0 1 h
+6787 6278 N 0 -1 153 0 0 1 h
+6939 6290 N 0 -1 153 0 0 1 h
+7091 6365 N 0 -1 153 0 0 1 h
+7243 6307 N 0 -1 153 0 0 1 h
+7395 6315 N 0 -1 153 0 0 1 h
+7547 6326 N 0 -1 153 0 0 1 h
+7699 6439 N 0 -1 153 0 0 1 h
+7851 6474 N 0 -1 153 0 0 1 h
+8003 6481 N 0 -1 153 0 0 1 h
+8155 6536 N 0 -1 152 0 0 1 h
+8306 6565 N 0 -1 153 0 0 1 h
+8458 6609 N 0 -1 153 0 0 1 h
+8610 6737 N 0 -1 153 0 0 1 h
+8762 6546 N 0 -1 153 0 0 1 h
+8914 6793 N 0 -1 153 0 0 1 h
+9066 6580 N 0 -1 153 0 0 1 h
+9218 6584 N 0 -1 153 0 0 1 h
+9370 6585 N 0 -1 153 0 0 1 h
+9522 6696 N 0 -1 153 0 0 1 h
+9674 6633 N 0 -1 153 0 0 1 h
+9826 6575 N 0 -1 153 0 0 1 h
+9978 6589 N 0 -1 153 0 0 1 h
+10130 6590 N 0 -1 153 0 0 1 h
+10282 6688 N 0 -1 152 0 0 1 h
+10433 6600 N 0 -1 153 0 0 1 h
+10585 6601 N 0 -1 153 0 0 1 h
+10737 6618 N 0 -1 153 0 0 1 h
+10889 6609 N 0 -1 153 0 0 1 h
+11041 6574 N 0 -1 153 0 0 1 h
+11193 6460 N 0 -1 153 0 0 1 h
+1.000 UL
+LT1
+0.78 0.24 0.16 C LTb
+22593 4382 M
+[ [(Helvetica) 140.0 0.0 true true 0 (0x536B0F3: sqlite3MemMalloc \(sqlite3.c:12336\))]
+] -46.7 MRshow
+LT1
+0.78 0.24 0.16 C 17154 4347 N 0 -70 399 0 0 70 h
+LTw
+LT1
+0.78 0.24 0.16 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 5969 N 0 -79 153 0 0 79 h
+3901 6165 N 0 -78 153 0 0 78 h
+4053 6855 N 0 -150 152 0 0 150 h
+4204 5522 N 0 -150 153 0 0 150 h
+4356 5596 N 0 -149 153 0 0 149 h
+4508 5725 N 0 -149 153 0 0 149 h
+4660 6025 N 0 -149 153 0 0 149 h
+4812 6014 N 0 -149 153 0 0 149 h
+4964 6038 N 0 -160 153 0 0 160 h
+5116 6059 N 0 -180 153 0 0 180 h
+5268 6070 N 0 -188 153 0 0 188 h
+5420 6020 N 0 -204 153 0 0 204 h
+5572 6036 N 0 -224 153 0 0 224 h
+5724 6054 N 0 -245 153 0 0 245 h
+5876 6067 N 0 -257 153 0 0 257 h
+6028 6102 N 0 -270 153 0 0 270 h
+6180 6200 N 0 -331 152 0 0 331 h
+6331 6242 N 0 -353 153 0 0 353 h
+6483 6233 N 0 -360 153 0 0 360 h
+6635 6238 N 0 -364 153 0 0 364 h
+6787 6278 N 0 -390 153 0 0 390 h
+6939 6290 N 0 -390 153 0 0 390 h
+7091 6365 N 0 -395 153 0 0 395 h
+7243 6307 N 0 -394 153 0 0 394 h
+7395 6315 N 0 -394 153 0 0 394 h
+7547 6326 N 0 -394 153 0 0 394 h
+7699 6439 N 0 -394 153 0 0 394 h
+7851 6474 N 0 -394 153 0 0 394 h
+8003 6481 N 0 -398 153 0 0 398 h
+8155 6536 N 0 -398 152 0 0 398 h
+8306 6565 N 0 -398 153 0 0 398 h
+8458 6609 N 0 -398 153 0 0 398 h
+8610 6737 N 0 -398 153 0 0 398 h
+8762 6546 N 0 -398 153 0 0 398 h
+8914 6793 N 0 -398 153 0 0 398 h
+9066 6580 N 0 -398 153 0 0 398 h
+9218 6584 N 0 -398 153 0 0 398 h
+9370 6585 N 0 -398 153 0 0 398 h
+9522 6696 N 0 -398 153 0 0 398 h
+9674 6633 N 0 -398 153 0 0 398 h
+9826 6575 N 0 -397 153 0 0 397 h
+9978 6589 N 0 -397 153 0 0 397 h
+10130 6590 N 0 -397 153 0 0 397 h
+10282 6688 N 0 -398 152 0 0 398 h
+10433 6600 N 0 -398 153 0 0 398 h
+10585 6601 N 0 -400 153 0 0 400 h
+10737 6618 N 0 -398 153 0 0 398 h
+10889 6609 N 0 -398 153 0 0 398 h
+11041 6574 N 0 -399 153 0 0 399 h
+11193 6460 N 0 -398 153 0 0 398 h
+1.000 UL
+LT2
+0.45 0.10 0.58 C LTb
+22593 4242 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 873 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT2
+0.45 0.10 0.58 C 17154 4207 N 0 -70 399 0 0 70 h
+LTw
+LT2
+0.45 0.10 0.58 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 5671 N 0 -737 153 0 0 737 h
+4356 5744 N 0 -738 153 0 0 738 h
+4508 5873 N 0 -1 153 0 0 1 h
+4660 6173 N 0 -1 153 0 0 1 h
+4812 6162 N 0 -751 153 0 0 751 h
+4964 6197 N 0 -757 153 0 0 757 h
+5116 6238 N 0 -765 153 0 0 765 h
+5268 6257 N 0 -770 153 0 0 770 h
+5420 6223 N 0 -1 153 0 0 1 h
+5572 6259 N 0 -1 153 0 0 1 h
+5724 6298 N 0 -1 153 0 0 1 h
+5876 6323 N 0 -1 153 0 0 1 h
+6028 6371 N 0 -1 153 0 0 1 h
+6180 6530 N 0 -1 152 0 0 1 h
+6331 6594 N 0 -1 153 0 0 1 h
+6483 6592 N 0 -1 153 0 0 1 h
+6635 6601 N 0 -1 153 0 0 1 h
+6787 6667 N 0 -1 153 0 0 1 h
+6939 6679 N 0 -1 153 0 0 1 h
+7091 6759 N 0 -1 153 0 0 1 h
+7243 6700 N 0 -1 153 0 0 1 h
+7395 6708 N 0 -1 153 0 0 1 h
+7547 6719 N 0 -1 153 0 0 1 h
+7699 6832 N 0 -1 153 0 0 1 h
+7851 6867 N 0 -1 153 0 0 1 h
+8003 6878 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT3
+0.87 0.19 0.28 C LTb
+22593 4102 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 874 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT3
+0.87 0.19 0.28 C 17154 4067 N 0 -70 399 0 0 70 h
+LTw
+LT3
+0.87 0.19 0.28 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 5873 N 0 -804 153 0 0 804 h
+4660 6173 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 6223 N 0 -875 153 0 0 875 h
+5572 6259 N 0 -858 153 0 0 858 h
+5724 6298 N 0 -951 153 0 0 951 h
+5876 6323 N 0 -895 153 0 0 895 h
+6028 6371 N 0 -875 153 0 0 875 h
+6180 6530 N 0 -879 152 0 0 879 h
+6331 6594 N 0 -880 153 0 0 880 h
+6483 6592 N 0 -1 153 0 0 1 h
+6635 6601 N 0 -1 153 0 0 1 h
+6787 6667 N 0 -1 153 0 0 1 h
+6939 6679 N 0 -1 153 0 0 1 h
+7091 6759 N 0 -1 153 0 0 1 h
+7243 6700 N 0 -1 153 0 0 1 h
+7395 6708 N 0 -1 153 0 0 1 h
+7547 6719 N 0 -1 153 0 0 1 h
+7699 6832 N 0 -1 153 0 0 1 h
+7851 6867 N 0 -1 153 0 0 1 h
+8003 6878 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT4
+0.85 0.24 0.97 C LTb
+22593 3962 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 872 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT4
+0.85 0.24 0.97 C 17154 3927 N 0 -70 399 0 0 70 h
+LTw
+LT4
+0.85 0.24 0.97 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6173 N 0 -770 153 0 0 770 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 6592 N 0 -1 153 0 0 1 h
+6635 6601 N 0 -1 153 0 0 1 h
+6787 6667 N 0 -1 153 0 0 1 h
+6939 6679 N 0 -1 153 0 0 1 h
+7091 6759 N 0 -1 153 0 0 1 h
+7243 6700 N 0 -1 153 0 0 1 h
+7395 6708 N 0 -1 153 0 0 1 h
+7547 6719 N 0 -1 153 0 0 1 h
+7699 6832 N 0 -1 153 0 0 1 h
+7851 6867 N 0 -1 153 0 0 1 h
+8003 6878 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT5
+0.21 0.98 0.69 C LTb
+22593 3822 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 925 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT5
+0.21 0.98 0.69 C 17154 3787 N 0 -70 399 0 0 70 h
+LTw
+LT5
+0.21 0.98 0.69 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 6592 N 0 -910 153 0 0 910 h
+6635 6601 N 0 -1 153 0 0 1 h
+6787 6667 N 0 -1 153 0 0 1 h
+6939 6679 N 0 -1 153 0 0 1 h
+7091 6759 N 0 -1 153 0 0 1 h
+7243 6700 N 0 -1 153 0 0 1 h
+7395 6708 N 0 -1 153 0 0 1 h
+7547 6719 N 0 -1 153 0 0 1 h
+7699 6832 N 0 -1 153 0 0 1 h
+7851 6867 N 0 -1 153 0 0 1 h
+8003 6878 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT6
+0.97 0.64 0.53 C LTb
+22593 3682 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 936 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT6
+0.97 0.64 0.53 C 17154 3647 N 0 -70 399 0 0 70 h
+LTw
+LT6
+0.97 0.64 0.53 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 6601 N 0 -910 153 0 0 910 h
+6787 6667 N 0 -1 153 0 0 1 h
+6939 6679 N 0 -1 153 0 0 1 h
+7091 6759 N 0 -1 153 0 0 1 h
+7243 6700 N 0 -1 153 0 0 1 h
+7395 6708 N 0 -1 153 0 0 1 h
+7547 6719 N 0 -1 153 0 0 1 h
+7699 6832 N 0 -1 153 0 0 1 h
+7851 6867 N 0 -1 153 0 0 1 h
+8003 6878 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT7
+0.96 0.35 0.12 C LTb
+22593 3542 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 953 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT7
+0.96 0.35 0.12 C 17154 3507 N 0 -70 399 0 0 70 h
+LTw
+LT7
+0.96 0.35 0.12 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 6667 N 0 -915 153 0 0 915 h
+6939 6679 N 0 -1 153 0 0 1 h
+7091 6759 N 0 -1 153 0 0 1 h
+7243 6700 N 0 -1 153 0 0 1 h
+7395 6708 N 0 -1 153 0 0 1 h
+7547 6719 N 0 -1 153 0 0 1 h
+7699 6832 N 0 -1 153 0 0 1 h
+7851 6867 N 0 -1 153 0 0 1 h
+8003 6878 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT8
+0.17 0.99 0.44 C LTb
+22593 3402 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 958 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT8
+0.17 0.99 0.44 C 17154 3367 N 0 -70 399 0 0 70 h
+LTw
+LT8
+0.17 0.99 0.44 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 6679 N 0 -920 153 0 0 920 h
+7091 6759 N 0 -1 153 0 0 1 h
+7243 6700 N 0 -1 153 0 0 1 h
+7395 6708 N 0 -1 153 0 0 1 h
+7547 6719 N 0 -1 153 0 0 1 h
+7699 6832 N 0 -1 153 0 0 1 h
+7851 6867 N 0 -1 153 0 0 1 h
+8003 6878 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT0
+0.75 0.52 0.43 C LTb
+22593 3262 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 973 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT0
+0.75 0.52 0.43 C 17154 3227 N 0 -70 399 0 0 70 h
+LTw
+LT0
+0.75 0.52 0.43 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 6759 N 0 -941 153 0 0 941 h
+7243 6700 N 0 -1 153 0 0 1 h
+7395 6708 N 0 -1 153 0 0 1 h
+7547 6719 N 0 -1 153 0 0 1 h
+7699 6832 N 0 -1 153 0 0 1 h
+7851 6867 N 0 -1 153 0 0 1 h
+8003 6878 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT1
+0.36 0.16 0.52 C LTb
+22593 3122 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 985 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT1
+0.36 0.16 0.52 C 17154 3087 N 0 -70 399 0 0 70 h
+LTw
+LT1
+0.36 0.16 0.52 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 6700 N 0 -923 153 0 0 923 h
+7395 6708 N 0 -923 153 0 0 923 h
+7547 6719 N 0 -1 153 0 0 1 h
+7699 6832 N 0 -1 153 0 0 1 h
+7851 6867 N 0 -1 153 0 0 1 h
+8003 6878 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT2
+0.26 0.31 0.96 C LTb
+22593 2982 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 994 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT2
+0.26 0.31 0.96 C 17154 2947 N 0 -70 399 0 0 70 h
+LTw
+LT2
+0.26 0.31 0.96 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 7622 N 0 -1 153 0 0 1 h
+7395 7630 N 0 -1 153 0 0 1 h
+7547 6719 N 0 -923 153 0 0 923 h
+7699 6832 N 0 -1 153 0 0 1 h
+7851 6867 N 0 -1 153 0 0 1 h
+8003 6878 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT3
+0.33 0.53 0.47 C LTb
+22593 2842 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 1044 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT3
+0.33 0.53 0.47 C 17154 2807 N 0 -70 399 0 0 70 h
+LTw
+LT3
+0.33 0.53 0.47 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 7622 N 0 -1 153 0 0 1 h
+7395 7630 N 0 -1 153 0 0 1 h
+7547 7641 N 0 -1 153 0 0 1 h
+7699 6832 N 0 -936 153 0 0 936 h
+7851 6867 N 0 -1 153 0 0 1 h
+8003 6878 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT4
+0.42 0.25 0.28 C LTb
+22593 2702 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 1058 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT4
+0.42 0.25 0.28 C 17154 2667 N 0 -70 399 0 0 70 h
+LTw
+LT4
+0.42 0.25 0.28 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 7622 N 0 -1 153 0 0 1 h
+7395 7630 N 0 -1 153 0 0 1 h
+7547 7641 N 0 -1 153 0 0 1 h
+7699 7767 N 0 -1 153 0 0 1 h
+7851 6867 N 0 -942 153 0 0 942 h
+8003 6878 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT5
+0.84 0.18 0.49 C LTb
+22593 2562 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 1061 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT5
+0.84 0.18 0.49 C 17154 2527 N 0 -70 399 0 0 70 h
+LTw
+LT5
+0.84 0.18 0.49 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 7622 N 0 -1 153 0 0 1 h
+7395 7630 N 0 -1 153 0 0 1 h
+7547 7641 N 0 -1 153 0 0 1 h
+7699 7767 N 0 -1 153 0 0 1 h
+7851 7808 N 0 -1 153 0 0 1 h
+8003 6878 N 0 -944 153 0 0 944 h
+8155 6933 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT6
+0.80 0.83 0.25 C LTb
+22593 2422 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 1088 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT6
+0.80 0.83 0.25 C 17154 2387 N 0 -70 399 0 0 70 h
+LTw
+LT6
+0.80 0.83 0.25 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 7622 N 0 -1 153 0 0 1 h
+7395 7630 N 0 -1 153 0 0 1 h
+7547 7641 N 0 -1 153 0 0 1 h
+7699 7767 N 0 -1 153 0 0 1 h
+7851 7808 N 0 -1 153 0 0 1 h
+8003 7821 N 0 -1 153 0 0 1 h
+8155 6933 N 0 -959 152 0 0 959 h
+8306 6962 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT7
+0.52 0.54 0.41 C LTb
+22593 2282 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 1097 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT7
+0.52 0.54 0.41 C 17154 2247 N 0 -70 399 0 0 70 h
+LTw
+LT7
+0.52 0.54 0.41 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 7622 N 0 -1 153 0 0 1 h
+7395 7630 N 0 -1 153 0 0 1 h
+7547 7641 N 0 -1 153 0 0 1 h
+7699 7767 N 0 -1 153 0 0 1 h
+7851 7808 N 0 -1 153 0 0 1 h
+8003 7821 N 0 -1 153 0 0 1 h
+8155 7891 N 0 -1 152 0 0 1 h
+8306 6962 N 0 -966 153 0 0 966 h
+8458 7006 N 0 -1 153 0 0 1 h
+8610 7134 N 0 -1 153 0 0 1 h
+8762 6943 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -1 153 0 0 1 h
+9218 6981 N 0 -1 153 0 0 1 h
+9370 6982 N 0 -1 153 0 0 1 h
+9522 7093 N 0 -1 153 0 0 1 h
+9674 7030 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT8
+0.68 0.32 0.24 C LTb
+22593 2142 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 1104 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT8
+0.68 0.32 0.24 C 17154 2107 N 0 -70 399 0 0 70 h
+LTw
+LT8
+0.68 0.32 0.24 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 7622 N 0 -1 153 0 0 1 h
+7395 7630 N 0 -1 153 0 0 1 h
+7547 7641 N 0 -1 153 0 0 1 h
+7699 7767 N 0 -1 153 0 0 1 h
+7851 7808 N 0 -1 153 0 0 1 h
+8003 7821 N 0 -1 153 0 0 1 h
+8155 7891 N 0 -1 152 0 0 1 h
+8306 7927 N 0 -1 153 0 0 1 h
+8458 7006 N 0 -1049 153 0 0 1049 h
+8610 7134 N 0 -1050 153 0 0 1050 h
+8762 6943 N 0 -966 153 0 0 966 h
+8914 7190 N 0 -1 153 0 0 1 h
+9066 6977 N 0 -970 153 0 0 970 h
+9218 6981 N 0 -974 153 0 0 974 h
+9370 6982 N 0 -971 153 0 0 971 h
+9522 7093 N 0 -1012 153 0 0 1012 h
+9674 7030 N 0 -1012 153 0 0 1012 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT0
+0.20 0.29 0.73 C LTb
+22593 2002 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 1105 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT0
+0.20 0.29 0.73 C 17154 1967 N 0 -70 399 0 0 70 h
+LTw
+LT0
+0.20 0.29 0.73 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 7622 N 0 -1 153 0 0 1 h
+7395 7630 N 0 -1 153 0 0 1 h
+7547 7641 N 0 -1 153 0 0 1 h
+7699 7767 N 0 -1 153 0 0 1 h
+7851 7808 N 0 -1 153 0 0 1 h
+8003 7821 N 0 -1 153 0 0 1 h
+8155 7891 N 0 -1 152 0 0 1 h
+8306 7927 N 0 -1 153 0 0 1 h
+8458 8054 N 0 -1 153 0 0 1 h
+8610 8183 N 0 -1 153 0 0 1 h
+8762 7908 N 0 -1 153 0 0 1 h
+8914 7190 N 0 -1051 153 0 0 1051 h
+9066 7946 N 0 -1 153 0 0 1 h
+9218 7954 N 0 -1 153 0 0 1 h
+9370 7952 N 0 -1 153 0 0 1 h
+9522 8104 N 0 -1 153 0 0 1 h
+9674 8041 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -1 153 0 0 1 h
+9978 6985 N 0 -1 153 0 0 1 h
+10130 6986 N 0 -1 153 0 0 1 h
+10282 7085 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT1
+0.98 0.33 0.29 C LTb
+22593 1862 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 1107 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT1
+0.98 0.33 0.29 C 17154 1827 N 0 -70 399 0 0 70 h
+LTw
+LT1
+0.98 0.33 0.29 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 7622 N 0 -1 153 0 0 1 h
+7395 7630 N 0 -1 153 0 0 1 h
+7547 7641 N 0 -1 153 0 0 1 h
+7699 7767 N 0 -1 153 0 0 1 h
+7851 7808 N 0 -1 153 0 0 1 h
+8003 7821 N 0 -1 153 0 0 1 h
+8155 7891 N 0 -1 152 0 0 1 h
+8306 7927 N 0 -1 153 0 0 1 h
+8458 8054 N 0 -1 153 0 0 1 h
+8610 8183 N 0 -1 153 0 0 1 h
+8762 7908 N 0 -1 153 0 0 1 h
+8914 8240 N 0 -1 153 0 0 1 h
+9066 7946 N 0 -1 153 0 0 1 h
+9218 7954 N 0 -1 153 0 0 1 h
+9370 7952 N 0 -1 153 0 0 1 h
+9522 8104 N 0 -1 153 0 0 1 h
+9674 8041 N 0 -1 153 0 0 1 h
+9826 6971 N 0 -978 153 0 0 978 h
+9978 6985 N 0 -986 153 0 0 986 h
+10130 6986 N 0 -975 153 0 0 975 h
+10282 7085 N 0 -1012 152 0 0 1012 h
+10433 6997 N 0 -1 153 0 0 1 h
+10585 7000 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT2
+0.12 0.89 0.48 C LTb
+22593 1722 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 1108 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT2
+0.12 0.89 0.48 C 17154 1687 N 0 -70 399 0 0 70 h
+LTw
+LT2
+0.12 0.89 0.48 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 7622 N 0 -1 153 0 0 1 h
+7395 7630 N 0 -1 153 0 0 1 h
+7547 7641 N 0 -1 153 0 0 1 h
+7699 7767 N 0 -1 153 0 0 1 h
+7851 7808 N 0 -1 153 0 0 1 h
+8003 7821 N 0 -1 153 0 0 1 h
+8155 7891 N 0 -1 152 0 0 1 h
+8306 7927 N 0 -1 153 0 0 1 h
+8458 8054 N 0 -1 153 0 0 1 h
+8610 8183 N 0 -1 153 0 0 1 h
+8762 7908 N 0 -1 153 0 0 1 h
+8914 8240 N 0 -1 153 0 0 1 h
+9066 7946 N 0 -1 153 0 0 1 h
+9218 7954 N 0 -1 153 0 0 1 h
+9370 7952 N 0 -1 153 0 0 1 h
+9522 8104 N 0 -1 153 0 0 1 h
+9674 8041 N 0 -1 153 0 0 1 h
+9826 7948 N 0 -1 153 0 0 1 h
+9978 7970 N 0 -1 153 0 0 1 h
+10130 7960 N 0 -1 153 0 0 1 h
+10282 8096 N 0 -1 152 0 0 1 h
+10433 6997 N 0 -978 153 0 0 978 h
+10585 7000 N 0 -979 153 0 0 979 h
+10737 7015 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT3
+0.37 0.23 0.34 C LTb
+22593 1582 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 1109 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT3
+0.37 0.23 0.34 C 17154 1547 N 0 -70 399 0 0 70 h
+LTw
+LT3
+0.37 0.23 0.34 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 7622 N 0 -1 153 0 0 1 h
+7395 7630 N 0 -1 153 0 0 1 h
+7547 7641 N 0 -1 153 0 0 1 h
+7699 7767 N 0 -1 153 0 0 1 h
+7851 7808 N 0 -1 153 0 0 1 h
+8003 7821 N 0 -1 153 0 0 1 h
+8155 7891 N 0 -1 152 0 0 1 h
+8306 7927 N 0 -1 153 0 0 1 h
+8458 8054 N 0 -1 153 0 0 1 h
+8610 8183 N 0 -1 153 0 0 1 h
+8762 7908 N 0 -1 153 0 0 1 h
+8914 8240 N 0 -1 153 0 0 1 h
+9066 7946 N 0 -1 153 0 0 1 h
+9218 7954 N 0 -1 153 0 0 1 h
+9370 7952 N 0 -1 153 0 0 1 h
+9522 8104 N 0 -1 153 0 0 1 h
+9674 8041 N 0 -1 153 0 0 1 h
+9826 7948 N 0 -1 153 0 0 1 h
+9978 7970 N 0 -1 153 0 0 1 h
+10130 7960 N 0 -1 153 0 0 1 h
+10282 8096 N 0 -1 152 0 0 1 h
+10433 7974 N 0 -1 153 0 0 1 h
+10585 7978 N 0 -1 153 0 0 1 h
+10737 7015 N 0 -982 153 0 0 982 h
+10889 7006 N 0 -1 153 0 0 1 h
+11041 6972 N 0 -1 153 0 0 1 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LT4
+0.84 0.72 0.78 C LTb
+22593 1442 M
+[ [(Helvetica) 140.0 0.0 true true 0 (in 1110 places, all below massif's threshold \(01.00%\))]
+] -46.7 MRshow
+LT4
+0.84 0.72 0.78 C 17154 1407 N 0 -70 399 0 0 70 h
+LTw
+LT4
+0.84 0.72 0.78 C 1014 1232 N 0 -1 153 0 0 1 h
+1166 1233 N 0 -1 153 0 0 1 h
+1318 2614 N 0 -1 153 0 0 1 h
+1470 2966 N 0 -1 153 0 0 1 h
+1622 3215 N 0 -1 153 0 0 1 h
+1774 3510 N 0 -1 153 0 0 1 h
+1926 3737 N 0 -1 152 0 0 1 h
+2077 4195 N 0 -1 153 0 0 1 h
+2229 4185 N 0 -1 153 0 0 1 h
+2381 4329 N 0 -1 153 0 0 1 h
+2533 4943 N 0 -1 153 0 0 1 h
+2685 5037 N 0 -1 153 0 0 1 h
+2837 5447 N 0 -1 153 0 0 1 h
+2989 5502 N 0 -1 153 0 0 1 h
+3141 5727 N 0 -1 153 0 0 1 h
+3293 5598 N 0 -1 153 0 0 1 h
+3445 5545 N 0 -1 153 0 0 1 h
+3597 5547 N 0 -1 153 0 0 1 h
+3749 6047 N 0 -1 153 0 0 1 h
+3901 6242 N 0 -1 153 0 0 1 h
+4053 7004 N 0 -1 152 0 0 1 h
+4204 6407 N 0 -1 153 0 0 1 h
+4356 6481 N 0 -1 153 0 0 1 h
+4508 6676 N 0 -1 153 0 0 1 h
+4660 6942 N 0 -1 153 0 0 1 h
+4812 6912 N 0 -1 153 0 0 1 h
+4964 6953 N 0 -1 153 0 0 1 h
+5116 7002 N 0 -1 153 0 0 1 h
+5268 7026 N 0 -1 153 0 0 1 h
+5420 7097 N 0 -1 153 0 0 1 h
+5572 7116 N 0 -1 153 0 0 1 h
+5724 7248 N 0 -1 153 0 0 1 h
+5876 7217 N 0 -1 153 0 0 1 h
+6028 7245 N 0 -1 153 0 0 1 h
+6180 7408 N 0 -1 152 0 0 1 h
+6331 7473 N 0 -1 153 0 0 1 h
+6483 7501 N 0 -1 153 0 0 1 h
+6635 7510 N 0 -1 153 0 0 1 h
+6787 7581 N 0 -1 153 0 0 1 h
+6939 7598 N 0 -1 153 0 0 1 h
+7091 7699 N 0 -1 153 0 0 1 h
+7243 7622 N 0 -1 153 0 0 1 h
+7395 7630 N 0 -1 153 0 0 1 h
+7547 7641 N 0 -1 153 0 0 1 h
+7699 7767 N 0 -1 153 0 0 1 h
+7851 7808 N 0 -1 153 0 0 1 h
+8003 7821 N 0 -1 153 0 0 1 h
+8155 7891 N 0 -1 152 0 0 1 h
+8306 7927 N 0 -1 153 0 0 1 h
+8458 8054 N 0 -1 153 0 0 1 h
+8610 8183 N 0 -1 153 0 0 1 h
+8762 7908 N 0 -1 153 0 0 1 h
+8914 8240 N 0 -1 153 0 0 1 h
+9066 7946 N 0 -1 153 0 0 1 h
+9218 7954 N 0 -1 153 0 0 1 h
+9370 7952 N 0 -1 153 0 0 1 h
+9522 8104 N 0 -1 153 0 0 1 h
+9674 8041 N 0 -1 153 0 0 1 h
+9826 7948 N 0 -1 153 0 0 1 h
+9978 7970 N 0 -1 153 0 0 1 h
+10130 7960 N 0 -1 153 0 0 1 h
+10282 8096 N 0 -1 152 0 0 1 h
+10433 7974 N 0 -1 153 0 0 1 h
+10585 7978 N 0 -1 153 0 0 1 h
+10737 7996 N 0 -1 153 0 0 1 h
+10889 7006 N 0 -979 153 0 0 979 h
+11041 6972 N 0 -968 153 0 0 968 h
+11193 6857 N 0 -1 153 0 0 1 h
+1.000 UL
+LTb
+938 8250 N
+0 -7018 V
+10483 0 V
+0 7018 V
+938 8250 L
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+grestore % colour palette end
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Helvetica
+%%Pages: 1
