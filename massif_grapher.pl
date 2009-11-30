@@ -563,7 +563,7 @@ sub print_graph() {
 
     open (GNUPLOT, "| gnuplot");
     print GNUPLOT <<EOPLOT;
-set terminal postscript enhanced color
+set terminal postscript enhanced color size 80cm,29.7cm
 set output 'massif_pretty.ps'
 set datafile separator '\t'
 set key autotitle columnheader
