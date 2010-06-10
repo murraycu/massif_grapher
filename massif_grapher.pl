@@ -4,11 +4,11 @@
 ##--- Massif's results printer                                     ---##
 ##--------------------------------------------------------------------##
 
-#  This file is based on the original ms_print.pl.in, 
+#  This file is based on the original ms_print.pl.in,
 #  Copyright (C) 2007-2007 Nicholas Nethercote
 #     njn@valgrind.org
 #
-#  The "massif_grapher" changes are 
+#  The "massif_grapher" changes are
 #  Copyright (C) 2009 Murray Cumming
 #     murrayc@openismus.com
 #
@@ -51,7 +51,7 @@ my $time_unit;
 # bother showing it.
 my $threshold = 1.0;
 
-# Whether the graph will be detailed, which requires us to only use 
+# Whether the graph will be detailed, which requires us to only use
 # the details snapshots.
 my $arg_detailed = 0;
 
@@ -74,14 +74,14 @@ usage: massif_grapher [options] massif-out-file
     --threshold=<m.n>     significance threshold, in percent [$threshold] (specify this to massif too).
     --detailed            Print allocation details, using only the detailed snapshots.
 
-  massif_grapher is Copyright (C) 2007-2007 Nicholas Nethercote, and Copyright (C) 2009 Murray Cumming 
+  massif_grapher is Copyright (C) 2007-2007 Nicholas Nethercote, and Copyright (C) 2009 Murray Cumming
   and licensed under the GNU General Public License, version 2.
   Bug reports, feedback, admiration, abuse, etc, to: njn\@valgrind.org.
 
 
   For best results run valgrind massif with --details-freq=1. For instance,
     valgrind --tool=massif --detailed-freq=1 yourapp
-                                                
+
 END
 ;
 
@@ -102,7 +102,7 @@ my @is_detaileds  = ();
 my $peak_mem_total_szB = 0;
 
 # Map of all function names to a unique index:
-my %hash_map_part_names = (); 
+my %hash_map_part_names = ();
 # Reverse (Map of all unique indexes to function names):
 my %hash_map_part_names_reverse = ();
 
@@ -110,16 +110,16 @@ my %hash_map_part_names_reverse = ();
 #-----------------------------------------------------------------------------
 # Argument and option handling
 #-----------------------------------------------------------------------------
-sub process_cmd_line() 
+sub process_cmd_line()
 {
     my @files;
 
     # Grab a copy of the arguments, for printing later.
-    for my $arg (@ARGV) { 
+    for my $arg (@ARGV) {
         $ms_print_args .= " $arg";       # The arguments.
     }
 
-    for my $arg (@ARGV) { 
+    for my $arg (@ARGV) {
 
         # Option handling
         if ($arg =~ /^-/) {
@@ -140,7 +140,7 @@ sub process_cmd_line()
                 die($usage);
             }
         } else {
-            # Not an option.  Remember it as a filename. 
+            # Not an option.  Remember it as a filename.
             push(@files, $arg);
         }
     }
@@ -173,7 +173,7 @@ sub get_line()
 sub equals_num_line($$)
 {
     my ($line, $fieldname) = @_;
-    defined($line) 
+    defined($line)
         or die("Line $.: expected \"$fieldname\" line, got end of file\n");
     $line =~ s/^$fieldname=(.*)\s*$//
         or die("Line $.: expected \"$fieldname\" line, got:\n$line");
@@ -250,7 +250,7 @@ sub read_heap_tree($$$$$)
 # we print the fourth part to a tmp file, and then dump the tmp file at the
 # end.
 #
-sub read_input_file() 
+sub read_input_file()
 {
     my $desc = "";              # Concatenated description lines.
 
@@ -258,11 +258,11 @@ sub read_input_file()
     my @mem_total_Bs  = ();
     my $peak_num = -1;      # An initial value that will be ok if no peak
                             # entry is in the file.
-    
+
     #-------------------------------------------------------------------------
     # Read start of input file.
     #-------------------------------------------------------------------------
-    open(INPUTFILE, "< $input_file") 
+    open(INPUTFILE, "< $input_file")
          || die "Cannot open $input_file for reading\n";
 
     # Read "desc:" lines.
@@ -324,7 +324,7 @@ sub read_input_file()
                 $peak_num = $snapshot_num;
             }
 
-            my ($bytes, $function_name, $child_bytes_ref, $child_functions_ref) = 
+            my ($bytes, $function_name, $child_bytes_ref, $child_functions_ref) =
                 read_heap_tree(1, "", "", "", $mem_total_B);
             @child_bytes = @$child_bytes_ref;
             @child_functions = @$child_functions_ref;
@@ -374,7 +374,7 @@ sub print_graph() {
 
     my $gd_graph_data = GD::Graph::Data->new()
       or die GD::Graph::Data->error;
-   
+
     my $n_snapshots = scalar(@snapshot_nums);
     ($n_snapshots > 0) or die;
 
@@ -386,7 +386,7 @@ sub print_graph() {
 
     for (my $i = 0; $i < $n_snapshots; $i++) {
 
-        # Fill an array for one column for an x item in the GD::Data. 
+        # Fill an array for one column for an x item in the GD::Data.
         my @gd_row;
 
         # The y item label (to appear for the item on the X axis):
@@ -394,7 +394,7 @@ sub print_graph() {
 
         #Y axis values:
         if ($arg_detailed && $is_detaileds[$i]) {
-            # Detailed values, with a y value for each function that is 
+            # Detailed values, with a y value for each function that is
             # mentioned in any snapshot:
 
             # Default to 0 for all items,
@@ -412,7 +412,7 @@ sub print_graph() {
             my $index = 0;
             foreach my $function_name (@heap_parts_names) {
                 my $bytes = $heap_parts_bytes[$index];
-               
+
                 my $id = $hash_map_part_names{$function_name};
                 $gd_row[$id] = $bytes;
 
@@ -438,10 +438,10 @@ sub print_graph() {
     $gd_graph_data->make_strict();
 
     # Specify a large area so people can zoom in:
-    # If this isn't big enough then we get a "Vertical size too small" or "Horizontal size too small" error 
+    # If this isn't big enough then we get a "Vertical size too small" or "Horizontal size too small" error
     # from Gd::Graph's axestype.pm: setup_boundaries().
     # Using the defaults (not specify a size) don't help either.
-    # TODO: File a bug about that and/or guess a suitable size. 
+    # TODO: File a bug about that and/or guess a suitable size.
     my $gd_graph = GD::Graph::area->new(4000, 2000);
 
     my @legend = ();
@@ -456,7 +456,7 @@ sub print_graph() {
         @legend = ("Heap", "Extra Heap", "Stacks");
     }
 
-    $gd_graph->set_legend(@legend); 
+    $gd_graph->set_legend(@legend);
 
     my @colors = ();
     if ($arg_detailed) {
@@ -482,7 +482,7 @@ sub print_graph() {
       @colors = qw(red green blue);
     }
 
-    
+
 
     $gd_graph->set(
         #show_values => $gd_graph_data,
@@ -490,16 +490,16 @@ sub print_graph() {
         y_label => 'Kilobytes (KiB)',
         title   => 'Massif Snapshots',
         cumulate => 1, # Meaning True
-        #long_ticks => 1, 
+        #long_ticks => 1,
         tick_length => 0,
         #x_ticks => 0,
         #y_ticks => 0,
         #shadow_depth => 4,
         #shadowclr => 'dred',
         transparent => 0,
-        'bgclr' => 'white', 
-        'dclrs' => \@colors, 
-        legend_placement => 'RB', 
+        'bgclr' => 'white',
+        'dclrs' => \@colors,
+        legend_placement => 'RB',
         accent_treshold => 100_000, # Don't draw the vertical lines for each x item.
 
         t_margin => 20,
